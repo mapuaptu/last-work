@@ -1,18 +1,9 @@
 {
   "name": "@dashdojodev/ui-components",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
     "release": "np --any-branch --no-yarn --verbose"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://dremchee@bitbucket.org/dashdojoteam/ui-components.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/dashdojoteam/ui-components#readme"
+  }
 }
