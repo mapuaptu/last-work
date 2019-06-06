@@ -2,7 +2,13 @@
   <a href :class="$style.root">Button</a>
 </template>
 
-<style lang="scss">
+<script>
+export default {
+  name: 'd-button'
+}
+</script>
+
+<style lang="scss" module>
 .root {
 	display: flex;
 }
