@@ -1,6 +1,10 @@
 {
   "name": "@dashdojodev/ui-components",
   "version": "1.0.0",
+  "main": "index.js",
+  "files": [
+    "*/**"
+  ],
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
