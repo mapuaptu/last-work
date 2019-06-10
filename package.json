@@ -1,6 +1,9 @@
 {
-  "name": "ui-components",
-  "version": "0.1.0",
+  "name": "@dashdojodev/ui-components",
+  "version": "1.0.3",
+  "files": [
+    "src/**"
+  ],
   "private": true,
   "scripts": {
     "storybook": "start-storybook -p 9000 -s ./.storybook/assets",
