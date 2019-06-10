@@ -1,10 +1,15 @@
 <template>
-  <button :class="[$style.button]">
+  <button :class="[
+    $style.button, $style[`button--${size}`],
+    $style[`button--${type}`],
+    !$slots.default &&  $style[`button--notext`]
+  ]">
+    <i
+      v-if="icon"
+      class="fa"
+      :class="`fa-${icon}`"
+    ></i>
     <span v-if="$slots.default">
-      <i
-        v-if="icon"
-        class="fa fa-circle"
-      ></i>
       <slot></slot>
     </span>
   </button>

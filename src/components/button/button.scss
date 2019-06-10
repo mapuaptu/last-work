@@ -1,18 +1,74 @@
 @import '../../styles/variables';
 
 .button {
+  $font-size: 12;
+  $line-height: 16;
+
   display: flex;
   align-items: center;
   justify-content: center;
   outline: none;
   border: none;
   border-radius: 6px;
-  width: 155px;
+  padding-right: 17px;
+  padding-left: 17px;
   height: 48px;
   font-weight: 700;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: #{$font-size}px;
+  line-height: #{$line-height}px;
   color: $color-white;
   background-color: $color-primary;
   cursor: pointer;
+
+  i {
+    margin-right: 10px;
+    font-size: #{$font-size * 1.7}px;
+    line-height: #{$line-height * 1.7}px;
+  }
+
+  &--small {
+    $font-size: 11;
+    $line-height: 15;
+
+    border-radius: 4px;
+    padding-right: 8px;
+    padding-left: 8px;
+    height: 32px;
+    font-weight: 600;
+    font-size: #{$font-size}px;
+    line-height: #{$line-height}px;
+
+    i {
+      margin-right: 5px;
+      font-size: #{$font-size * 1.4}px;
+      line-height: #{$line-height * 1.4}px;
+    }
+  }
+
+  &--large {
+    $font-size: 16;
+    $line-height: 21;
+
+    padding-right: 16px;
+    padding-left: 16px;
+    height: 56px;
+    font-size: #{$font-size}px;
+    line-height: #{$line-height}px;
+
+    i {
+      margin-right: 15px;
+      font-size: #{$font-size * 1.7}px;
+      line-height: #{$line-height * 1.7}px;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+  }
+
+  &--notext {
+    i {
+      margin-right: 0;
+    }
+  }
 }
