@@ -1,4 +1,5 @@
 export default {
+  name: 'ui-button',
   props: {
     type: {
       type: String,
@@ -13,9 +14,4 @@ export default {
       default: '',
     },
   },
-  data() {
-    return {};
-  },
-  computed: {},
-  methods: {},
 };

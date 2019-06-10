@@ -1,6 +1,7 @@
 {
   "name": "@dashdojodev/ui-components",
   "version": "1.0.4",
+  "main": "src/index.js",
   "files": [
     "src/**"
   ],
