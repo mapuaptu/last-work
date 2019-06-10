@@ -1,7 +1,10 @@
 <template>
-  <button>
+  <button :class="[$style.button]">
     <span v-if="$slots.default">
-      <i class="fa fa-circle"></i>
+      <i
+        v-if="icon"
+        class="fa fa-circle"
+      ></i>
       <slot></slot>
     </span>
   </button>

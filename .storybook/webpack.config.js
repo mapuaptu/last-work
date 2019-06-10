@@ -9,7 +9,19 @@ module.exports = async ({ config, mode }) => {
   // Make whatever fine-grained changes you need
   config.module.rules.push({
     test: /\.scss$/,
-    use: ['style-loader', 'css-loader', 'sass-loader'],
+    use: [
+      'style-loader',
+      {
+        loader: 'css-loader',
+        options: {
+          // enable CSS Modules
+          modules: true,
+          // customize generated class names
+          localIdentName: '[local]_[hash:base64:8]',
+        },
+      },
+      'sass-loader',
+    ],
     include: path.resolve(__dirname, '../'),
   });
 

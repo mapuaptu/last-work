@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import Button from '../src/components/button/button.vue';
 
-storiesOf('Button', module).add('default', () => ({
+storiesOf('Button', module).add('size - default', () => ({
   components: { 'ui-button': Button },
-  template: '<ui-button>rounded 1234</ui-button>',
+  template: '<ui-button>ADD NEW TASK</ui-button>',
 }));

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "storybook": "start-storybook",
+    "storybook": "start-storybook -p 9000",
     "release": "np --any-branch --no-yarn --verbose",
     "lint": "vue-cli-service lint"
   },

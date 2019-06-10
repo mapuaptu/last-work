@@ -1,3 +1,18 @@
+@import '../../styles/variables';
+
 .button {
-  background-color: #564;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  width: 155px;
+  height: 48px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-white;
+  background-color: $color-primary;
+  cursor: pointer;
 }
