@@ -4,7 +4,6 @@
   "files": [
     "src/**"
   ],
-  "private": true,
   "scripts": {
     "storybook": "start-storybook -p 9000 -s ./.storybook/assets",
     "release": "np --any-branch --no-yarn --verbose",
