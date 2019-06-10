@@ -1,4 +1,4 @@
-# html-markup
+# dashdojo ui-components
 
 ## Project setup
 
@@ -6,16 +6,16 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Run StoryBook
 
 ```
-npm run serve
+npm run storybook
 ```
 
-### Compiles and minifies for production
+### Release
 
 ```
-npm run build
+npm run release
 ```
 
 ### Lints and fixes files
@@ -23,7 +23,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
