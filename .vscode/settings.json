@@ -5,6 +5,7 @@
   "prettier.semi": true,
   "prettier.singleQuote": true,
   "prettier.printWidth": 80,
+  "prettier.arrowParens": "always",
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
