@@ -1,5 +1,4 @@
 export default {
-  name: 'EzButton',
   props: {
     nativeType: {
       type: String,
