@@ -24,9 +24,5 @@ storiesOf('Button', module)
   }))
   .add('icon="circle"', () => ({
     components: { 'ui-button': Button },
-    template: '<ui-button icon="circle" size="large">ADD NEW TASK</ui-button>',
-  }))
-  .add('icon="circle"', () => ({
-    components: { 'ui-button': Button },
     template: '<ui-button icon="circle">ADD NEW TASK</ui-button>',
   }));
