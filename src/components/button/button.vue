@@ -1,34 +1,9 @@
 <template>
-  <button
-    class="button"
-    :class="[classList]"
-    :disabled="disabled"
-    :type="nativeType"
-    @click="onClick"
-  >
-    <ez-icon
-      v-if="icon"
-      :name="icon"
-      :color="iconColor"
-      :size="iconSize"
-    ></ez-icon>
-    <span
-      v-if="$slots.default"
-      class="ez-button__text"
-    >
+  <button>
+    <span v-if="$slots.default">
+      <i class="fa fa-circle"></i>
       <slot></slot>
     </span>
-    <span
-      class="ez-caret"
-      v-if="caret"
-    ></span>
-    <transition name="ez-button__preloader-transition">
-      <div
-        class="ez-button__preloader"
-        v-if="preloader"
-      >
-      </div>
-    </transition>
   </button>
 </template>
 
