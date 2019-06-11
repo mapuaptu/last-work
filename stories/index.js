@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import Button from '../src/components/button/src/button.vue';
+import Button from '../src/packages/button/src/button.vue';
 
 storiesOf('Button', module)
   .add('size="default"', () => ({
