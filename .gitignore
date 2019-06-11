@@ -20,5 +20,5 @@ yarn-error.log*
 *.sw?
 
 # Other
-
-.npmrc
+*.npmrc
+/build
