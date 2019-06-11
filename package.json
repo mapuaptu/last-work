@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "storybook": "start-storybook -p 9000 -s ./.storybook/assets",
+    "build-storybook": "build-storybook -c .storybook -o build/storybook",
     "release": "np --any-branch --no-yarn --verbose",
     "lint": "vue-cli-service lint"
   },
