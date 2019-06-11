@@ -1,5 +1,6 @@
 import { storiesOf } from '@storybook/vue';
 import Button from '../src/packages/button/src/button.vue';
+import Container from '../src/packages/container/src/container.vue';
 
 storiesOf('Button', module)
   .add('size="default"', () => ({
@@ -26,3 +27,8 @@ storiesOf('Button', module)
     components: { 'ui-button': Button },
     template: '<ui-button icon="circle">ADD NEW TASK</ui-button>',
   }));
+
+storiesOf('Container', module).add('container', () => ({
+  components: { 'ui-container': Container },
+  template: '<ui-container size="default">Container</ui-container>',
+}));
