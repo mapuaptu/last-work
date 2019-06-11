@@ -7,7 +7,8 @@
   "scripts": {
     "storybook": "start-storybook -p 9000 -s ./.storybook/assets",
     "release": "np --any-branch --no-yarn --verbose",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "reinstall": "rm -rf node_modules && npm i"
   },
   "dependencies": {
     "core-js": "^2.6.5",
