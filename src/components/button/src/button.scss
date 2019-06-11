@@ -10,9 +10,7 @@
   outline: none;
   border: none;
   border-radius: 6px;
-  padding-right: 17px;
-  padding-left: 17px;
-  height: 48px;
+  padding: 16px 17px;
   font-weight: 700;
   font-size: #{$font-size}px;
   line-height: #{$line-height}px;
@@ -31,9 +29,7 @@
     $line-height: 15;
 
     border-radius: 4px;
-    padding-right: 8px;
-    padding-left: 8px;
-    height: 32px;
+    padding: 8px;
     font-weight: 600;
     font-size: #{$font-size}px;
     line-height: #{$line-height}px;
@@ -49,9 +45,7 @@
     $font-size: 16;
     $line-height: 21;
 
-    padding-right: 16px;
-    padding-left: 16px;
-    height: 56px;
+    padding: 16px 18px;
     font-size: #{$font-size}px;
     line-height: #{$line-height}px;
 
