@@ -28,7 +28,12 @@ storiesOf('Button', module)
     template: '<ui-button icon="circle">ADD NEW TASK</ui-button>',
   }));
 
-storiesOf('Container', module).add('container', () => ({
-  components: { 'ui-container': Container },
-  template: '<ui-container size="default">Container</ui-container>',
-}));
+storiesOf('Container', module)
+  .add('default', () => ({
+    components: { 'ui-container': Container },
+    template: '<ui-container>Container</ui-container>',
+  }))
+  .add('fluid', () => ({
+    components: { 'ui-container': Container },
+    template: '<ui-container fluid>Container</ui-container>',
+  }));
