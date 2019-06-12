@@ -1,4 +1,5 @@
 import { configure } from '@storybook/vue';
+import 'normalize.css';
 import '../src/styles/main.scss';
 
 function loadStories() {
