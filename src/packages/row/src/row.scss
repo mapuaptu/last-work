@@ -1,7 +1,7 @@
-@import './../../core/src/variables.scss';
-@import './../../core/src/vendor/grid-bootstrap/mixins/breakpoints';
-@import './../../core/src/vendor/grid-bootstrap/utilities/flex';
-@import './../../core/src/vendor/grid-bootstrap/mixins/grid';
+@import '../../../styles/variables';
+@import '../../../styles/vendor/grid-bootstrap/mixins/breakpoints';
+@import '../../../styles/vendor/grid-bootstrap/utilities/flex';
+@import '../../../styles/vendor/grid-bootstrap/mixins/grid';
 
 .row {
   @include make-row();

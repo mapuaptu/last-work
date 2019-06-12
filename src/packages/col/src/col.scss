@@ -1,0 +1,7 @@
+@import '../../../styles/variables';
+@import '../../../styles/vendor/grid-bootstrap/mixins/breakpoints';
+@import '../../../styles/vendor/grid-bootstrap/utilities/spacing';
+@import '../../../styles/vendor/grid-bootstrap/mixins/grid';
+@import '../../../styles/vendor/grid-bootstrap/mixins/grid-framework';
+
+@include make-grid-columns();

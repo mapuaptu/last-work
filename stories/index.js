@@ -1,6 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import Button from '../src/packages/button/src/button.vue';
-import Container from '../src/packages/container/src/container.vue';
+import { Button, Container, Row, Col } from '../src/index';
 
 storiesOf('Button', module)
   .add('size="default"', () => ({
@@ -30,8 +29,9 @@ storiesOf('Button', module)
 
 storiesOf('Container', module)
   .add('default', () => ({
-    components: { 'ui-container': Container },
-    template: '<ui-container>Container</ui-container>',
+    components: { 'ui-container': Container, 'ui-row': Row, 'ui-col': Col },
+    template:
+      '<ui-container><ui-row><ui-col margin="right">some content</ui-col></ui-row></ui-container>',
   }))
   .add('fluid', () => ({
     components: { 'ui-container': Container },
