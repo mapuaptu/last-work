@@ -6,5 +6,5 @@ export default () =>
     components: {
       'ui-input': Input,
     },
-    template: '<ui-input></ui-input>',
+    template: '<ui-input value="Example text field"></ui-input>',
   }));
