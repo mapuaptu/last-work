@@ -24,4 +24,9 @@
   &:focus {
     border: 1px solid $color-secondary;
   }
+
+  &--disabled {
+    color: $color-secondary;
+    background-color: $color-alabaster;
+  }
 }

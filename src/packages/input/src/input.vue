@@ -1,7 +1,7 @@
 <template>
   <div :class="[$style.wrapper]">
     <input
-      :class="[$style.input]"
+      :class="[$style.input, disabled && $style['input--disabled']]"
       :type="type"
       :disabled="disabled"
       :value="value"

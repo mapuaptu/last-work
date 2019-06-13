@@ -15,4 +15,10 @@ export default () =>
         'ui-input': Input,
       },
       template: '<ui-input placeholder="Example placeholder"></ui-input>',
+    }))
+    .add('disabled', () => ({
+      components: {
+        'ui-input': Input,
+      },
+      template: '<ui-input value="Example text field" disabled></ui-input>',
     }));
