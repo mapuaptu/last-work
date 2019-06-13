@@ -1,25 +1,24 @@
 export default {
   name: 'UiRow',
   props: {
-    gutter: [Number, String],
-    parentOffset: {
-      type: Boolean,
-      default: true,
+    gutter: {
+      type: [Number, String],
+      default: null,
     },
     justify: {
       type: String,
-      default: 'start',
+      default: null,
     },
     align: {
       type: String,
-      default: 'start',
+      default: null,
     },
   },
   computed: {
-    styleList() {
+    styleGutter() {
       const result = {};
 
-      if (this.gutter && this.parentOffset) {
+      if (this.gutter) {
         const margin = `-${Number(this.gutter) / 2}px`;
 
         result.marginLeft = margin;

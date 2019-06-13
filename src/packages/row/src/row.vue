@@ -5,7 +5,7 @@
       $style[`justify-content-${justify}`],
       $style[`align-items-${this.align}`]
     ]"
-    :style="styleList"
+    :style="[styleGutter]"
   >
     <slot></slot>
   </div>
