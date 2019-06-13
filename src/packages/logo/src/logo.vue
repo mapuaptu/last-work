@@ -1,5 +1,8 @@
 <template>
-  <div :class="[$style.logo]">logo</div>
+  <div :class="[$style.logo]">
+    <div :class="[$style.icon]"></div>
+    <div :class="[$style.text]">Dashdojo</div>
+  </div>
 </template>
 
 <script src="./logo.js"></script>
