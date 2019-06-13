@@ -44,4 +44,19 @@ export default () =>
           this.checked = !this.checked;
         },
       },
+    }))
+    .add('disabled', () => ({
+      components: { 'ui-checkbox': Checkbox },
+      template:
+        '<ui-checkbox disabled :value="checked" @input="onInput">Checkbox with text</ui-checkbox>',
+      data() {
+        return {
+          checked: true,
+        };
+      },
+      methods: {
+        onInput() {
+          this.checked = !this.checked;
+        },
+      },
     }));

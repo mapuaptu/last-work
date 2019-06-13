@@ -40,6 +40,10 @@
       transform: rotate(45deg) scaleY(1);
     }
   }
+
+  &--disabled {
+    opacity: 0.6;
+  }
 }
 
 .input {
@@ -62,8 +66,13 @@
 
 .label {
   margin-left: 10px;
+  font-weight: 400;
   font-size: 14px;
   line-height: 19px;
   color: $color-default;
   cursor: initial;
+
+  &--disabled {
+    color: $color-secondary;
+  }
 }

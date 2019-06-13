@@ -1,7 +1,11 @@
 <template>
   <label :class="[$style.wrapper]">
     <div :class="[$style.input]">
-      <span :class="[$style.inner, value && $style['inner--checked']]"></span>
+      <span :class="[
+        $style.inner,
+        value && $style['inner--checked'],
+        disabled && $style['inner--disabled']
+      ]"></span>
       <input
         :class="[$style.original]"
         type="checkbox"
@@ -12,7 +16,7 @@
       >
     </div>
     <div
-      :class="[$style.label]"
+      :class="[$style.label, disabled && $style['label--disabled']]"
       v-if="$slots.default"
     >
       <slot></slot>
