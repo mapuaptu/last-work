@@ -1,11 +1,15 @@
 import InputStory from './input';
 import ButtonStory from './button';
-import Typography from './typography';
-import Container from './container';
+import ContainerStory from './container';
+import TypographyStory from './typography';
 
-InputStory();
-ButtonStory();
-Typography.Headings();
-Typography.Text();
-Typography.Paragraph();
-Container();
+const stories = {
+  InputStory,
+  ButtonStory,
+  ContainerStory,
+  ...TypographyStory,
+};
+
+Object.values(stories).map((story) => {
+  story();
+});
