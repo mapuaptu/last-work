@@ -4,7 +4,8 @@
       <span :class="[
         $style.inner,
         value && $style['inner--checked'],
-        disabled && $style['inner--disabled']
+        disabled && $style['inner--disabled'],
+        $slots.default && value && $style['inner--text']
       ]"></span>
       <input
         :class="[$style.original]"
