@@ -62,11 +62,11 @@ export default {
     },
     classList() {
       return [
-        //this.size ? this._sizeClass() : 'col',
-        //this.offset ? this._offsetClass() : '',
-        //this.order ? this._orderClass() : '',
-        //this.self ? `align-self-${this.self}` : '',
-        //this.justify ? this._justifyClass() : '',
+        // this.size ? this._sizeClass() : 'col',
+        // this.offset ? this._offsetClass() : '',
+        // this.order ? this._orderClass() : '',
+        // this.self ? `align-self-${this.self}` : '',
+        // this.justify ? this._justifyClass() : '',
         this.margin ? this.marginClass : '',
       ];
     },
@@ -77,17 +77,15 @@ export default {
 
       switch (typeof params) {
         case 'object':
-          for (let index in params) {
+          for (const index in params) {
             if (!isFinite(index)) {
               classList.push(`${name}-${index}-${params[index]}`);
-            } else {
-              if (params[index] instanceof Object) {
-                for (let key in params[index]) {
-                  classList.push(`${name}-${key}-${params[index][key]}`);
-                }
-              } else {
-                classList.push(`${name}-${params[index]}`);
+            } else if (params[index] instanceof Object) {
+              for (const key in params[index]) {
+                classList.push(`${name}-${key}-${params[index][key]}`);
               }
+            } else {
+              classList.push(`${name}-${params[index]}`);
             }
           }
 
@@ -99,7 +97,7 @@ export default {
           classList.push(`${name}-${params}`);
           break;
         default:
-          for (let key in params) {
+          for (const key in params) {
             classList.push(`${name}-${key}-${params[Object.keys(params)]}`);
           }
       }
