@@ -1,6 +1,10 @@
 import { storiesOf } from '@storybook/vue';
 import { Button, Container, Row, Col } from '../src/index';
 
+import InputStory from './input';
+
+InputStory();
+
 storiesOf('Button', module)
   .add('size="default"', () => ({
     components: { 'ui-button': Button },

@@ -15,6 +15,7 @@ module.exports = {
         ExportDeclaration: 'never',
       },
     ],
+    'implicit-arrow-linebreak': 'below',
   },
   parserOptions: {
     parser: 'babel-eslint',
