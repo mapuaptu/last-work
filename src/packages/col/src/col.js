@@ -21,6 +21,10 @@ export default {
       type: String,
       default: null,
     },
+    self: {
+      type: String,
+      default: null,
+    },
     margin: {
       type: String,
       default: null,

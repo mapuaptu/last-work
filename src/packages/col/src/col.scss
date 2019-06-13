@@ -3,5 +3,10 @@
 @import '../../../styles/vendor/grid-bootstrap/utilities/spacing';
 @import '../../../styles/vendor/grid-bootstrap/mixins/grid';
 @import '../../../styles/vendor/grid-bootstrap/mixins/gridframework';
+@import '../../../styles/vendor/grid-bootstrap/utilities/flex';
 
 @include make-grid-columns();
+
+.flex {
+  display: flex;
+}

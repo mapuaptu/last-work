@@ -1,8 +1,11 @@
 <template>
   <div :class="[
-    size && $style[`col-${size}`],
+    $style.flex,
+    size ? $style[`col-${size}`] : 'col',
     offset && $style[`offset-${offset}`],
-    order && $style[`order-${order}`]
+    order && $style[`order-${order}`],
+    justify && $style[`justify-content-${justify}`],
+    align && $style[`align-items-${align}`]
   ]">
     <slot></slot>
   </div>
