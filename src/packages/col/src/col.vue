@@ -5,7 +5,8 @@
     offset && $style[`offset-${offset}`],
     order && $style[`order-${order}`],
     justify && $style[`justify-content-${justify}`],
-    align && $style[`align-items-${align}`]
+    align && $style[`align-items-${align}`],
+    self && $style[`align-self-${self}`]
   ]">
     <slot></slot>
   </div>
