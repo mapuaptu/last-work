@@ -1,5 +1,9 @@
 <template>
-  <div :class="[$style[`col-${size}`], $style[`offset-${offset}`]]">
+  <div :class="[
+    size && $style[`col-${size}`],
+    offset && $style[`offset-${offset}`],
+    order && $style[`order-${order}`]
+  ]">
     <slot></slot>
   </div>
 </template>

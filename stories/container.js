@@ -7,7 +7,7 @@ export default () =>
       components: { 'ui-container': Container, 'ui-row': Row, 'ui-col': Col },
       template: `<ui-container>
         <ui-row style="background-color: red;">
-          <ui-col size="5" offset="1" style="background-color: green;">col 1</ui-col>
+          <ui-col size="5" offset="1" order="2" style="background-color: green;">col 1</ui-col>
           <ui-col size="6" offset="2" style="background-color: blue;">col 2</ui-col>
         </ui-row>
       </ui-container>`,
