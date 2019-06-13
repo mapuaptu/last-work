@@ -1,17 +1,15 @@
 import InputStory from './input';
 import ButtonStory from './button';
-import ContainerStory from './container';
+import GridStory from './grid';
 import TypographyStory from './typography';
 import CheckboxStory from './checkbox';
 
 const stories = {
   InputStory,
   ButtonStory,
-  ContainerStory,
+  GridStory,
   CheckboxStory,
   ...TypographyStory,
 };
 
-Object.values(stories).map((story) => {
-  story();
-});
+Object.values(stories).map((story) => story());
