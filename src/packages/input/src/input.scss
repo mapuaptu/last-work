@@ -1,0 +1,267 @@
+@import './../../core/src/variables';
+
+.ez-input {
+  $this: &;
+  position: relative;
+  font-size: 14px;
+  width: 100%;
+  font-family: $font-family;
+
+  &__ico-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__ico-status {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    &_custom {
+      width: 100%;
+      height: 100%;
+      color: $color-gray-500;
+      transition: 0.2s ease color;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    color: $input-label-color;
+
+    &--file {
+      display: flex;
+      overflow: hidden;
+      box-sizing: border-box;
+      border: 1px solid $input-border-color;
+      border-radius: $input-border-radius;
+      margin: 0;
+      padding: 0 40px 0 15px;
+      width: 100%;
+      height: 40px;
+      background-image: none;
+      background-color: $input-background-color;
+      font-weight: 400;
+      font-size: inherit;
+      line-height: 40px;
+      text-overflow: ellipsis;
+      color: $input-placeholder-color;
+      transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      &.is-active {
+        color: $color-gray-800;
+      }
+    }
+  }
+
+  &__control {
+    -webkit-appearance: none;
+    background-color: $input-background-color;
+    background-image: none;
+    border-radius: $input-border-radius;
+    border: 1px solid $input-border-color;
+    box-sizing: border-box;
+    color: $input-text-color;
+    display: inline-block;
+    font-size: inherit;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    padding: 0 15px;
+    transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    width: 100%;
+
+    &:hover {
+      border-color: $brand-color-funnels;
+
+      & ~ .ez-input__ico-status_custom {
+        color: $brand-color-funnels;
+      }
+
+      & ~ .ez-input__label--file {
+        border: 1px solid $brand-color-funnels;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $brand-color-funnels;
+
+      & ~ .ez-input__ico-status_custom {
+        color: $brand-color-funnels;
+      }
+
+      & ~ .ez-input__label--file {
+        border: 1px solid $brand-color-funnels;
+      }
+    }
+
+    &:active {
+      & ~ .ez-input__ico-status_custom {
+        color: $brand-color-funnels;
+      }
+
+      & ~ .ez-input__label--file {
+        border: 1px solid $brand-color-funnels;
+      }
+    }
+
+    &.input {
+      &-search {
+        padding-left: 38px;
+        + button {
+          position: absolute;
+          color: $input-border-color-active;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
+    &::placeholder {
+      color: $input-placeholder-color;
+    }
+
+    &.input-file {
+      pointer-events: none;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+
+  &.is-disabled {
+    #{$this}__control {
+      border-color: $input-border-color-disabled;
+      background-color: $input-background-color-disabled;
+      color: $input-text-color-disabled;
+      cursor: not-allowed;
+    }
+  }
+
+  &.is-readonly {
+    #{$this}__control {
+      background-color: $color-gray-300;
+    }
+
+    .icon {
+      display: none;
+    }
+  }
+
+  &.is-icon-right {
+    #{$this}__control {
+      padding-right: $offset * 5;
+    }
+  }
+
+  &.is-icon-left {
+    ::v-deep .icon {
+      right: auto;
+      left: 0;
+    }
+    #{$this}__control {
+      padding-left: $offset * 5;
+    }
+  }
+
+  &.is-large {
+    font-size: 18px;
+
+    #{$this}__control {
+      padding-left: 18px;
+      padding-right: 18px;
+      height: 48px;
+      line-height: 48px;
+    }
+
+    #{$this}__label--file {
+      padding-left: 18px;
+      padding-right: 18px;
+      height: 48px;
+      line-height: 48px;
+    }
+  }
+
+  &.is-small {
+    #{$this}__control {
+      height: 32px;
+      line-height: 32px;
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+
+    #{$this}__label--file {
+      height: 32px;
+      line-height: 32px;
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+
+    &.is-icon-right {
+      #{$this}__ico-wrap {
+        width: 32px;
+      }
+      #{$this}__control {
+        padding-right: $offset * 4;
+      }
+    }
+  }
+
+  .is-solid & {
+    z-index: 5;
+    width: auto;
+    flex-grow: 1;
+    #{$this}__control {
+      position: relative;
+    }
+    &:not(:only-child) {
+      &:first-child {
+        margin-right: -1px;
+        #{$this}__control {
+          border-radius: $button-border-radius 0 0 $button-border-radius;
+        }
+        &:only-of-type {
+          #{$this}__control {
+            border-right: none;
+          }
+        }
+        &:not(:only-of-type) {
+          width: 100%;
+        }
+      }
+      &:last-child {
+        margin-left: -1px;
+        #{$this}__control {
+          border-left: none;
+          border-radius: 0 $button-border-radius $button-border-radius 0;
+        }
+      }
+      &:nth-of-type(2) {
+        width: auto;
+        margin-left: 1px;
+        background-color: $color-gray-50;
+        #{$this}__control {
+          width: calc(100% + 1px);
+          margin-left: -1px;
+          border-radius: 0 $button-border-radius $button-border-radius 0;
+          border-left: 1px solid transparent;
+          background-color: transparent;
+          &:focus,
+          &:hover {
+            border-left: 1px solid $brand-color-funnels;
+          }
+        }
+      }
+    }
+  }
+}
