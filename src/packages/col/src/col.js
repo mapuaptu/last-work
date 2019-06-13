@@ -27,27 +27,27 @@ export default {
     },
   },
   computed: {
-    gutter() {
-      let parent = this.$parent;
+    // gutter() {
+    //   let parent = this.$parent;
 
-      // eslint-disable-next-line
-      while (parent && parent.$options._componentTag !== 'row') {
-        parent = parent.$parent;
-      }
-      return parent ? parent.gutter : 0;
-    },
-    styleList() {
-      const style = {};
+    //   // eslint-disable-next-line
+    //   while (parent && parent.$options._componentTag !== 'row') {
+    //     parent = parent.$parent;
+    //   }
+    //   return parent ? parent.gutter : 0;
+    // },
+    // styleList() {
+    //   const style = {};
 
-      if (this.gutter) {
-        const padding = `${this.gutter / 2}px`;
+    //   if (this.gutter) {
+    //     const padding = `${this.gutter / 2}px`;
 
-        style.paddingLeft = padding;
-        style.paddingRight = padding;
-      }
+    //     style.paddingLeft = padding;
+    //     style.paddingRight = padding;
+    //   }
 
-      return style;
-    },
+    //   return style;
+    // },
     marginClass() {
       switch (this.margin) {
         case 'left':
@@ -71,49 +71,49 @@ export default {
       ];
     },
   },
-  methods: {
-    _generateClass(params, name) {
-      const classList = [];
+  // methods: {
+  //   _generateClass(params, name) {
+  //     const classList = [];
 
-      switch (typeof params) {
-        case 'object':
-          for (const index in params) {
-            if (!isFinite(index)) {
-              classList.push(`${name}-${index}-${params[index]}`);
-            } else if (params[index] instanceof Object) {
-              for (const key in params[index]) {
-                classList.push(`${name}-${key}-${params[index][key]}`);
-              }
-            } else {
-              classList.push(`${name}-${params[index]}`);
-            }
-          }
+  //     switch (typeof params) {
+  //       case 'object':
+  //         for (const index in params) {
+  //           if (!isFinite(index)) {
+  //             classList.push(`${name}-${index}-${params[index]}`);
+  //           } else if (params[index] instanceof Object) {
+  //             for (const key in params[index]) {
+  //               classList.push(`${name}-${key}-${params[index][key]}`);
+  //             }
+  //           } else {
+  //             classList.push(`${name}-${params[index]}`);
+  //           }
+  //         }
 
-          break;
-        case 'string':
-          classList.push(`${name}-${params}`);
-          break;
-        case 'number':
-          classList.push(`${name}-${params}`);
-          break;
-        default:
-          for (const key in params) {
-            classList.push(`${name}-${key}-${params[Object.keys(params)]}`);
-          }
-      }
-      return classList;
-    },
-    _offsetClass() {
-      return this._generateClass(this.offset, 'offset');
-    },
-    _sizeClass() {
-      return this._generateClass(this.size, 'col');
-    },
-    _orderClass() {
-      return this._generateClass(this.order, 'order');
-    },
-    _justifyClass() {
-      return this._generateClass(this.justify, 'justify-content');
-    },
-  },
+  //         break;
+  //       case 'string':
+  //         classList.push(`${name}-${params}`);
+  //         break;
+  //       case 'number':
+  //         classList.push(`${name}-${params}`);
+  //         break;
+  //       default:
+  //         for (const key in params) {
+  //           classList.push(`${name}-${key}-${params[Object.keys(params)]}`);
+  //         }
+  //     }
+  //     return classList;
+  //   },
+  //   _offsetClass() {
+  //     return this._generateClass(this.offset, 'offset');
+  //   },
+  //   _sizeClass() {
+  //     return this._generateClass(this.size, 'col');
+  //   },
+  //   _orderClass() {
+  //     return this._generateClass(this.order, 'order');
+  //   },
+  //   _justifyClass() {
+  //     return this._generateClass(this.justify, 'justify-content');
+  //   },
+  // },
 };

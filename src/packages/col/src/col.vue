@@ -1,13 +1,8 @@
 <template>
-  <div
-    class="col-xs-5"
-    :class="[classList]"
-    :style="styleList"
-  >
+  <div :class="[$style[`col-${size}`], $style[`offset-${offset}`]]">
     <slot></slot>
-    <pre>{{marginClass}}</pre>
   </div>
 </template>
 
 <script src="./col.js"></script>
-<style src="./col.scss" lang="scss" scope></style>
+<style src="./col.scss" lang="scss" module></style>
