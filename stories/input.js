@@ -5,20 +5,20 @@ export default () =>
   storiesOf('Input', module)
     .add('default', () => ({
       components: {
-        'ui-input': Input,
+        'dd-input': Input,
       },
       template:
-        '<ui-input placeholder="Example placeholder" value="Example text field"></ui-input>',
+        '<dd-input placeholder="Example placeholder" value="Example text field"></dd-input>',
     }))
     .add('empty', () => ({
       components: {
-        'ui-input': Input,
+        'dd-input': Input,
       },
-      template: '<ui-input placeholder="Example placeholder"></ui-input>',
+      template: '<dd-input placeholder="Example placeholder"></dd-input>',
     }))
     .add('disabled', () => ({
       components: {
-        'ui-input': Input,
+        'dd-input': Input,
       },
-      template: '<ui-input value="Example text field" disabled></ui-input>',
+      template: '<dd-input value="Example text field" disabled></dd-input>',
     }));

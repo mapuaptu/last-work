@@ -4,8 +4,8 @@ import { Checkbox } from '../src/index';
 export default () =>
   storiesOf('Checkbox', module)
     .add('default', () => ({
-      components: { 'ui-checkbox': Checkbox },
-      template: '<ui-checkbox :value="checked" @input="onInput"></ui-checkbox>',
+      components: { 'dd-checkbox': Checkbox },
+      template: '<dd-checkbox :value="checked" @input="onInput"></dd-checkbox>',
       data() {
         return {
           checked: false,
@@ -18,8 +18,8 @@ export default () =>
       },
     }))
     .add('checked', () => ({
-      components: { 'ui-checkbox': Checkbox },
-      template: '<ui-checkbox :value="checked" @input="onInput"></ui-checkbox>',
+      components: { 'dd-checkbox': Checkbox },
+      template: '<dd-checkbox :value="checked" @input="onInput"></dd-checkbox>',
       data() {
         return {
           checked: true,
@@ -32,8 +32,8 @@ export default () =>
       },
     }))
     .add('with text', () => ({
-      components: { 'ui-checkbox': Checkbox },
-      template: '<ui-checkbox :value="checked" @input="onInput">Checkbox with text</ui-checkbox>',
+      components: { 'dd-checkbox': Checkbox },
+      template: '<dd-checkbox :value="checked" @input="onInput">Checkbox with text</dd-checkbox>',
       data() {
         return {
           checked: false,
@@ -46,9 +46,9 @@ export default () =>
       },
     }))
     .add('disabled', () => ({
-      components: { 'ui-checkbox': Checkbox },
+      components: { 'dd-checkbox': Checkbox },
       template:
-        '<ui-checkbox disabled :value="checked" @input="onInput">Checkbox with text</ui-checkbox>',
+        '<dd-checkbox disabled :value="checked" @input="onInput">Checkbox with text</dd-checkbox>',
       data() {
         return {
           checked: true,
