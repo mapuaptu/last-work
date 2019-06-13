@@ -1,7 +1,7 @@
 import Inputmask from 'inputmask';
 
 export default {
-  name: 'Input',
+  name: 'dd-input',
   props: {
     value: {
       type: [String, Number],

@@ -1,5 +1,5 @@
 export default {
-  name: 'Checkbox',
+  name: 'dd-checkbox',
   props: {
     value: {
       type: [Array, Boolean],

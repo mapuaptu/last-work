@@ -1,5 +1,5 @@
 export default {
-  name: 'UiContainer',
+  name: 'dd-container',
   props: {
     fluid: {
       type: Boolean,

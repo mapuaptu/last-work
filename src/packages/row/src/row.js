@@ -1,5 +1,5 @@
 export default {
-  name: 'UiRow',
+  name: 'dd-row',
   props: {
     gutter: {
       type: [Number, String],

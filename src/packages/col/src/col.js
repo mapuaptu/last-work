@@ -1,5 +1,5 @@
 export default {
-  name: 'UiCol',
+  name: 'dd-col',
   props: {
     size: {
       type: [String, Number],
