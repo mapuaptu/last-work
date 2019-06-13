@@ -1,16 +1,12 @@
 <template>
-  <div
-    class="ez-input"
-    :class="classList"
-  >
+  <div :class="[$style.wrapper]">
     <input
-      class="ez-input__control"
-      :class="`input-${type}`"
+      :class="[$style.input]"
       :type="type"
       :disabled="disabled"
       :value="value"
       v-bind="$attrs"
-      v-on="listeners"
+      v-on="$listeners"
       ref="input"
     />
   </div>
