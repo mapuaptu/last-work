@@ -1,9 +1,9 @@
 <template>
   <label :class="[$style.wrapper]">
-    <div>
-      <span :class="[$style.inner]"></span>
+    <div :class="[$style.input]">
+      <span :class="[$style.inner, value && $style['inner--checked']]"></span>
       <input
-        :class="[$style.input]"
+        :class="[$style.original]"
         type="checkbox"
         :checked="value"
         :disabled="disabled"

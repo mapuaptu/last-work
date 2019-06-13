@@ -1,111 +1,65 @@
-@import './../../core/src/variables.scss';
+@import '../../../styles/variables';
 
-.checkbox {
-  $this: &;
-
+.wrapper {
   position: relative;
   display: inline-flex;
   align-items: center;
-  font-weight: 500;
-  font-size: 14px;
-  color: $color-text;
   white-space: nowrap;
-  user-select: none;
   cursor: pointer;
-
-  &.is-checked {
-    #{$this}__label {
-      color: $brand-color-funnels;
-
-      @each $name, $color in $brand-colors {
-        .is-service-#{$name} & {
-          color: $color;
-        }
-      }
-    }
-
-    #{$this}__inner {
-      border-color: $brand-color-funnels;
-      background-color: $brand-color-funnels;
-
-      @each $name, $color in $brand-colors {
-        .is-service-#{$name} & {
-          border-color: $color;
-          background-color: $color;
-        }
-      }
-
-      &:after {
-        transform: rotate(45deg) scaleY(1);
-      }
-    }
-  }
-
-  &.is-disabled {
-    #{$this}__inner {
-      border-color: $color-gray-300;
-      background-color: $color-gray-200;
-      cursor: not-allowed;
-    }
-
-    #{$this}__label {
-      color: $color-border;
-      cursor: not-allowed;
-    }
-  }
-
-  &.is-disabled.is-checked {
-    #{$this}__inner:after {
-      border-color: $color-border;
-    }
-  }
+  user-select: none;
 }
 
 .inner {
-  z-index: 1;
-  display: inline-flex;
   position: relative;
-  border: 1px solid $color-gray-300;
-  border-radius: 2px;
-  box-sizing: border-box;
-  width: 14px;
-  height: 14px;
+  z-index: 1;
+  display: flex;
+  border: 1px solid $color-light;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
   background-color: $color-white;
-  transition: 0.2s ease;
-  transition-property: border-color, background-color;
 
-  &:after {
+  &::after {
     content: '';
     position: absolute;
-    left: 4px;
-    top: 1px;
-    box-sizing: content-box;
-    border: 1px solid $color-white;
-    border-left: 0;
+    left: 8px;
+    top: 4px;
+    border: 2px solid $color-white;
     border-top: 0;
-    width: 3px;
-    height: 7px;
+    border-left: 0;
+    width: 6px;
+    height: 11px;
     transform: rotate(45deg) scaleY(0);
     transform-origin: center;
-    transition: transform 0.2s ease;
+  }
+
+  &--checked {
+    border-color: $color-primary;
+    background-color: $color-primary;
+
+    &::after {
+      transform: rotate(45deg) scaleY(1);
+    }
   }
 }
 
 .input {
   position: relative;
-  display: inline-flex;
-  outline: none;
-  line-height: 1;
-  white-space: nowrap;
   vertical-align: middle;
-  transition: color 0.2s ease;
+  outline: none;
+  white-space: nowrap;
   cursor: pointer;
 }
 
+.original {
+  position: absolute;
+  z-index: -1;
+  margin: 0;
+  outline: none;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
 .label {
-  display: inline-block;
-  padding-left: 10px;
-  font-size: 14px;
-  line-height: 19px;
-  transition: color 0.2s ease;
 }
