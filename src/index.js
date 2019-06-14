@@ -1,15 +1,23 @@
 import Button from './packages/button';
-import { Grid, Col } from './packages/grid';
+import Container from './packages/container';
+import Row from './packages/row';
+import Col from './packages/col';
+import Input from './packages/input';
+import Checkbox from './packages/checkbox';
+import Logo from './packages/logo';
 
 import { version } from '../package.json';
 
 
 const components = [
   Button,
-  Grid,
+  Container,
+  Row,
   Col,
-];
-
+  Input,
+  Checkbox,
+  Logo,
+};
 
 const install = (Vue) => {
   components.forEach((component) => {
@@ -17,15 +25,4 @@ const install = (Vue) => {
   });
 };
 
-if (typeof window !== 'undefined' && window.Vue) {
-  install(window.Vue);
-}
-
-export default install;
-
-export {
-  version,
-  Button,
-  Grid,
-  Col,
-};
+export { install, Button, Container, Row, Col, Input, Checkbox, Logo };

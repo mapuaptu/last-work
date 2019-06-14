@@ -1,0 +1,13 @@
+@import '../../../styles/variables';
+@import '../../../styles/vendor/grid-bootstrap/mixins/breakpoints';
+@import '../../../styles/vendor/grid-bootstrap/utilities/flex';
+@import '../../../styles/vendor/grid-bootstrap/mixins/grid';
+
+.row {
+  @include make-row();
+
+  @include media-breakpoint-down(xs) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

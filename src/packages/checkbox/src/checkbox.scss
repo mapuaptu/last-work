@@ -1,0 +1,90 @@
+@import '../../../styles/variables';
+
+.wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  border: 1px solid $color-light;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  background-color: $color-white;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    border: 2px solid $color-white;
+    border-top: 0;
+    border-left: 0;
+    width: 6px;
+    height: 11px;
+    transform: rotate(45deg) scaleY(0);
+    transform-origin: center;
+  }
+
+  &--checked {
+    border-color: $color-primary;
+    background-color: $color-primary;
+
+    &::after {
+      transform: rotate(45deg) scaleY(1);
+    }
+  }
+
+  &--text {
+    border-color: $color-light;
+    background-color: $color-white;
+
+    &::after {
+      border: 2px solid $color-secondary;
+      border-top: 0;
+      border-left: 0;
+      transform: rotate(45deg) scaleY(1);
+    }
+  }
+
+  &--disabled {
+    opacity: 0.6;
+  }
+}
+
+.input {
+  position: relative;
+  vertical-align: middle;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.original {
+  position: absolute;
+  z-index: -1;
+  margin: 0;
+  outline: none;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.label {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: $color-default;
+  cursor: initial;
+
+  &--disabled {
+    color: $color-secondary;
+  }
+}
