@@ -4,6 +4,7 @@
   "files": [
     "src/**"
   ],
+  "main": "src/index.js",
   "scripts": {
     "storybook": "start-storybook -p 9000 -s ./.storybook/assets",
     "build-storybook": "build-storybook -c .storybook -o build/storybook",

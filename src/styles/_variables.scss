@@ -1,5 +1,4 @@
 // BASE COLORS
-
 $color-white: #fff;
 $color-black: #000;
 $color-primary: #005291;
@@ -9,8 +8,7 @@ $color-secondary: #989898;
 $color-light: #e3e3e3;
 
 // STATUS COLORS
-
-$color-progress: #ffe284;
-$color-waiting: #ff9184;
-$color-testing: #84d9ff;
-$color-complete: #ceedb6;
+$color-status-progress: #ffe284;
+$color-status-waiting: #ff9184;
+$color-status-testing: #84d9ff;
+$color-status-complete: #ceedb6;
