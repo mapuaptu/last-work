@@ -17,7 +17,7 @@ const components = [
   Input,
   Checkbox,
   Logo,
-};
+];
 
 const install = (Vue) => {
   components.forEach((component) => {
@@ -25,4 +25,6 @@ const install = (Vue) => {
   });
 };
 
-export { install, Button, Container, Row, Col, Input, Checkbox, Logo };
+export default install;
+
+export { version, Button, Container, Row, Col, Input, Checkbox, Logo };

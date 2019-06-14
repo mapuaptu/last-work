@@ -1,12 +1,12 @@
 import Grid from './src/grid.vue';
-import Col from './src/col.vue';
+import Column from './src/column.vue';
 
 Grid.install = (Vue) => {
   Vue.component(Grid.name, Grid);
 };
 
-Col.install = (Vue) => {
-  Vue.component(Col.name, Col);
+Column.install = (Vue) => {
+  Vue.component(Column.name, Column);
 };
 
-export { Grid, Col };
+export { Grid, Column };
