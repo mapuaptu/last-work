@@ -14,5 +14,4 @@ const install = (Vue) => {
 };
 
 export default install;
-
-export { Button, Container, Row, Col, Input, Checkbox, Logo, version };
+export { Button, Container, Row, Col, Logo, Input, version };
