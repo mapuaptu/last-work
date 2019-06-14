@@ -5,19 +5,14 @@ import Col from './packages/col';
 import Input from './packages/input';
 import Checkbox from './packages/checkbox';
 import Logo from './packages/logo';
+import { version } from '../package.json';
 
-const components = {
-  Button,
-  Container,
-  Row,
-  Col,
-  Input,
-  Checkbox,
-  Logo,
+const components = [Button, Container, Row, Col, Input, Checkbox, Logo];
+
+const install = (Vue) => {
+  components.map((component) => Vue.component(component.name, component));
 };
 
-export default (Vue) => {
-  Object.values(components).map((component) => Vue.component(component.name, component));
-};
+export default install;
 
-export { Button, Container, Row, Col, Input, Checkbox, Logo };
+export { Button, Container, Row, Col, Input, Checkbox, Logo, version };
