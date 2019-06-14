@@ -1,5 +1,5 @@
 export default {
-  name: 'ui-button',
+  name: 'dd-button',
   props: {
     type: {
       type: String,
