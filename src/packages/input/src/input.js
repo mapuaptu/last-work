@@ -1,4 +1,4 @@
-import Inputmask from 'inputmask';
+// import Inputmask from 'inputmask';
 
 export default {
   name: 'dd-input',
@@ -22,7 +22,7 @@ export default {
   },
   mounted() {
     if (this.mask) {
-      Inputmask(this.mask).mask(this.$refs.input);
+      // Inputmask(this.mask).mask(this.$refs.input);
     }
   },
 };

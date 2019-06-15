@@ -41,17 +41,17 @@
     }
   }
 
-  &--text {
-    border-color: $color-light;
-    background-color: $color-white;
+  // &--text {
+  //   border-color: $color-light;
+  //   background-color: $color-white;
 
-    &::after {
-      border: 2px solid $color-secondary;
-      border-top: 0;
-      border-left: 0;
-      transform: rotate(45deg) scaleY(1);
-    }
-  }
+  //   &::after {
+  //     border: 2px solid $color-secondary;
+  //     border-top: 0;
+  //     border-left: 0;
+  //     transform: rotate(45deg) scaleY(1);
+  //   }
+  // }
 
   &--disabled {
     opacity: 0.6;
