@@ -1,7 +1,7 @@
 import { configure, addParameters } from '@storybook/vue';
 import theme from './dashdojoTheme'
 import 'normalize.css';
-import '../src/styles/main.scss';
+import '../src/styles/common.scss';
 
 addParameters({
   options: {
