@@ -1,5 +1,8 @@
 <template>
-  <div :class="[$style.column, columnClass]" ref="column">
+  <div
+    :class="[$style.column, columnClass]"
+    ref="column"
+  >
     <slot></slot>
   </div>
 </template>
@@ -10,53 +13,53 @@ export default {
   props: {
     size: {
       type: [Number, String],
-      default: 'auto'
-    }
+      default: 'auto',
+    },
   },
   inject: {
     getColumns: {
-      default: null
-    }
+      default: null,
+    },
   },
   data() {
     return {
-      columns: 0
-    }
+      columns: 0,
+    };
   },
   computed: {
     columnClass() {
-      return this.size && this.$style[`column-size--${this.size}`]
-    }
+      return this.size && this.$style[`column-size--${this.size}`];
+    },
   },
   mounted() {
     this.$nextTick(() => {
       this.columns = this.getColumns.count;
-    })
-  }
-}
+    });
+  },
+};
 </script>
 
 <style lang="scss" module>
-  .column {
-    display: flex;
-    background-color: antiquewhite;
-  }
+.column {
+  display: flex;
+  background-color: antiquewhite;
+}
 
-  @for $i from 1 through 12 {
-    .column-size--#{$i} {
-      grid-column: 1 / span #{$i};
-
-      @media screen and (max-width: 480px) {
-        // grid-column: span 12;
-      }
-    }
-  }
-
-  .column-size--auto {
-    grid-column: auto;
+@for $i from 1 through 12 {
+  .column-size--#{$i} {
+    grid-column: 1 / span #{$i};
 
     @media screen and (max-width: 480px) {
       // grid-column: span 12;
     }
   }
+}
+
+.column-size--auto {
+  grid-column: auto;
+
+  @media screen and (max-width: 480px) {
+    // grid-column: span 12;
+  }
+}
 </style>
