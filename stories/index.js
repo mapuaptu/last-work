@@ -1,15 +1,15 @@
 import ButtonStory from './button';
 import CheckboxStory from './checkbox';
-import InputStory from './input';
 import GridStory from './grid';
-import TypographyStory from './typography';
+import InputStory from './input';
 import LogoStory from './logo';
+import TypographyStory from './typography';
 
 const stories = {
   ButtonStory,
   CheckboxStory,
-  InputStory,
   GridStory,
+  InputStory,
   LogoStory,
   ...TypographyStory,
 };

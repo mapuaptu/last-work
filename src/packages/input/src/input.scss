@@ -16,6 +16,8 @@
   line-height: 21px;
   color: $color-default;
   background-color: $color-white;
+  transition: $transition;
+  transition-property: border, color, background-color;
 
   &::placeholder {
     color: $color-secondary;
