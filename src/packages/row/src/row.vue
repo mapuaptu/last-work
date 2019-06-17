@@ -3,7 +3,7 @@
     :class="[
       $style.row,
       $style[`justify-content-${justify}`],
-      $style[`align-items-${this.align}`]
+      $style[`align-items-${this.align}`],
     ]"
     :style="[styleGutter]"
   >

@@ -1,5 +1,8 @@
 <template>
-  <div :class="[$style.container, fluid && $style['container-fluid']]">
+  <div :class="[
+    $style.container,
+    fluid && $style['container-fluid'],
+  ]">
     <slot></slot>
   </div>
 </template>

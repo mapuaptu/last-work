@@ -1,7 +1,7 @@
 <template>
   <div
     :class="[
-    size && $style[`col-${size}`],
+    size ? $style[`col-${size}`] : $style['col-12'],
     sm && $style[`col-sm-${sm}`],
     md && $style[`col-md-${md}`],
     lg && $style[`col-lg-${lg}`],

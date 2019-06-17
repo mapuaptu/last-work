@@ -1,5 +1,5 @@
 <template>
-  <label :class="[$style.wrapper]">
+  <label :class="[$style.checkbox]">
     <div :class="[$style.input]">
       <span :class="[
         $style.inner,
