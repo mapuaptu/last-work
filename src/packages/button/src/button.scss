@@ -17,12 +17,18 @@
   text-transform: uppercase;
   color: $color-white;
   background-color: $color-primary;
+  transition: $transition;
+  transition-property: 'background-color';
   cursor: pointer;
 
   i {
     margin-right: 10px;
     font-size: #{$font-size * 1.7}px;
     line-height: #{$line-height * 1.7}px;
+  }
+
+  &:hover {
+    background-color: lighten($color-primary, 10);
   }
 
   &--small {
