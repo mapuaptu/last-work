@@ -1,7 +1,13 @@
 <template>
-  <div :class="[$style.wrapper]">
+  <div :class="[
+    $style.input,
+    fluid && $style['input--fluid'],
+  ]">
     <input
-      :class="[$style.input, disabled && $style['input--disabled']]"
+      :class="[
+        $style.inner,
+        disabled && $style['inner--disabled'],
+      ]"
       :type="type"
       :disabled="disabled"
       :value="value"

@@ -17,7 +17,11 @@ export default {
     },
     mask: {
       type: String,
-      default: '',
+      default: null,
+    },
+    fluid: {
+      type: Boolean,
+      default: false,
     },
   },
   mounted() {

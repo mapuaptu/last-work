@@ -1,7 +1,6 @@
 <template>
   <div
     :class="[
-    $style.flex,
     size && $style[`col-${size}`],
     sm && $style[`col-sm-${sm}`],
     md && $style[`col-md-${md}`],
@@ -12,6 +11,7 @@
     justify && $style[`justify-content-${justify}`],
     align && $style[`align-items-${align}`],
     self && $style[`align-self-${self}`],
+    $style.flex,
   ]"
     :style="[styleGutter]"
   >

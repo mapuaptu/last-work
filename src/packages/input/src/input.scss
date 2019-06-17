@@ -1,16 +1,21 @@
 @import '../../../styles/variables';
 
-.wrapper {
+.input {
   position: relative;
+
+  &--fluid {
+    flex: 1 0 auto;
+  }
 }
 
-.input {
+.inner {
   display: flex;
   align-items: center;
   outline: none;
   border: 1px solid $color-light;
   border-radius: 6px;
   padding: 13px 20px;
+  width: 100%;
   min-width: 280px;
   font-size: 16px;
   line-height: 21px;

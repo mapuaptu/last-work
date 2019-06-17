@@ -28,7 +28,12 @@ export default () =>
       template: '<dd-button icon="circle">ADD NEW TASK</dd-button>',
     }))
     .add(':fluid="true"', () => ({
-      components: { 'dd-button': Button, 'dd-container': Container, 'dd-row': Row, 'dd-col': Col },
+      components: {
+        'dd-button': Button,
+        'dd-container': Container,
+        'dd-row': Row,
+        'dd-col': Col,
+      },
       template: `<dd-container>
         <dd-row>
           <dd-col size="12">
