@@ -3,6 +3,10 @@
     :class="[
     $style.flex,
     size ? $style[`col-${size}`] : 'col',
+    sm && $style[`col-sm-${sm}`],
+    md && $style[`col-md-${md}`],
+    lg && $style[`col-lg-${lg}`],
+    xl && $style[`col-xl-${xl}`],
     offset && $style[`offset-${offset}`],
     order && $style[`order-${order}`],
     justify && $style[`justify-content-${justify}`],

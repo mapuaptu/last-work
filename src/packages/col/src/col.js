@@ -5,6 +5,22 @@ export default {
       type: [String, Number],
       default: null,
     },
+    sm: {
+      type: String,
+      default: null,
+    },
+    md: {
+      type: String,
+      default: null,
+    },
+    lg: {
+      type: String,
+      default: null,
+    },
+    xl: {
+      type: String,
+      default: null,
+    },
     offset: {
       type: [String, Number],
       default: null,
