@@ -1,11 +1,11 @@
 import { configure, addParameters } from '@storybook/vue';
-import theme from './dashdojoTheme'
+import theme from './dashdojoTheme';
 import 'normalize.css';
 import '../src/styles/common.scss';
 
 addParameters({
   options: {
-    theme
+    theme,
   },
 });
 
