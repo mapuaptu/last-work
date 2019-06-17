@@ -11,8 +11,8 @@ import { version } from '../package.json';
 const components = [Button, Grid, Column, Container, Row, Col, Input, Checkbox, Logo];
 
 const install = (Vue) => {
-  components.map(component => Vue.component(component.name, component));
+  components.map((component) => Vue.component(component.name, component));
 };
 
 export default install;
-export { components, version };
+export { Button, Grid, Column, Container, Row, Col, Input, Checkbox, Logo, version };
