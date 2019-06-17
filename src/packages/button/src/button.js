@@ -3,15 +3,19 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'primary',
+      default: null,
     },
     size: {
       type: String,
-      default: 'default',
+      default: null,
+    },
+    fluid: {
+      type: Boolean,
+      default: false,
     },
     icon: {
       type: String,
-      default: '',
+      default: null,
     },
   },
 };

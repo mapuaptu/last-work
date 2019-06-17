@@ -2,7 +2,7 @@
   <div
     :class="[
     $style.flex,
-    size ? $style[`col-${size}`] : 'col',
+    size && $style[`col-${size}`],
     sm && $style[`col-sm-${sm}`],
     md && $style[`col-md-${md}`],
     lg && $style[`col-lg-${lg}`],

@@ -1,7 +1,9 @@
 <template>
   <button :class="[
-    $style.button, $style[`button--${size}`],
-    $style[`button--${type}`],
+    $style.button,
+    size && $style[`button--${size}`],
+    type && $style[`button--${type}`],
+    fluid && $style['button--fluid'],
     !$slots.default &&  $style[`button--notext`]
   ]">
     <i

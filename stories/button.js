@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { Button } from '../src/index';
+import { Button, Container, Row, Col } from '../src/index';
 
 export default () =>
   storiesOf('Button', module)
@@ -26,4 +26,14 @@ export default () =>
     .add('icon="circle"', () => ({
       components: { 'dd-button': Button },
       template: '<dd-button icon="circle">ADD NEW TASK</dd-button>',
+    }))
+    .add(':fluid="true"', () => ({
+      components: { 'dd-button': Button, 'dd-container': Container, 'dd-row': Row, 'dd-col': Col },
+      template: `<dd-container>
+        <dd-row>
+          <dd-col size="12">
+          <dd-button fluid icon="circle">ADD NEW TASK</dd-button>
+          </dd-col>
+        </dd-row>
+      </dd-container>`,
     }));
