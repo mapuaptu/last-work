@@ -6,11 +6,11 @@
 
 <script>
 export default {
-  name: 'ui-col',
+  name: 'dd-column',
   props: {
     size: {
-      type: Number,
-      default: 1
+      type: [Number, String],
+      default: 'auto'
     }
   },
   inject: {
@@ -39,11 +39,24 @@ export default {
 <style lang="scss" module>
   .column {
     display: flex;
+    background-color: antiquewhite;
   }
 
   @for $i from 1 through 12 {
     .column-size--#{$i} {
-      grid-column: span #{$i};
+      grid-column: 1 / span #{$i};
+
+      @media screen and (max-width: 480px) {
+        // grid-column: span 12;
+      }
+    }
+  }
+
+  .column-size--auto {
+    grid-column: auto;
+
+    @media screen and (max-width: 480px) {
+      // grid-column: span 12;
     }
   }
 </style>
