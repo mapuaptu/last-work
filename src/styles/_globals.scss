@@ -5,12 +5,12 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 19px;
+  line-height: 22px;
   color: $color-default;
 
   h1 {
-    font-size: 26px;
-    line-height: 35px;
+    font-size: 32px;
+    line-height: 43px;
   }
 
   h2 {
@@ -30,6 +30,7 @@ body {
   h5,
   h6 {
     font-family: 'Segoe', sans-serif;
+    font-weight: 600;
   }
 
   a {
@@ -38,11 +39,11 @@ body {
 
   p {
     font-size: 16px;
-    line-height: 21px;
+    line-height: 24px;
   }
 
   small {
     font-size: 12px;
-    line-height: 16px;
+    line-height: 18px;
   }
 }
