@@ -3,7 +3,7 @@ export default {
   props: {
     width: {
       type: Number,
-      default: 380,
+      default: 381,
     },
     height: {
       type: Number,

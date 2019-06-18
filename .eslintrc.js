@@ -16,6 +16,7 @@ module.exports = {
       },
     ],
     'implicit-arrow-linebreak': 0,
+    'max-len': ['error', { code: 80 }],
   },
   parserOptions: {
     parser: 'babel-eslint',
