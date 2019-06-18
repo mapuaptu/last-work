@@ -1,9 +1,12 @@
 <template>
-  <div :class="$style.dropdown">
+  <div
+    :class="$style.dropdown"
+    @click="onClick"
+    v-click-outside="onClickOutside"
+  >
     <i
       class="fa fa-ellipsis-h"
       :class="$style.icon"
-      @click="onClick"
     ></i>
     <div
       v-if="value"
