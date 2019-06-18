@@ -6,8 +6,14 @@ export default {
     clickOutside,
   },
   props: {
-    value: Boolean,
-    default: false,
+    value: {
+      type: Boolean,
+      default: false,
+    },
+    icon: {
+      type: String,
+      default: 'ellipsis-h',
+    },
   },
   methods: {
     onClick() {

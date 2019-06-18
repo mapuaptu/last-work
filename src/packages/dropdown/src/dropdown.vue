@@ -4,15 +4,12 @@
     @click="onClick"
     v-click-outside="onClickOutside"
   >
-    <i
-      class="fa fa-ellipsis-h"
-      :class="$style.icon"
-    ></i>
+    <i :class="[$style.icon, `fa fa-${icon}`]"></i>
     <div
       v-if="value"
       :class="$style.menu"
     >
-      <div>123</div>
+      <slot></slot>
     </div>
   </div>
 </template>
