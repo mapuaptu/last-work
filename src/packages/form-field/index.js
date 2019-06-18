@@ -1,4 +1,4 @@
-import FormField from './src/form-field';
+import FormField from './src/form-field.vue';
 
 FormField.install = (Vue) => {
   Vue.component(FormField.name, FormField);

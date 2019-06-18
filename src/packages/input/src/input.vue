@@ -6,7 +6,7 @@
       :class="[
         $style.inner,
         disabled && $style['inner--disabled'],
-        status && $style[`inner--status`],
+        status && $style[`inner--${status}`],
       ]"
       :type="type"
       :disabled="disabled"
