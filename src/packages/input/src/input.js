@@ -19,10 +19,6 @@ export default {
       type: String,
       default: null,
     },
-    fluid: {
-      type: Boolean,
-      default: false,
-    },
   },
   mounted() {
     if (this.mask) {

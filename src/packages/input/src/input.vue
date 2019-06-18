@@ -1,7 +1,6 @@
 <template>
   <div :class="[
     $style.input,
-    fluid && $style['input--fluid'],
   ]">
     <input
       :class="[
