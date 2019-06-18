@@ -12,7 +12,7 @@ module.exports = {
     'object-curly-newline': [
       'error',
       {
-        ExportDeclaration: 'never',
+        ExportDeclaration: 'always',
       },
     ],
     'implicit-arrow-linebreak': 0,

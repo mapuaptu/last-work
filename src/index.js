@@ -6,13 +6,37 @@ import Col from './packages/col';
 import Input from './packages/input';
 import Checkbox from './packages/checkbox';
 import Logo from './packages/logo';
+import Dropdown from './packages/dropdown';
 import { version } from '../package.json';
 
-const components = [Button, Grid, Column, Container, Row, Col, Input, Checkbox, Logo];
+const components = [
+  Button,
+  Grid,
+  Column,
+  Container,
+  Row,
+  Col,
+  Input,
+  Checkbox,
+  Logo,
+  Dropdown,
+];
 
 const install = (Vue) => {
   components.map((component) => Vue.component(component.name, component));
 };
 
 export default install;
-export { Button, Grid, Column, Container, Row, Col, Input, Checkbox, Logo, version };
+export {
+  Button,
+  Grid,
+  Column,
+  Container,
+  Row,
+  Col,
+  Input,
+  Checkbox,
+  Logo,
+  version,
+  Dropdown,
+};

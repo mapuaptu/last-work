@@ -9,4 +9,6 @@ Column.install = (Vue) => {
   Vue.component(Column.name, Column);
 };
 
-export { Grid, Column };
+export {
+  Grid, Column,
+};

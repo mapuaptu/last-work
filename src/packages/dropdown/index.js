@@ -1,7 +1,7 @@
-import Container from './src/container.vue';
+import Dropdown from './src/dropdown.vue';
 
-Container.install = (Vue) => {
-  Vue.component(Container.name, Container);
+Dropdown.install = (Vue) => {
+  Vue.component(Dropdown.name, Dropdown);
 };
 
-export default Container;
+export default Dropdown;
