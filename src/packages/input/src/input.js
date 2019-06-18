@@ -20,6 +20,7 @@ export default {
       default: null,
     },
   },
+  inject: ['status'],
   mounted() {
     if (this.mask) {
       // Inputmask(this.mask).mask(this.$refs.input);
