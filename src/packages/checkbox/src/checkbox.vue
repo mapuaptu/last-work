@@ -13,7 +13,7 @@
         :checked="value"
         :disabled="disabled"
         v-bind="$attrs"
-        v-on="$listeners"
+        @click="onClick"
       >
     </div>
     <div

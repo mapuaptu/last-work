@@ -20,6 +20,11 @@ export default {
       default: null,
     },
   },
+  methods: {
+    onInput(event) {
+      this.$emit('input', event.target.value);
+    },
+  },
   inject: ['status'],
   mounted() {
     if (this.mask) {

@@ -1,6 +1,16 @@
 <template>
   <div :class="$style.dropdown">
-    <slot></slot>
+    <i
+      class="fa fa-ellipsis-h"
+      :class="$style.icon"
+      @click="onClick"
+    ></i>
+    <div
+      v-if="value"
+      :class="$style.menu"
+    >
+      <div>123</div>
+    </div>
   </div>
 </template>
 

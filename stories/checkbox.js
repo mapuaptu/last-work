@@ -5,58 +5,39 @@ export default () =>
   storiesOf('Checkbox', module)
     .add('default', () => ({
       components: { 'dd-checkbox': Checkbox },
-      template: '<dd-checkbox :value="checked" @input="onInput"></dd-checkbox>',
+      template: '<dd-checkbox v-model="checked">{{checked}}</dd-checkbox>',
       data() {
         return {
           checked: false,
         };
-      },
-      methods: {
-        onInput() {
-          this.checked = !this.checked;
-        },
       },
     }))
     .add('checked', () => ({
       components: { 'dd-checkbox': Checkbox },
-      template: '<dd-checkbox :value="checked" @input="onInput"></dd-checkbox>',
+      template: '<dd-checkbox v-model="checked">{{checked}}</dd-checkbox>',
       data() {
         return {
           checked: true,
         };
       },
-      methods: {
-        onInput() {
-          this.checked = !this.checked;
-        },
-      },
     }))
     .add('with text', () => ({
       components: { 'dd-checkbox': Checkbox },
-      template: '<dd-checkbox :value="checked" @input="onInput">Checkbox with text</dd-checkbox>',
+      template: `<dd-checkbox v-model="checked">
+        Checkbox with text</dd-checkbox>`,
       data() {
         return {
           checked: false,
         };
       },
-      methods: {
-        onInput() {
-          this.checked = !this.checked;
-        },
-      },
     }))
     .add('disabled', () => ({
       components: { 'dd-checkbox': Checkbox },
-      template:
-        '<dd-checkbox disabled :value="checked" @input="onInput">Checkbox with text</dd-checkbox>',
+      template: `<dd-checkbox disabled v-model="checked">
+        Checkbox with text</dd-checkbox>`,
       data() {
         return {
           checked: true,
         };
-      },
-      methods: {
-        onInput() {
-          this.checked = !this.checked;
-        },
       },
     }));

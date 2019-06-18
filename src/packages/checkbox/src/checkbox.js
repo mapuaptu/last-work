@@ -14,4 +14,9 @@ export default {
       default: '',
     },
   },
+  methods: {
+    onClick(event) {
+      this.$emit('input', event.target.checked);
+    },
+  },
 };

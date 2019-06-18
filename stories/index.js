@@ -3,6 +3,7 @@ import CheckboxStory from './checkbox';
 import GridStory from './grid';
 import InputStory from './input';
 import LogoStory from './logo';
+import DropdownStory from './dropdown';
 import TypographyStory from './typography';
 
 const stories = {
@@ -11,6 +12,7 @@ const stories = {
   GridStory,
   InputStory,
   LogoStory,
+  DropdownStory,
   ...TypographyStory,
 };
 

@@ -8,6 +8,7 @@ import Checkbox from './packages/checkbox';
 import Logo from './packages/logo';
 import Dropdown from './packages/dropdown';
 import FormField from './packages/form-field';
+
 import { version } from '../package.json';
 
 const components = [

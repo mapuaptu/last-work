@@ -3,7 +3,7 @@ export default {
   props: {
     status: {
       type: String,
-      default: null,
+      default: '',
     },
   },
   provide() {

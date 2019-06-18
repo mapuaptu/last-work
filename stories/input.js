@@ -9,15 +9,26 @@ export default () =>
         'dd-container': Container,
         'dd-row': Row,
         'dd-col': Col,
+        'dd-form-field': FormField,
+      },
+      data() {
+        return {
+          model: 'Example text field',
+        };
       },
       template: `<dd-container>
         <dd-row>
           <dd-col>
+          <dd-form-field>
             <dd-input
               placeholder="Example placeholder"
-              value="Example text field">
+              v-model="model">
             </dd-input>
+          </dd-form-field>
           </dd-col>
+        </dd-row>
+        <dd-row>
+          <dd-col>{{model}}</dd-col>
         </dd-row>
       </dd-container>`,
     }))
@@ -27,13 +38,26 @@ export default () =>
         'dd-container': Container,
         'dd-row': Row,
         'dd-col': Col,
+        'dd-form-field': FormField,
+      },
+      data() {
+        return {
+          model: '',
+        };
       },
       template: `<dd-container>
         <dd-row>
           <dd-col>
-            <dd-input placeholder="Example placeholder">
+          <dd-form-field>
+            <dd-input
+              placeholder="Example placeholder"
+              v-model="model">
             </dd-input>
+          </dd-form-field>
           </dd-col>
+        </dd-row>
+        <dd-row>
+          <dd-col>{{model}}</dd-col>
         </dd-row>
       </dd-container>`,
     }))
@@ -43,16 +67,26 @@ export default () =>
         'dd-container': Container,
         'dd-row': Row,
         'dd-col': Col,
+        'dd-form-field': FormField,
+      },
+      data() {
+        return {
+          model: '',
+        };
       },
       template: `<dd-container>
         <dd-row>
           <dd-col>
+          <dd-form-field>
             <dd-input
               placeholder="Example placeholder"
-              disabled
-              value="Example text field">
+              v-model="model" disabled>
             </dd-input>
+          </dd-form-field>
           </dd-col>
+        </dd-row>
+        <dd-row>
+          <dd-col>{{model}}</dd-col>
         </dd-row>
       </dd-container>`,
     }))
@@ -64,16 +98,24 @@ export default () =>
         'dd-col': Col,
         'dd-form-field': FormField,
       },
+      data() {
+        return {
+          model: 'Example text field',
+        };
+      },
       template: `<dd-container>
         <dd-row>
           <dd-col>
           <dd-form-field status="success">
             <dd-input
               placeholder="Example placeholder"
-              value="Example text field">
+              v-model="model">
             </dd-input>
           </dd-form-field>
           </dd-col>
+        </dd-row>
+        <dd-row>
+          <dd-col>{{model}}</dd-col>
         </dd-row>
       </dd-container>`,
     }))
@@ -85,16 +127,24 @@ export default () =>
         'dd-col': Col,
         'dd-form-field': FormField,
       },
+      data() {
+        return {
+          model: 'Example text field',
+        };
+      },
       template: `<dd-container>
         <dd-row>
           <dd-col>
           <dd-form-field status="error">
             <dd-input
               placeholder="Example placeholder"
-              value="Example text field">
+              v-model="model">
             </dd-input>
           </dd-form-field>
           </dd-col>
+        </dd-row>
+        <dd-row>
+          <dd-col>{{model}}</dd-col>
         </dd-row>
       </dd-container>`,
     }));
