@@ -4,7 +4,8 @@
     size && $style[`button--${size}`],
     type && $style[`button--${type}`],
     fluid && $style['button--fluid'],
-    !$slots.default &&  $style[`button--notext`]
+    icon && $style['button--icon'],
+    !$slots.default &&  $style[`button--notext`],
   ]">
     <i
       v-if="icon"
