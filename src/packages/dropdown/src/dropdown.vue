@@ -7,7 +7,10 @@
     <i :class="[$style.icon, `fa fa-${icon}`]"></i>
     <div
       v-if="value"
-      :class="$style.menu"
+      :class="[
+        $style.menu,
+        position && $style[`menu--${position}`],
+      ]"
     >
       <slot></slot>
     </div>

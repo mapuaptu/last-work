@@ -54,4 +54,30 @@ export default () =>
         {{item.title}}
       </dd-dropdown-item>
     </dd-dropdown>`,
+    }))
+    .add('position="bottom-left"', () => ({
+      components: { 'dd-dropdown': Dropdown, 'dd-dropdown-item': DropdownItem },
+      data() {
+        return {
+          open: false,
+          menu: [
+            {
+              title: 'Archive',
+            },
+            {
+              title: 'Rename',
+            },
+            {
+              title: 'Delete',
+            },
+          ],
+        };
+      },
+      template: `<div style="display: flex; justify-content: flex-end;">
+      <dd-dropdown v-model="open" position="bottom-left">
+        <dd-dropdown-item v-for="(item, index) in menu" :key="index">
+          {{item.title}}
+        </dd-dropdown-item>
+      </dd-dropdown>
+    </div>`,
     }));

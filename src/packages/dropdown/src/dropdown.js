@@ -14,6 +14,10 @@ export default {
       type: String,
       default: 'ellipsis-h',
     },
+    position: {
+      type: String,
+      default: 'bottom-right',
+    },
   },
   methods: {
     onClick() {
