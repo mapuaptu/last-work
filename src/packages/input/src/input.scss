@@ -11,9 +11,9 @@
   outline: none;
   border: 1px solid $color-light;
   border-radius: 6px;
-  padding: 13px 20px;
+  padding: 12px;
   width: 100%;
-  min-width: 280px;
+  min-height: 48px;
   font-size: 16px;
   line-height: 21px;
   color: $color-default;
@@ -32,5 +32,31 @@
   &--disabled {
     color: $color-secondary;
     background-color: $color-background;
+  }
+
+  &--success {
+    border: 1px solid $color-message-success;
+    color: $color-message-success;
+
+    &::placeholder {
+      color: lighten($color-message-success, 20);
+    }
+
+    &:focus {
+      border: 1px solid $color-message-success;
+    }
+  }
+
+  &--error {
+    border: 1px solid $color-message-error;
+    color: $color-message-error;
+
+    &::placeholder {
+      color: lighten($color-message-error, 20);
+    }
+
+    &:focus {
+      border: 1px solid $color-message-error;
+    }
   }
 }
