@@ -2,7 +2,38 @@
 
 .input {
   position: relative;
+  display: flex;
   flex: 1 0 auto;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  right: 15px;
+  font-size: 20px;
+
+  &--small {
+    right: 10px;
+    font-size: 15px;
+  }
+
+  &--medium {
+    right: 20px;
+    font-size: 25px;
+  }
+
+  &--large {
+    right: 25px;
+    font-size: 30px;
+  }
+
+  &--success {
+    color: $color-message-success;
+  }
+
+  &--error {
+    color: $color-message-error;
+  }
 }
 
 .inner {
@@ -12,6 +43,7 @@
   border: 1px solid $color-light;
   border-radius: 6px;
   padding: 12px 14px;
+  padding-right: 45px;
   width: 100%;
   min-height: 48px;
   font-size: 16px;
@@ -36,6 +68,7 @@
 
   &--small {
     padding: 5px 14px;
+    padding-right: 35px;
     min-height: 32px;
     font-size: 12px;
     line-height: 19px;
@@ -43,6 +76,7 @@
 
   &--medium {
     padding: 15px 14px;
+    padding-right: 65px;
     min-height: 56px;
     font-size: 18px;
     line-height: 24px;
@@ -50,6 +84,7 @@
 
   &--large {
     padding: 18px 14px;
+    padding-right: 80px;
     min-height: 64px;
     font-size: 20px;
     line-height: 27px;

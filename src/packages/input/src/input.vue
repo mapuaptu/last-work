@@ -16,6 +16,14 @@
       @input="onInput"
       ref="input"
     />
+    <i :class="[
+      $style.icon,
+      'fa',
+      status === 'success' ? [$style['icon--success'],'fa-check-circle'] :
+      status === 'error' ? [$style['icon--error'], 'fa-exclamation-circle']: '',
+      size && $style[`icon--${size}`],
+    ]">
+    </i>
   </div>
 </template>
 
