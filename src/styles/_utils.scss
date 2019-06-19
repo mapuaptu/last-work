@@ -2,7 +2,12 @@
 @import './vendor/grid-bootstrap/variables';
 @import './vendor/grid-bootstrap/mixins/clearfix';
 @import './vendor/grid-bootstrap/mixins/breakpoints';
+@import './vendor/grid-bootstrap/mixins/text-truncate';
+@import './vendor/grid-bootstrap/mixins/text-emphasis';
+@import './vendor/grid-bootstrap/mixins/text-hide';
+@import './vendor/grid-bootstrap/mixins/hover';
 @import './vendor/grid-bootstrap/utilities/align';
+@import './vendor/grid-bootstrap/utilities/text';
 @import './vendor/grid-bootstrap/utilities/clearfix';
 @import './vendor/grid-bootstrap/utilities/display';
 @import './vendor/grid-bootstrap/utilities/flex';
