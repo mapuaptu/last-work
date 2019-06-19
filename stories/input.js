@@ -27,9 +27,6 @@ export default () =>
           </dd-form-field>
           </dd-col>
         </dd-row>
-        <dd-row>
-          <dd-col>{{model}}</dd-col>
-        </dd-row>
       </dd-container>`,
     }))
     .add('empty', () => ({
@@ -39,11 +36,6 @@ export default () =>
         'dd-row': Row,
         'dd-col': Col,
         'dd-form-field': FormField,
-      },
-      data() {
-        return {
-          model: '',
-        };
       },
       template: `<dd-container>
         <dd-row>
@@ -55,9 +47,6 @@ export default () =>
             </dd-input>
           </dd-form-field>
           </dd-col>
-        </dd-row>
-        <dd-row>
-          <dd-col>{{model}}</dd-col>
         </dd-row>
       </dd-container>`,
     }))
@@ -71,7 +60,7 @@ export default () =>
       },
       data() {
         return {
-          model: '',
+          model: 'Example text field',
         };
       },
       template: `<dd-container>
@@ -84,9 +73,6 @@ export default () =>
             </dd-input>
           </dd-form-field>
           </dd-col>
-        </dd-row>
-        <dd-row>
-          <dd-col>{{model}}</dd-col>
         </dd-row>
       </dd-container>`,
     }))
@@ -114,9 +100,6 @@ export default () =>
           </dd-form-field>
           </dd-col>
         </dd-row>
-        <dd-row>
-          <dd-col>{{model}}</dd-col>
-        </dd-row>
       </dd-container>`,
     }))
     .add('error', () => ({
@@ -143,8 +126,86 @@ export default () =>
           </dd-form-field>
           </dd-col>
         </dd-row>
+      </dd-container>`,
+    }))
+    .add('size="small"', () => ({
+      components: {
+        'dd-input': Input,
+        'dd-container': Container,
+        'dd-row': Row,
+        'dd-col': Col,
+        'dd-form-field': FormField,
+      },
+      data() {
+        return {
+          model: 'Example text field',
+        };
+      },
+      template: `<dd-container>
         <dd-row>
-          <dd-col>{{model}}</dd-col>
+          <dd-col>
+          <dd-form-field>
+            <dd-input
+              size="small"
+              placeholder="Example placeholder"
+              v-model="model">
+            </dd-input>
+          </dd-form-field>
+          </dd-col>
+        </dd-row>
+      </dd-container>`,
+    }))
+    .add('size="medium"', () => ({
+      components: {
+        'dd-input': Input,
+        'dd-container': Container,
+        'dd-row': Row,
+        'dd-col': Col,
+        'dd-form-field': FormField,
+      },
+      data() {
+        return {
+          model: 'Example text field',
+        };
+      },
+      template: `<dd-container>
+        <dd-row>
+          <dd-col>
+          <dd-form-field>
+            <dd-input
+              size="medium"
+              placeholder="Example placeholder"
+              v-model="model">
+            </dd-input>
+          </dd-form-field>
+          </dd-col>
+        </dd-row>
+      </dd-container>`,
+    }))
+    .add('size="large"', () => ({
+      components: {
+        'dd-input': Input,
+        'dd-container': Container,
+        'dd-row': Row,
+        'dd-col': Col,
+        'dd-form-field': FormField,
+      },
+      data() {
+        return {
+          model: 'Example text field',
+        };
+      },
+      template: `<dd-container>
+        <dd-row>
+          <dd-col>
+          <dd-form-field>
+            <dd-input
+              size="large"
+              placeholder="Example placeholder"
+              v-model="model">
+            </dd-input>
+          </dd-form-field>
+          </dd-col>
         </dd-row>
       </dd-container>`,
     }));

@@ -7,6 +7,7 @@
         $style.inner,
         disabled && $style['inner--disabled'],
         status && $style[`inner--${status}`],
+        size && $style[`inner--${size}`],
       ]"
       :type="type"
       :disabled="disabled"

@@ -15,6 +15,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    size: {
+      type: String,
+      default: '',
+    },
     mask: {
       type: String,
       default: null,

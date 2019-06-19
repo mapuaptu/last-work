@@ -11,7 +11,7 @@
   outline: none;
   border: 1px solid $color-light;
   border-radius: 6px;
-  padding: 12px;
+  padding: 12px 14px;
   width: 100%;
   min-height: 48px;
   font-size: 16px;
@@ -32,6 +32,27 @@
   &--disabled {
     color: $color-secondary;
     background-color: $color-background;
+  }
+
+  &--small {
+    padding: 5px 14px;
+    min-height: 32px;
+    font-size: 12px;
+    line-height: 19px;
+  }
+
+  &--medium {
+    padding: 15px 14px;
+    min-height: 56px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &--large {
+    padding: 18px 14px;
+    min-height: 64px;
+    font-size: 20px;
+    line-height: 27px;
   }
 
   &--success {
