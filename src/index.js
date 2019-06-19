@@ -8,6 +8,7 @@ import Checkbox from './packages/checkbox';
 import Logo from './packages/logo';
 import Dropdown from './packages/dropdown';
 import DropdownItem from './packages/dropdown-item';
+import Form from './packages/form';
 import FormField from './packages/form-field';
 import Radio from './packages/radio';
 
@@ -25,6 +26,7 @@ const components = [
   Logo,
   Dropdown,
   DropdownItem,
+  Form,
   FormField,
   Radio,
 ];
@@ -47,6 +49,7 @@ export {
   version,
   Dropdown,
   DropdownItem,
+  Form,
   FormField,
   Radio,
 };

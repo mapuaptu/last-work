@@ -1,5 +1,8 @@
 <template>
-  <form action="">
+  <form
+    action=""
+    :class="[$style.form]"
+  >
     <slot></slot>
   </form>
 </template>
