@@ -5,6 +5,7 @@ import InputStory from './input';
 import LogoStory from './logo';
 import DropdownStory from './dropdown';
 import TypographyStory from './typography';
+import RadioStory from './radio';
 
 const stories = {
   ButtonStory,
@@ -13,6 +14,7 @@ const stories = {
   InputStory,
   LogoStory,
   DropdownStory,
+  RadioStory,
   ...TypographyStory,
 };
 

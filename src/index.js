@@ -9,6 +9,7 @@ import Logo from './packages/logo';
 import Dropdown from './packages/dropdown';
 import DropdownItem from './packages/dropdown-item';
 import FormField from './packages/form-field';
+import Radio from './packages/radio';
 
 import { version } from '../package.json';
 
@@ -25,6 +26,7 @@ const components = [
   Dropdown,
   DropdownItem,
   FormField,
+  Radio,
 ];
 
 const install = (Vue) => {
@@ -46,4 +48,5 @@ export {
   Dropdown,
   DropdownItem,
   FormField,
+  Radio,
 };
