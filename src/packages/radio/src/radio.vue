@@ -1,15 +1,25 @@
 <template>
   <div :class="[$style.radio]">
-    <input
-      :class="[$style.inner]"
-      type="radio"
-      :disabled="disabled"
-      :value="label"
-      :checked="isChecked"
-      v-bind="$attrs"
-      @change="onChange"
-    />
-    <div :class="[$style.label]">{{label}}</div>
+    <div :class="[$style.input]">
+      <div :class="[
+        $style.inner,
+        isChecked && $style['inner--checked'],
+        disabled && $style['inner--disabled'],
+      ]"></div>
+      <input
+        :class="[$style.original]"
+        type="radio"
+        :disabled="disabled"
+        :value="label"
+        :checked="isChecked"
+        v-bind="$attrs"
+        @change="onChange"
+      />
+    </div>
+    <div
+      v-if="label"
+      :class="[$style.label]"
+    >{{label}}</div>
   </div>
 </template>
 
