@@ -93,6 +93,8 @@ export default () =>
         <dd-row>
           <dd-col>
           <dd-form-field status="success">
+            <template #label>Label example</template>
+            <template #message>Helper text for example</template>
             <dd-input
               placeholder="Example placeholder"
               v-model="model">
@@ -119,6 +121,8 @@ export default () =>
         <dd-row>
           <dd-col>
           <dd-form-field status="error">
+            <template #label>Label example</template>
+            <template #message>Helper text for example</template>
             <dd-input
               placeholder="Example placeholder"
               v-model="model">

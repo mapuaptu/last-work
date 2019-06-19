@@ -1,3 +1,26 @@
+@import '../../../styles/variables';
+
 .field {
   flex: 1 0 auto;
+}
+
+.label {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.message {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 14px;
+  color: $color-link;
+
+  &--success {
+    color: $color-message-success;
+  }
+
+  &--error {
+    color: $color-message-error;
+  }
 }

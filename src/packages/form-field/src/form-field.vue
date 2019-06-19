@@ -2,7 +2,19 @@
   <div :class="[
     $style.field,
   ]">
+    <div
+      v-if="$slots.label"
+      :class="[$style.label]"
+    >
+      <slot name="label"></slot>
+    </div>
     <slot></slot>
+    <div
+      v-if="$slots.message"
+      :class="[$style.message, status && $style[`message--${status}`]]"
+    >
+      <slot name="message"></slot>
+    </div>
   </div>
 </template>
 
