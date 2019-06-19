@@ -25,7 +25,11 @@ export default {
       this.$emit('input', event.target.value);
     },
   },
-  inject: ['status'],
+  inject: {
+    status: {
+      default: null,
+    },
+  },
   mounted() {
     if (this.mask) {
       // Inputmask(this.mask).mask(this.$refs.input);
