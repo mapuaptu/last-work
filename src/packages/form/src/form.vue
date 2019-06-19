@@ -2,6 +2,7 @@
   <form
     action=""
     :class="[$style.form]"
+    @submit="onSubmit"
   >
     <slot></slot>
   </form>
