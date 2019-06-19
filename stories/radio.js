@@ -9,11 +9,22 @@ export default () =>
       'dd-col': Col,
       'dd-radio': Radio,
     },
+    data() {
+      return {
+        current: '',
+      };
+    },
     template: `<dd-container>
       <dd-row>
         <dd-col>
-          <dd-raido></dd-radio>
+          <dd-radio v-model="current" label="Radio with text">
+          </dd-radio>
+          <dd-radio v-model="current" label="Radio with text 2">
+          </dd-radio>
         </dd-col>
+      </dd-row>
+      <dd-row>
+        <dd-col>{{current}}</dd-col>
       </dd-row>
     </dd-container>`,
   }));

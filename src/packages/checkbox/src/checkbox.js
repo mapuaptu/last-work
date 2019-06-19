@@ -15,7 +15,7 @@ export default {
     },
   },
   methods: {
-    onClick(event) {
+    onChange(event) {
       this.$emit('input', event.target.checked);
     },
   },
