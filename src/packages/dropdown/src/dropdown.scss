@@ -35,5 +35,49 @@
   &--bottom-left {
     left: initial;
     right: 0;
+    top: 100%;
+    bottom: initial;
+  }
+
+  &--right-bottom {
+    left: 100%;
+    right: initial;
+    top: 0;
+    bottom: initial;
+  }
+
+  &--right-top {
+    left: 100%;
+    right: initial;
+    top: initial;
+    bottom: 0;
+  }
+
+  &--top-right {
+    left: 0;
+    right: initial;
+    top: initial;
+    bottom: 100%;
+  }
+
+  &--top-left {
+    left: initial;
+    right: 0;
+    top: initial;
+    bottom: 100%;
+  }
+
+  &--left-top {
+    left: initial;
+    right: 100%;
+    top: initial;
+    bottom: 0;
+  }
+
+  &--left-bottom {
+    left: initial;
+    right: 100%;
+    top: 0;
+    bottom: initial;
   }
 }
