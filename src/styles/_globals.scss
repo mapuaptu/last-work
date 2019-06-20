@@ -46,4 +46,10 @@ body {
     font-size: 12px;
     line-height: 18px;
   }
+
+  .block-link {
+    display: flex;
+    flex: 1 0 auto;
+    text-decoration: none;
+  }
 }
