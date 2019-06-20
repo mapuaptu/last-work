@@ -11,6 +11,7 @@ import DropdownItem from './packages/dropdown-item';
 import Form from './packages/form';
 import FormField from './packages/form-field';
 import Radio from './packages/radio';
+import Panel from './packages/panel';
 
 import { version } from '../package.json';
 
@@ -29,6 +30,7 @@ const components = [
   Form,
   FormField,
   Radio,
+  Panel,
 ];
 
 const install = (Vue) => {
@@ -52,4 +54,5 @@ export {
   Form,
   FormField,
   Radio,
+  Panel,
 };
