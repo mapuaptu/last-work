@@ -9,9 +9,9 @@ module.exports = async ({ config, mode }) => {
   // Make whatever fine-grained changes you need
   config.module.rules.push(
     {
-      test: /\.stories\.jsx?$/,
-      loaders: [require.resolve('@storybook/addon-storysource/loader')],
-      enforce: 'pre',
+      test: /\.vue$/,
+      loader: 'storybook-addon-vue-info/loader',
+      enforce: 'post',
     },
     {
       test: /\.scss$/,
