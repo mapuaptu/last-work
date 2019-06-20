@@ -5,9 +5,5 @@ export default {
       type: Boolean,
       default: false,
     },
-    width: {
-      type: Number,
-      default: null,
-    },
   },
 };

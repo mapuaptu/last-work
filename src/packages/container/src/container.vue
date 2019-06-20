@@ -1,11 +1,8 @@
 <template>
-  <div
-    :class="[
+  <div :class="[
     $style.container,
     fluid && $style['container-fluid'],
-  ]"
-    :style="{width: `${width}px`}"
-  >
+  ]">
     <slot></slot>
   </div>
 </template>
