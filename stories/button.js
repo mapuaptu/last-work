@@ -1,11 +1,13 @@
 import { storiesOf } from '@storybook/vue';
+import { action } from '@storybook/addon-actions';
 import { Button, Container, Row, Col } from '../src/index';
 
 export default () =>
   storiesOf('Button', module)
     .add('size="default"', () => ({
       components: { 'dd-button': Button },
-      template: '<dd-button size="default">ADD NEW TASK</dd-button>',
+      template: `<dd-button size="default"
+          @click="">Add new task</dd-button>`,
     }))
     .add('size="small"', () => ({
       components: { 'dd-button': Button },
@@ -34,13 +36,7 @@ export default () =>
         'dd-row': Row,
         'dd-col': Col,
       },
-      template: `<dd-container>
-        <dd-row>
-          <dd-col size="12">
-          <dd-button :fluid="false" icon="circle">ADD NEW TASK</dd-button>
-          </dd-col>
-        </dd-row>
-      </dd-container>`,
+      template: '<dd-button icon="circle">ADD NEW TASK</dd-button>',
     }))
     .add(':fluid="true"', () => ({
       components: {
