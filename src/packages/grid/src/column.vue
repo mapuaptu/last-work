@@ -40,9 +40,11 @@ export default {
 </script>
 
 <style lang="scss" module>
+@import '../../../styles/variables';
+
 .column {
   display: flex;
-  background-color: antiquewhite;
+  background-color: $color-light;
 }
 
 @for $i from 1 through 12 {

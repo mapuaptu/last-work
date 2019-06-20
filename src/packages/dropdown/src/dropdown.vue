@@ -1,10 +1,12 @@
 <template>
   <div
     :class="$style.dropdown"
-    @click="onClick"
     v-click-outside="onClickOutside"
   >
-    <i :class="[$style.icon, `fa fa-${icon}`]"></i>
+    <i
+      :class="[$style.icon, `fa fa-${icon}`]"
+      @click="onClick"
+    ></i>
     <div
       v-if="value"
       :class="[
@@ -12,7 +14,13 @@
         position && $style[`menu--${position}`],
       ]"
     >
-      <slot></slot>
+      <div
+        v-if="$slots.default"
+        @click="$emit('input', false)"
+      >
+        <slot></slot>
+      </div>
+
     </div>
   </div>
 </template>

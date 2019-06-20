@@ -12,20 +12,30 @@
   transition: $transition;
   transition-property: background-color;
   cursor: pointer;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 20px;
 
   &:hover {
     background-color: $color-light;
   }
 }
 
-.icon {
-  font-size: 20px;
-}
-
 .menu {
   position: absolute;
   left: 0;
-  top: 100%;
+  top: calc(100% + 4px);
   overflow: hidden;
   border-radius: 6px;
   min-width: 212px;
@@ -35,19 +45,19 @@
   &--bottom-left {
     left: initial;
     right: 0;
-    top: 100%;
+    top: calc(100% + 4px);
     bottom: initial;
   }
 
   &--right-bottom {
-    left: 100%;
+    left: calc(100% + 4px);
     right: initial;
     top: 0;
     bottom: initial;
   }
 
   &--right-top {
-    left: 100%;
+    left: calc(100% + 4px);
     right: initial;
     top: initial;
     bottom: 0;
@@ -57,26 +67,26 @@
     left: 0;
     right: initial;
     top: initial;
-    bottom: 100%;
+    bottom: calc(100% + 4px);
   }
 
   &--top-left {
     left: initial;
     right: 0;
     top: initial;
-    bottom: 100%;
+    bottom: calc(100% + 4px);
   }
 
   &--left-top {
     left: initial;
-    right: 100%;
+    right: calc(100% + 4px);
     top: initial;
     bottom: 0;
   }
 
   &--left-bottom {
     left: initial;
-    right: 100%;
+    right: calc(100% + 4px);
     top: 0;
     bottom: initial;
   }
