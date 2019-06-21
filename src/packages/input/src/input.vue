@@ -6,7 +6,7 @@
       :class="[
         $style.inner,
         disabled && $style['inner--disabled'],
-        status && $style[`inner--${status}`],
+        root.status && $style[`inner--${root.status}`],
         size && $style[`inner--${size}`],
       ]"
       :type="type"
@@ -19,8 +19,9 @@
     <i :class="[
       $style.icon,
       'fa',
-      status === 'success' ? [$style['icon--success'],'fa-check-circle'] :
-      status === 'error' ? [$style['icon--error'], 'fa-exclamation-circle']: '',
+      root.status === 'success' ? [$style['icon--success'],'fa-check-circle'] :
+      root.status === 'error' ?
+      [$style['icon--error'], 'fa-exclamation-circle']: '',
       size && $style[`icon--${size}`],
     ]">
     </i>

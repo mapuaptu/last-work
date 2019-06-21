@@ -7,8 +7,13 @@ export default {
     },
   },
   provide() {
-    return {
-      status: this.status,
-    };
+    const root = {};
+
+    Object.defineProperty(root, 'status', {
+      enumerable: true,
+      get: () => this.status,
+    });
+
+    return { root };
   },
 };

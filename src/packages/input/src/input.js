@@ -30,7 +30,7 @@ export default {
     },
   },
   inject: {
-    status: {
+    root: {
       default: null,
     },
   },
