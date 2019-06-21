@@ -1,17 +1,6 @@
 <template>
-  <button :class="[
-    $style.button,
-    size && $style[`button--${size}`],
-    type && $style[`button--${type}`],
-    fluid && $style['button--fluid'],
-    icon && $style['button--icon'],
-    !$slots.default &&  $style[`button--notext`],
-  ]">
-    <i
-      v-if="icon"
-      class="fa"
-      :class="`fa-${icon}`"
-    ></i>
+  <button :class="classList" @click="$emit('click', $event)">
+    <i v-if="icon" class="fa" :class="`fa-${icon}`"></i>
     <span v-if="$slots.default">
       <slot></slot>
     </span>

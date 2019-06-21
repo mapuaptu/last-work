@@ -1,8 +1,8 @@
 @import '../../../styles/variables';
 
 .button {
-  --font-size: 14;
-  --line-height: 19;
+  --font-size: 14px;
+  --line-height: 19px;
 
   display: flex;
   align-items: center;
@@ -14,8 +14,8 @@
   padding-left: 24px;
   min-height: 48px;
   font-weight: 700;
-  font-size: calc(var(--font-size) * 1px);
-  line-height: calc(var(--line-height) * 1px);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   text-transform: uppercase;
   color: $color-white;
   background-color: $color-primary;
@@ -25,10 +25,8 @@
 
   i {
     position: relative;
-    top: -1px;
     margin-right: 6px;
-    font-size: calc(var(--font-size) * 1.4px);
-    line-height: calc(var(--line-height) * 1.4px);
+    font-size: 1em * 1.4;
   }
 
   &:hover {

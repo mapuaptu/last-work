@@ -1,6 +1,10 @@
-import { configure, addParameters } from '@storybook/vue';
+import { configure, addParameters, addDecorator } from '@storybook/vue';
+import centered from '@storybook/addon-centered/vue';
+import { withInfo } from 'storybook-addon-vue-info';
 import theme from './dashdojoTheme';
 import '../src/styles/common.scss';
+
+addDecorator(centered, withInfo);
 
 addParameters({
   options: {

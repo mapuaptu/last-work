@@ -39,6 +39,7 @@ const install = (Vue) => {
 
 export default install;
 export {
+  version,
   Button,
   Grid,
   Column,
@@ -48,7 +49,6 @@ export {
   Input,
   Checkbox,
   Logo,
-  version,
   Dropdown,
   DropdownItem,
   Form,
