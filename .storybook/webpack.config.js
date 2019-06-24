@@ -20,15 +20,11 @@ module.exports = async ({ config, mode }) => {
         {
           loader: 'css-loader',
           options: {
-            // enable CSS Modules
-            modules: true,
-            // customize generated class names
-            localIdentName: '[local]_[hash:base64:8]',
+            modules: { localIdentName: '[local]_[hash:base64:8]' },
           },
         },
         'sass-loader',
       ],
-      include: path.resolve(__dirname, '../'),
     },
   );
 

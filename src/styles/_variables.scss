@@ -20,6 +20,17 @@ $color-status-complete: #ceedb6;
 $color-message-success: #58c556;
 $color-message-error: #f0503d;
 
+// MAP COLORS
+
+$colors: (
+  progress: $color-status-progress,
+  waiting: $color-status-waiting,
+  testing: $color-status-testing,
+  complete: $color-status-complete,
+  success: $color-message-success,
+  error: $color-message-error,
+);
+
 // OTHER
 
 $transition: 0.2s ease;

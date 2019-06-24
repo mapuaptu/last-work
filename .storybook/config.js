@@ -2,7 +2,7 @@ import { configure, addParameters, addDecorator } from '@storybook/vue';
 import centered from '@storybook/addon-centered/vue';
 import { withInfo } from 'storybook-addon-vue-info';
 import theme from './dashdojoTheme';
-import '../src/styles/common.scss';
+import '!style-loader!css-loader!sass-loader!./../src/styles/common.scss';
 
 centered().data().innerStyle = {
   display: 'flex',

@@ -56,7 +56,8 @@ export default () =>
             ),
           },
         },
-        template: `<dd-dropdown v-model="open" :icon="icon"
+        template: `<dd-dropdown v-model="open"
+        :icon="icon"
         :position="position">
         <dd-dropdown-item v-for="(item, index) in menu" :key="index">
           {{item.title}}
