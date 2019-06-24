@@ -4,6 +4,7 @@ import Container from './packages/container';
 import Row from './packages/row';
 import Col from './packages/col';
 import Input from './packages/input';
+import Icon from './packages/icon';
 import Checkbox from './packages/checkbox';
 import Logo from './packages/logo';
 import Dropdown from './packages/dropdown';
@@ -23,6 +24,7 @@ const components = [
   Row,
   Col,
   Input,
+  Icon,
   Checkbox,
   Logo,
   Dropdown,
@@ -47,6 +49,7 @@ export {
   Row,
   Col,
   Input,
+  Icon,
   Checkbox,
   Logo,
   Dropdown,
