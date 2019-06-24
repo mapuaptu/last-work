@@ -7,21 +7,23 @@
       :class="[$style.icon, `fa fa-${icon}`]"
       @click="onClick"
     ></i>
-    <div
-      v-if="value"
-      :class="[
+    <transition name="fade">
+      <div
+        v-if="value"
+        :class="[
         $style.menu,
         position && $style[`menu--${position}`],
       ]"
-    >
-      <div
-        v-if="$slots.default"
-        @click="$emit('input', false)"
       >
-        <slot></slot>
-      </div>
+        <div
+          v-if="$slots.default"
+          @click="$emit('input', false)"
+        >
+          <slot></slot>
+        </div>
 
-    </div>
+      </div>
+    </transition>
   </div>
 </template>
 

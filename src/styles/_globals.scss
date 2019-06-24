@@ -56,3 +56,13 @@ body {
   flex: 1 0 auto;
   text-decoration: none;
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: $transition opacity;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
