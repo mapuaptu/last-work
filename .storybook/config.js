@@ -4,6 +4,11 @@ import { withInfo } from 'storybook-addon-vue-info';
 import theme from './dashdojoTheme';
 import '../src/styles/common.scss';
 
+centered().data().innerStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  width: '100%',
+};
 addDecorator(centered, withInfo);
 
 addParameters({
