@@ -1,18 +1,16 @@
 import { storiesOf } from '@storybook/vue';
-import { Container, Row, Col, Panel } from '../src/index';
+import { Panel } from '../src/index';
 
 export default () =>
   storiesOf('Panel', module).add('default', () => ({
     components: {
       'dd-panel': Panel,
-      'dd-container': Container,
-      'dd-row': Row,
-      'dd-col': Col,
     },
     data() {
       return {
         list: [
           {
+            id: '1',
             task: {
               header: 'Task',
               avatar: 'https://i.pravatar.cc/55',
@@ -24,6 +22,7 @@ export default () =>
               menu: [
                 {
                   title: 'Archive',
+                  action: 'archive',
                 },
                 {
                   title: 'Rename',
@@ -34,7 +33,7 @@ export default () =>
               ],
             },
             todo: {
-              header: 'To-to',
+              header: 'To-do',
               avatar: 'https://i.pravatar.cc/300',
             },
             status: { header: 'Status', name: 'In progress' },
@@ -73,11 +72,6 @@ export default () =>
         ],
       };
     },
-    template: `<dd-panel>
-      <dd-container>
-        <dd-row>
-          <dd-col>panel</dd-col>
-        </dd-row>
-      </dd-container>
+    template: `<dd-panel>panel
     </dd-panel>`,
   }));
