@@ -1,11 +1,20 @@
 import { storiesOf } from '@storybook/vue';
-import { action } from '@storybook/addon-actions';
 import { withInfo } from 'storybook-addon-vue-info';
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import { withKnobs, text, select } from '@storybook/addon-knobs';
 import { Dropdown, DropdownItem } from '../src/index';
 
 const options = {
-  value: false,
+  icon: 'ellipsis-h',
+  position: {
+    bottomRight: 'bottom-right',
+    bottomLeft: 'bottom-left',
+    rightTop: 'right-top',
+    rightBottom: 'right-bottom',
+    topRight: 'top-right',
+    topLeft: 'top-left',
+    leftTop: 'left-top',
+    leftBotton: 'left-bottom',
+  },
 };
 
 export default () =>
@@ -35,7 +44,20 @@ export default () =>
             ],
           };
         },
-        template: `<dd-dropdown v-model="open">
+        props: {
+          icon: {
+            default: text('Icon', options.icon),
+          },
+          position: {
+            default: select(
+              'Position',
+              options.position,
+              options.position.bottomRight,
+            ),
+          },
+        },
+        template: `<dd-dropdown v-model="open" :icon="icon"
+        :position="position">
         <dd-dropdown-item v-for="(item, index) in menu" :key="index">
           {{item.title}}
         </dd-dropdown-item>
