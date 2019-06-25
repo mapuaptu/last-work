@@ -1,10 +1,7 @@
 import { storiesOf } from '@storybook/vue';
-import { action } from '@storybook/addon-actions';
 import { withInfo } from 'storybook-addon-vue-info';
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import { withKnobs } from '@storybook/addon-knobs';
 import { Select } from '../src/index';
-
-const options = {};
 
 export default () =>
   storiesOf('Select', module)
