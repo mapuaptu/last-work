@@ -9,7 +9,8 @@ import TypographyStory from './typography';
 import RadioStory from './radio';
 import PanelStory from './panel';
 import SelectStory from './select';
-import Switch from './switch';
+import SwitchStory from './switch';
+import ModalStory from './modal';
 
 const stories = {
   ButtonStory,
@@ -22,7 +23,8 @@ const stories = {
   RadioStory,
   PanelStory,
   SelectStory,
-  Switch,
+  SwitchStory,
+  ModalStory,
   ...TypographyStory,
 };
 
