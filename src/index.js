@@ -14,6 +14,7 @@ import FormField from './packages/form-field';
 import Radio from './packages/radio';
 import Panel from './packages/panel';
 import Select from './packages/select';
+import Switch from './packages/switch';
 
 import { version } from '../package.json';
 
@@ -35,6 +36,7 @@ const components = [
   Radio,
   Panel,
   Select,
+  Switch,
 ];
 
 const install = (Vue) => {
@@ -61,4 +63,5 @@ export {
   Radio,
   Panel,
   Select,
+  Switch,
 };
