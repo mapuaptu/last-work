@@ -15,6 +15,7 @@ import Radio from './packages/radio';
 import Panel from './packages/panel';
 import Select from './packages/select';
 import Switch from './packages/switch';
+import Modal from './packages/modal';
 
 import { version } from '../package.json';
 
@@ -37,6 +38,7 @@ const components = [
   Panel,
   Select,
   Switch,
+  Modal,
 ];
 
 const install = (Vue) => {
@@ -64,4 +66,5 @@ export {
   Panel,
   Select,
   Switch,
+  Modal,
 };

@@ -1,8 +1,8 @@
 <template>
-  <div :class="[$style.panel]">
+  <div :class="[$style.modal]">
     <slot></slot>
   </div>
 </template>
 
-<script src="./panel.js"></script>
-<style src="./panel.scss" lang="scss" module></style>
+<script src="./modal.js"></script>
+<style src="./modal.scss" lang="scss" module></style>
