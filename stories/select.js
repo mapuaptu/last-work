@@ -14,7 +14,7 @@ export default () =>
       'Default',
       () => ({
         components: { 'dd-select': Select },
-        template: '<dd-select></dd-select>',
+        template: '<dd-select :value="123" :options="[123, 321]"></dd-select>',
       }),
       {
         info: {

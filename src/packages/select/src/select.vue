@@ -1,6 +1,9 @@
 <template>
   <div :class="[$style.select]">
-    <slot></slot>
+    <multiselect
+      :value="value"
+      :options="options"
+    ></multiselect>
   </div>
 </template>
 

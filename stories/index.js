@@ -8,6 +8,7 @@ import DropdownStory from './dropdown';
 import TypographyStory from './typography';
 import RadioStory from './radio';
 import PanelStory from './panel';
+import SelectStory from './select';
 
 const stories = {
   ButtonStory,
@@ -19,6 +20,7 @@ const stories = {
   DropdownStory,
   RadioStory,
   PanelStory,
+  SelectStory,
   ...TypographyStory,
 };
 
