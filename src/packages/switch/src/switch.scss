@@ -1,3 +1,70 @@
+@import '../../../styles/variables';
+
 .switch {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $color-light;
+  border-radius: 30px;
+  width: 97px;
+  height: 45px;
+  cursor: pointer;
+
+  // &.is-checked {
+  //   #{$this}__core {
+  //     background-color: $color-message-success;
+
+  //     &:after {
+  //       left: 100%;
+  //       margin-left: -21px;
+  //     }
+  //   }
+  // }
+}
+
+.core {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  outline: none;
+  border-radius: 30px;
+  width: 91px;
+  height: 39px;
+  background: $color-light;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    border-radius: 50%;
+    width: 29px;
+    height: 29px;
+    background-color: $color-white;
+  }
+}
+
+.input {
+  position: absolute;
+  margin: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.label {
+  position: absolute;
+  font-size: 20px;
+  line-height: 27px;
+  color: $color-white;
+
+  &--off {
+    right: 10px;
+  }
+
+  &--on {
+    left: 10px;
+  }
 }

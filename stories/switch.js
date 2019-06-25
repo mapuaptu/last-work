@@ -11,7 +11,10 @@ export default () =>
       'Default',
       () => ({
         components: { 'dd-switch': Switch },
-        template: '<dd-switch></dd-switch>',
+        template: `<dd-switch>
+          <template #on>ON</template>
+          <template #off>OFF</template>
+        </dd-switch>`,
       }),
       {
         info: {
