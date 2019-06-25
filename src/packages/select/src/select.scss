@@ -1,3 +1,9 @@
+@import '../../../styles/variables';
+
 .select {
   position: relative;
+}
+
+:global(.multiselect__single) {
+  color: yellow;
 }

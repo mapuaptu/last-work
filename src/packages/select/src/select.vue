@@ -3,6 +3,9 @@
     <multiselect
       :value="value"
       :options="options"
+      :show-labels="false"
+      :searchable="false"
+      v-bind="$attrs"
     ></multiselect>
   </div>
 </template>
