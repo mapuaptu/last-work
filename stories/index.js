@@ -11,6 +11,7 @@ import PanelStory from './panel';
 import SelectStory from './select';
 import SwitchStory from './switch';
 import ModalStory from './modal';
+import UserpicStory from './userpic';
 
 const stories = {
   ButtonStory,
@@ -25,6 +26,7 @@ const stories = {
   SelectStory,
   SwitchStory,
   ModalStory,
+  UserpicStory,
   ...TypographyStory,
 };
 
