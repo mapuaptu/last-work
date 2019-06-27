@@ -1,5 +1,13 @@
 <template>
-  <div :class="[$style.userpic]"></div>
+  <div
+    :class="[$style.userpic]"
+    :style="{width: `${size}px`, height: `${size}px`}"
+  >
+    <img
+      :src="url"
+      :alt="alt"
+    >
+  </div>
 </template>
 
 <script src="./userpic.js"></script>
