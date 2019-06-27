@@ -7,7 +7,11 @@
       :disabled="disabled"
       @change="onChange"
     >
-    <span :class="[$style.core, value && $style['core--checked']]"></span>
+    <span :class="[
+      $style.core,
+      value && $style['core--checked'],
+      disabled && $style['core--disabled'],
+    ]"></span>
     <span
       :class="[$style.label]"
       v-if="$slots.label"
