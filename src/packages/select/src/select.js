@@ -16,5 +16,14 @@ export default {
       type: String,
       default: '',
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  methods: {
+    onInput(value) {
+      this.$emit('input', value);
+    },
   },
 };

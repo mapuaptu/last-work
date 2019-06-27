@@ -6,7 +6,9 @@
       :placeholder="placeholder"
       :show-labels="false"
       :searchable="false"
+      :disabled="disabled"
       v-bind="$attrs"
+      @input="onInput"
     >
       <template #caret>
         <div :class="[$style.caret]">
