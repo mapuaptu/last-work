@@ -3,10 +3,17 @@
     <multiselect
       :value="value"
       :options="options"
+      :placeholder="placeholder"
       :show-labels="false"
       :searchable="false"
       v-bind="$attrs"
-    ></multiselect>
+    >
+      <template #caret>
+        <div :class="[$style.caret]">
+          <i class="fa fa-angle-up"></i>
+        </div>
+      </template>
+    </multiselect>
   </div>
 </template>
 

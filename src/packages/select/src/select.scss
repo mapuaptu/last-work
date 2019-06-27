@@ -4,6 +4,47 @@
   position: relative;
 }
 
+.caret {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 100%;
+  font-size: 19px;
+  line-height: 25px;
+  color: $color-secondary;
+  transition: $transition;
+  transition-property: transform;
+  cursor: pointer;
+}
+
+:global(.multiselect--active) {
+  .caret {
+    transform: rotate(180deg);
+    transform-origin: 50% 50%;
+  }
+}
+
+:global(.multiselect__tags) {
+  border: 1px solid $color-light;
+  border-radius: 6px;
+  padding: 10px 40px 0 14px;
+  min-height: 48px;
+}
+
+:global(.multiselect__placeholder) {
+  padding-top: 3px;
+  font-size: 16px;
+  line-height: 19px;
+  color: $color-secondary;
+}
+
+:global(.multiselect__select) {
+  height: 48px;
+}
+
 :global(.multiselect__single) {
   color: $color-default;
 }

@@ -12,5 +12,9 @@ export default {
       type: Array,
       default: () => [],
     },
+    placeholder: {
+      type: String,
+      default: '',
+    },
   },
 };

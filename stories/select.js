@@ -11,7 +11,11 @@ export default () =>
       'Default',
       () => ({
         components: { 'dd-select': Select },
-        template: '<dd-select :value="123" :options="[123, 321]"></dd-select>',
+        template: `<div :style="{width: '280px'}">
+          <dd-select value="" :options="[123, 321]"
+          placeholder="Please select country">
+          </dd-select>
+        </div>`,
       }),
       {
         info: {
