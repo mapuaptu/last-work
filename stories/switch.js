@@ -18,7 +18,7 @@ export default () =>
         components: { 'dd-switch': Switch },
         data() {
           return {
-            checked: true,
+            checked: false,
           };
         },
         props: {
@@ -28,8 +28,7 @@ export default () =>
         },
         template: `<dd-switch v-model="checked"
         :disabled="disabled" @input="onInput">
-          <template #on>ON</template>
-          <template #off>OFF</template>
+          <template #label>Radio with text</template>
         </dd-switch>`,
         methods: {
           onInput: action('input'),

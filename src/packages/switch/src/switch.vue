@@ -7,20 +7,12 @@
       :disabled="disabled"
       @change="onChange"
     >
-    <span
-      :class="[$style.label, $style['label--on']]"
-      v-show="$slots.on && value"
-    >
-      <slot name="on"></slot>
-    </span>
-
     <span :class="[$style.core, value && $style['core--checked']]"></span>
-
     <span
-      :class="[$style.label, $style['label--off']]"
-      v-show="$slots.off && !value"
+      :class="[$style.label]"
+      v-if="$slots.label"
     >
-      <slot name="off"></slot>
+      <slot name="label"></slot>
     </span>
   </label>
 </template>
