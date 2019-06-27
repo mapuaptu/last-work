@@ -1,9 +1,7 @@
 <template>
-  <modal name="dd-modal">
-    <div :class="[$style.modal]">
-      <slot></slot>
-    </div>
-  </modal>
+  <div :class="[$style.modal]">
+    <slot></slot>
+  </div>
 </template>
 
 <script src="./modal.js"></script>
