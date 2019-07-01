@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/vue';
+import { action } from '@storybook/addon-actions';
 import { withInfo } from 'storybook-addon-vue-info';
 import { withKnobs, text, select } from '@storybook/addon-knobs';
 import { Dropdown, DropdownItem } from '../src/index';
@@ -57,12 +58,14 @@ export default () =>
           },
         },
         template: `<dd-dropdown v-model="open"
-        :icon="icon"
-        :position="position">
+        :icon="icon" :position="position" @input="onInput">
         <dd-dropdown-item v-for="(item, index) in menu" :key="index">
           {{item.title}}
         </dd-dropdown-item>
       </dd-dropdown>`,
+        methods: {
+          onInput: action('input'),
+        },
       }),
       {
         info: {
