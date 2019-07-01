@@ -1,7 +1,7 @@
 <template>
   <div
     :class="[$style.logo]"
-    :style="{width: `${width}px`, height: `${height}px`}"
+    :style="{width: `${size}px`}"
   >
     <svg
       enable-background="new 0 0 381 49"

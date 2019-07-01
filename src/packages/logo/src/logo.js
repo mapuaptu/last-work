@@ -1,13 +1,9 @@
 export default {
   name: 'dd-logo',
   props: {
-    width: {
+    size: {
       type: Number,
       default: 381,
-    },
-    height: {
-      type: Number,
-      default: 50,
     },
   },
 };
