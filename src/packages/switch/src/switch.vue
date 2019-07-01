@@ -14,9 +14,9 @@
     ]"></span>
     <span
       :class="[$style.label]"
-      v-if="$slots.label"
+      v-if="$slots.default"
     >
-      <slot name="label"></slot>
+      <slot></slot>
     </span>
   </label>
 </template>
