@@ -9,12 +9,11 @@
         root.status && $style[`inner--${root.status}`],
         size && $style[`inner--${size}`],
       ]"
-      :type="type"
       :disabled="disabled"
       :value="value"
       v-bind="$attrs"
       @input="onInput"
-      ref="input"
+      type="text"
     />
     <i :class="[
       $style.icon,
