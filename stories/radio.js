@@ -1,102 +1,56 @@
 import { storiesOf } from '@storybook/vue';
-import { Radio, Container, Row, Col } from '../src/index';
+import { action } from '@storybook/addon-actions';
+import { withInfo } from 'storybook-addon-vue-info';
+import { withKnobs, boolean, text } from '@storybook/addon-knobs';
+import { Radio } from '../src/index';
+
+const options = {
+  disabled: false,
+  label1: 'option 1',
+  label2: 'option 2',
+};
 
 export default () =>
   storiesOf('Radio', module)
-    .add('default ', () => ({
-      components: {
-        'dd-container': Container,
-        'dd-row': Row,
-        'dd-col': Col,
-        'dd-radio': Radio,
+    .addDecorator(withInfo)
+    .addDecorator(withKnobs)
+    .add(
+      'default ',
+      () => ({
+        components: {
+          'dd-radio': Radio,
+        },
+        props: {
+          disabled: {
+            default: boolean('Disabled', options.disabled),
+          },
+          label1: {
+            default: text('Label 1', options.label1),
+          },
+          label2: {
+            default: text('Label 2', options.label2),
+          },
+        },
+        data() {
+          return {
+            checked: 'option 1',
+          };
+        },
+        template: `<div style="display: flex">
+        <dd-radio v-model="checked" :label="label1" :disabled="disabled"
+        @input="onInput">
+        </dd-radio>
+        <dd-radio v-model="checked" :label="label2" :disabled="disabled"
+        @input="onInput">
+        </dd-radio>
+      </div>`,
+        methods: {
+          onInput: action('input'),
+        },
+      }),
+      {
+        info: {
+          summary: 'Default switch',
+        },
       },
-      data() {
-        return {
-          radio: '',
-        };
-      },
-      template: `<dd-container>
-      <dd-row>
-        <dd-col>
-          <dd-radio v-model="radio">
-          </dd-radio>
-        </dd-col>
-      </dd-row>
-    </dd-container>`,
-    }))
-    .add('cheched', () => ({
-      components: {
-        'dd-container': Container,
-        'dd-row': Row,
-        'dd-col': Col,
-        'dd-radio': Radio,
-      },
-      data() {
-        return {
-          radio: '',
-        };
-      },
-      template: `<dd-container>
-      <dd-row>
-        <dd-col>
-          <dd-radio v-model="radio" label="">
-          </dd-radio>
-        </dd-col>
-      </dd-row>
-    </dd-container>`,
-    }))
-    .add('with label', () => ({
-      components: {
-        'dd-container': Container,
-        'dd-row': Row,
-        'dd-col': Col,
-        'dd-radio': Radio,
-      },
-      data() {
-        return {
-          radio: 'label1',
-        };
-      },
-      template: `<dd-container>
-      <dd-row>
-        <dd-col size="1">
-          <dd-radio v-model="radio" label="label1">
-          </dd-radio>
-        </dd-col>
-        <dd-col size="1">
-          <dd-radio v-model="radio" label="label2">
-          </dd-radio>
-        </dd-col>
-      </dd-row>
-      <dd-row>
-        <dd-col>
-          {{radio}}
-        </dd-col>
-      </dd-row>
-    </dd-container>`,
-    }))
-    .add('disabled', () => ({
-      components: {
-        'dd-container': Container,
-        'dd-row': Row,
-        'dd-col': Col,
-        'dd-radio': Radio,
-      },
-      data() {
-        return {
-          radio: '2',
-        };
-      },
-      template: `<dd-container>
-      <dd-row>
-        <dd-col size="1">
-          <dd-radio v-model="radio" label="1" disabled>
-          </dd-radio>
-        </dd-col>
-        <dd-col size="1">
-          <dd-radio v-model="radio" label="2" disabled>
-          </dd-radio>
-        </dd-col>
-      </dd-row>
-    </dd-container>`,
-    }));
+    );
