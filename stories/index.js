@@ -10,7 +10,6 @@ import RadioStory from './radio';
 import PanelStory from './panel';
 import SelectStory from './select';
 import SwitchStory from './switch';
-import ModalStory from './modal';
 import UserpicStory from './userpic';
 
 const stories = {
@@ -25,7 +24,6 @@ const stories = {
   PanelStory,
   SelectStory,
   SwitchStory,
-  ModalStory,
   UserpicStory,
   ...TypographyStory,
 };
