@@ -7,7 +7,6 @@ import LogoStory from './logo';
 import DropdownStory from './dropdown';
 import TypographyStory from './typography';
 import RadioStory from './radio';
-import PanelStory from './panel';
 import SelectStory from './select';
 import SwitchStory from './switch';
 import UserpicStory from './userpic';
@@ -21,7 +20,6 @@ const stories = {
   LogoStory,
   DropdownStory,
   RadioStory,
-  PanelStory,
   SelectStory,
   SwitchStory,
   UserpicStory,
