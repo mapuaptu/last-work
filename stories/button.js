@@ -1,5 +1,4 @@
 import { storiesOf } from '@storybook/vue';
-import { action } from '@storybook/addon-actions';
 import { withInfo } from 'storybook-addon-vue-info';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import { Button } from '../src/index';
@@ -49,11 +48,8 @@ export default () =>
           },
         },
         template: `<dd-button :icon="icon" :type="type" :size="size"
-          :fluid="fluid"
-          @click="onClick">{{text}}</dd-button>`,
-        methods: {
-          onClick: action('click'),
-        },
+        :fluid="fluid"
+        >{{text}}</dd-button>`,
       }),
       {
         info: {
