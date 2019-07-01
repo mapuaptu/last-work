@@ -7,18 +7,18 @@ import { Button } from '../src/index';
 const options = {
   text: 'Hello Dashdojo',
   type: {
-    Primary: 'primary',
-    Secondary: 'secondary',
+    primary: 'primary',
+    secondary: 'secondary',
   },
   size: {
-    Default: '',
-    Small: 'small',
-    Large: 'large',
+    default: '',
+    small: 'small',
+    large: 'large',
   },
   icon: {
-    None: '',
-    'Adress Card': 'address-card',
-    Archive: 'archive',
+    none: '',
+    addressCard: 'address-card',
+    archive: 'archive',
   },
   fluid: false,
 };
@@ -32,23 +32,23 @@ export default () =>
       () => ({
         components: { 'dd-button': Button },
         props: {
-          text: {
-            default: text('Text', options.text),
+          type: {
+            default: select('Type', options.type, options.type.primary),
           },
-          types: {
-            default: select('Types', options.type, options.type.Primary),
+          size: {
+            default: select('Size', options.size, options.size.default),
           },
-          sizes: {
-            default: select('Sizes', options.size, options.size.Default),
-          },
-          icons: {
-            default: select('Icons', options.icon, options.icon.None),
+          icon: {
+            default: select('Icon', options.icon, options.icon.none),
           },
           fluid: {
             default: boolean('Fluid', options.fluid),
           },
+          text: {
+            default: text('Slot default', options.text),
+          },
         },
-        template: `<dd-button :icon="icons" :type="types" :size="sizes"
+        template: `<dd-button :icon="icon" :type="type" :size="size"
           :fluid="fluid"
           @click="onClick">{{text}}</dd-button>`,
         methods: {
