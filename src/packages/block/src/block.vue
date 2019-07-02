@@ -1,5 +1,8 @@
 <template>
-  <div :class="[$style.block]">
+  <div :class="[
+    $style.block,
+    status && $style[`block--${status}`]
+  ]">
     <slot></slot>
   </div>
 </template>

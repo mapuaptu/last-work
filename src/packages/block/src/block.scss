@@ -1,5 +1,28 @@
 @import '../../../styles/variables';
 
 .block {
-  position: relative;
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  padding: 16px 8px 16px 20px;
+  background-color: $color-white;
+  cursor: pointer;
+
+  &--progress {
+    background-color: $color-status-progress;
+  }
+
+  &--waiting {
+    background-color: $color-status-waiting;
+  }
+
+  &--testing {
+    background-color: $color-status-testing;
+  }
+
+  &--complete {
+    background-color: $color-status-complete;
+  }
 }
