@@ -28,6 +28,10 @@ export default {
   methods: {
     onInput(value) {
       this.$emit('input', value);
+
+      if (this.status) {
+        this.$emit('input:status', value);
+      }
     },
   },
 };

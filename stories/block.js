@@ -37,25 +37,21 @@ export default () =>
       'With status',
       () => ({
         components: { 'dd-block': Block, 'dd-select': Select },
-        props: {
-          status: {
-            default: select('Status', options.statuses, options.status),
-          },
-        },
         data() {
           return {
-            statusesRaw: [
+            options: [
               { id: 'progress', label: 'In progress' },
               { id: 'planned', label: 'Planned' },
               { id: 'waiting', label: 'Waiting' },
               { id: 'testing', label: 'Testing' },
               { id: 'complete', label: 'Done' },
             ],
-            statusRaw: { id: 'progress', label: 'In progress' },
+            value: { id: 'progress', label: 'In progress' },
           };
         },
-        template: `<dd-block :status="status">
-          <dd-select :value="statusRaw" :options="statusesRaw" status>
+        template: `<dd-block :status="value.id">
+          <dd-select :value="value" @input:status="value = $event"
+          :options="options" status>
           </dd-select>
         </dd-block>`,
       }),
