@@ -7,7 +7,9 @@ import '!style-loader!css-loader!sass-loader!./../src/styles/common.scss';
 centered().data().innerStyle = {
   display: 'flex',
   justifyContent: 'center',
-  width: '100%',
+  width: '50%',
+  marginLeft: 'auto',
+  marginRight: 'auto',
 };
 addDecorator(centered, withInfo);
 

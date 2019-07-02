@@ -37,10 +37,12 @@ export default () =>
             default: boolean('Disabled', options.disabled),
           },
         },
-        template: `<dd-select v-model="value" :options="countries"
-        :disabled="disabled" :placeholder="placeholder" style="width: 500px"
-        @input="onInput">
-        </dd-select>`,
+        template: `<div :style="{width: '500px'}">
+          <dd-select v-model="value" :options="countries"
+          :disabled="disabled" :placeholder="placeholder"
+          @input="onInput">
+          </dd-select>
+        </div>`,
         methods: {
           onInput: action('input'),
         },

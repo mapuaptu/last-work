@@ -5,7 +5,7 @@ export default {
   components: { Multiselect },
   props: {
     value: {
-      type: [String, Number],
+      type: [String, Number, Object],
       default: '',
     },
     options: {
@@ -19,6 +19,10 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
+    },
+    status: {
+      type: String,
+      default: '',
     },
   },
   methods: {

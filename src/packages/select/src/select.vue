@@ -1,5 +1,8 @@
 <template>
-  <div :class="[$style.select]">
+  <div :class="[
+    $style.select,
+    status && $style[`select--${status}`]
+  ]">
     <multiselect
       :value="value"
       :options="options"
@@ -7,6 +10,8 @@
       :show-labels="false"
       :searchable="false"
       :disabled="disabled"
+      :track-by="status && 'id'"
+      :label="status && 'label'"
       v-bind="$attrs"
       @input="onInput"
     >

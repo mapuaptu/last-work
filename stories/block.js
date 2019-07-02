@@ -47,17 +47,17 @@ export default () =>
         data() {
           return {
             statusesRaw: [
-              'In progress',
-              'Planned',
-              'Waiting',
-              'Testing',
-              'Done',
+              { id: 'progress', label: 'In progress' },
+              { id: 'planned', label: 'Planned' },
+              { id: 'waiting', label: 'Waiting' },
+              { id: 'testing', label: 'Testing' },
+              { id: 'complete', label: 'Done' },
             ],
-            statusRaw: 'In progress',
+            statusRaw: { id: 'progress', label: 'In progress' },
           };
         },
         template: `<div :style="{width: '500px'}">
-        <dd-block :status="status"><dd-select :value="statusRaw"
+        <dd-block :status="status"><dd-select :value="statusRaw" type="status"
           :options="statusesRaw"></dd-select>
         </dd-block>
     </div>`,
