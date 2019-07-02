@@ -36,7 +36,7 @@ export default () =>
             checked: 'option 1',
           };
         },
-        template: `<div style="display: flex">
+        template: `<div>
         <dd-radio v-model="checked" :label="label1" :disabled="disabled"
         @input="onInput">
         </dd-radio>

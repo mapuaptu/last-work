@@ -14,14 +14,14 @@ const Headings = () =>
 
 const Paragraph = () =>
   storiesOf('Paragraph', module).add('default', () => ({
-    template: `<p style="max-width: 500px">Lorem ipsum dolor sit amet,
+    template: `<p>Lorem ipsum dolor sit amet,
     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
     et dolore magna aliqua. </p>`,
   }));
 
 const Text = () =>
   storiesOf('Text', module).add('default', () => ({
-    template: `<div style="max-width: 500px">Lorem ipsum dolor sit amet,
+    template: `<div>Lorem ipsum dolor sit amet,
         consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

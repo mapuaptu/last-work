@@ -21,8 +21,8 @@ export default {
       default: false,
     },
     status: {
-      type: String,
-      default: '',
+      type: Boolean,
+      default: false,
     },
   },
   methods: {

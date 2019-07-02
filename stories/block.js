@@ -25,9 +25,7 @@ export default () =>
             default: text('Default slot', options.text),
           },
         },
-        template: `<div :style="{width: '500px'}">
-        <dd-block :status="status">{{text}}</dd-block>
-    </div>`,
+        template: '<dd-block :status="status">{{text}}</dd-block>',
       }),
       {
         info: {
@@ -56,11 +54,10 @@ export default () =>
             statusRaw: { id: 'progress', label: 'In progress' },
           };
         },
-        template: `<div :style="{width: '500px'}">
-        <dd-block :status="status"><dd-select :value="statusRaw" type="status"
-          :options="statusesRaw"></dd-select>
-        </dd-block>
-    </div>`,
+        template: `<dd-block :status="status">
+          <dd-select :value="statusRaw" :options="statusesRaw" status>
+          </dd-select>
+        </dd-block>`,
       }),
       {
         info: {

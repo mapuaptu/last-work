@@ -45,7 +45,7 @@ export default () =>
             model: 'Example text field',
           };
         },
-        template: `<dd-form-field :style="{maxWidth: '500px'}" :status="status">
+        template: `<dd-form-field :status="status">
         <dd-input v-model="model" :placeholder="placeholder"
         :disabled="disabled" @input="onInput">
         </dd-input>

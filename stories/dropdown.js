@@ -57,11 +57,11 @@ export default () =>
             ),
           },
         },
-        template: `<dd-dropdown v-model="open"
-        :icon="icon" :position="position" @input="onInput">
-        <dd-dropdown-item v-for="(item, index) in menu" :key="index">
-          {{item.title}}
-        </dd-dropdown-item>
+        template: `<dd-dropdown v-model="open" :icon="icon" :position="position"
+        @input="onInput">
+          <dd-dropdown-item v-for="(item, index) in menu" :key="index">
+            {{item.title}}
+          </dd-dropdown-item>
       </dd-dropdown>`,
         methods: {
           onInput: action('input'),
