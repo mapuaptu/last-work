@@ -10,6 +10,7 @@ import RadioStory from './radio';
 import SelectStory from './select';
 import SwitchStory from './switch';
 import UserpicStory from './userpic';
+import BlockStory from './block';
 
 const stories = {
   ButtonStory,
@@ -23,6 +24,7 @@ const stories = {
   SelectStory,
   SwitchStory,
   UserpicStory,
+  BlockStory,
   ...TypographyStory,
 };
 
