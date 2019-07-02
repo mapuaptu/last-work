@@ -3,6 +3,17 @@
 .select {
   position: relative;
   flex: 1 0 auto;
+
+  &--status {
+    :global(.multiselect__tags) {
+      border: 1px solid transparent;
+      background-color: transparent;
+    }
+
+    :global(.multiselect__single) {
+      background-color: transparent;
+    }
+  }
 }
 
 .caret {
@@ -19,6 +30,10 @@
   transition: $transition;
   transition-property: transform;
   cursor: pointer;
+
+  &--status {
+    right: 20px;
+  }
 }
 
 :global(.multiselect--active) {

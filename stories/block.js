@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
-import { withKnobs, select, text } from '@storybook/addon-knobs';
+import { withKnobs, text } from '@storybook/addon-knobs';
 import { Block, Select } from '../src/index';
 
 const options = {
@@ -18,14 +18,11 @@ export default () =>
       () => ({
         components: { 'dd-block': Block },
         props: {
-          status: {
-            default: select('Status', options.statuses, options.status),
-          },
           text: {
             default: text('Default slot', options.text),
           },
         },
-        template: '<dd-block :status="status">{{text}}</dd-block>',
+        template: '<dd-block>{{text}}</dd-block>',
       }),
       {
         info: {

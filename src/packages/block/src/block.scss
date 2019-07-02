@@ -25,4 +25,12 @@
   &--complete {
     background-color: $color-status-complete;
   }
+
+  &--planned,
+  &--progress,
+  &--waiting,
+  &--testing,
+  &--complete {
+    padding: 8px 0;
+  }
 }
