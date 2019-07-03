@@ -7,7 +7,10 @@
       <slot name="name"></slot>
     </div>
     <div
-      :class="[$style.value]"
+      :class="[
+        $style.value,
+        color && $style[`value--${color}`],
+      ]"
       v-if="$slots.value"
     >
       <slot name="value"></slot>

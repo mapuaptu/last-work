@@ -1,12 +1,10 @@
 import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import { Card, CardItem } from '../src/index';
 
 export default () =>
   storiesOf('Card', module)
     .addDecorator(withInfo)
-    .addDecorator(withKnobs)
     .add(
       'Default',
       () => ({
@@ -24,7 +22,8 @@ export default () =>
         },
         template: `<dd-card>
           <template #title>Last 30 Days</template>
-            <dd-card-item v-for="item in list" :key="item.name">
+            <dd-card-item v-for="item in list" :key="item.name"
+            :color="item.status">
               <template #name>
                 {{item.name}}
               </template>

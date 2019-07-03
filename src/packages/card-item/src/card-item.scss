@@ -5,6 +5,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 15px;
+  color: $color-secondary;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .name {
@@ -13,4 +19,12 @@
 
 .value {
   position: relative;
+
+  &--success {
+    color: $color-message-success;
+  }
+
+  &--error {
+    color: $color-message-error;
+  }
 }
