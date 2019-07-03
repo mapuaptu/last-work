@@ -43,6 +43,7 @@
   :global(.multiselect__content-wrapper) {
     overflow: visible;
     border: none !important;
+    background-color: transparent;
   }
 
   :global(.multiselect__content) {
