@@ -1,7 +1,8 @@
 <template>
   <div :class="[
     $style.block,
-    status && $style[`block--${status}`]
+    status && $style[`block--${status}`],
+    !size && $style['block--purge'],
   ]">
     <slot></slot>
   </div>

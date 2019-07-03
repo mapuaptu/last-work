@@ -1,12 +1,13 @@
 import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { Block, Select } from '../src/index';
 
 const options = {
   statuses: ['progress', 'waiting', 'testing', 'complete', 'default'],
   status: 'progress',
   text: 'Block content here',
+  size: true,
 };
 
 export default () =>
@@ -21,8 +22,11 @@ export default () =>
           text: {
             default: text('Default slot', options.text),
           },
+          size: {
+            default: boolean('Size', options.size),
+          },
         },
-        template: '<dd-block>{{text}}</dd-block>',
+        template: '<dd-block :size="size">{{text}}</dd-block>',
       }),
       {
         info: {

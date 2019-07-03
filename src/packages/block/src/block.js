@@ -5,5 +5,9 @@ export default {
       type: String,
       default: '',
     },
+    size: {
+      type: Boolean,
+      default: true,
+    },
   },
 };
