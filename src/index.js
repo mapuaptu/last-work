@@ -18,6 +18,7 @@ import Switch from './packages/switch';
 import Modal from './packages/modal';
 import Userpic from './packages/userpic';
 import Block from './packages/block';
+import Card from './packages/card';
 
 import { version } from '../package.json';
 
@@ -43,6 +44,7 @@ const components = [
   Modal,
   Userpic,
   Block,
+  Card,
 ];
 
 const install = (Vue) => {
@@ -73,4 +75,5 @@ export {
   Modal,
   Userpic,
   Block,
+  Card,
 };

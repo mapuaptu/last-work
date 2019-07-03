@@ -11,6 +11,7 @@ import SelectStory from './select';
 import SwitchStory from './switch';
 import UserpicStory from './userpic';
 import BlockStory from './block';
+import CardStory from './card';
 
 const stories = {
   ButtonStory,
@@ -25,6 +26,7 @@ const stories = {
   SwitchStory,
   UserpicStory,
   BlockStory,
+  CardStory,
   ...TypographyStory,
 };
 
