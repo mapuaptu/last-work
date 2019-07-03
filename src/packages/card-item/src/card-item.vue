@@ -1,6 +1,17 @@
 <template>
-  <div :class="[$style['card-item']]">
-    <slot></slot>
+  <div :class="[$style.item]">
+    <div
+      :class="[$style.name]"
+      v-if="$slots.name"
+    >
+      <slot name="name"></slot>
+    </div>
+    <div
+      :class="[$style.value]"
+      v-if="$slots.value"
+    >
+      <slot name="value"></slot>
+    </div>
   </div>
 </template>
 

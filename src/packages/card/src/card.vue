@@ -8,7 +8,12 @@
         <slot name="title"></slot>
       </h2>
     </div>
-
+    <div
+      v-if="$slots.default"
+      :class="[$style.content]"
+    >
+      <slot></slot>
+    </div>
   </div>
 </template>
 

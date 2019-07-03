@@ -1,5 +1,16 @@
 @import '../../../styles/variables';
 
-.card {
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name {
+  position: relative;
+}
+
+.value {
   position: relative;
 }
