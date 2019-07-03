@@ -12,7 +12,9 @@ export default () =>
       () => ({
         components: { 'dd-card': Card },
         props: {},
-        template: `<dd-card>card content</dd-card>`,
+        template: `<dd-card>
+          <template #title>Last 30 Days</template>
+        </dd-card>`,
       }),
       {
         info: {

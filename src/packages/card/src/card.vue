@@ -1,6 +1,14 @@
 <template>
   <div :class="[$style.card]">
-    <slot></slot>
+    <div
+      v-if="$slots.title"
+      :class="[$style.title]"
+    >
+      <h2>
+        <slot name="title"></slot>
+      </h2>
+    </div>
+
   </div>
 </template>
 
