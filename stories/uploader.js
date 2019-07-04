@@ -1,7 +1,11 @@
 import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
-import { withKnobs } from '@storybook/addon-knobs';
-import { Uploader } from '../src/index';
+import { withKnobs, text } from '@storybook/addon-knobs';
+import { Uploader, Userpic } from '../src/index';
+
+const options = {
+  text: 'Upload new',
+};
 
 export default () =>
   storiesOf('Uploader', module)
@@ -10,8 +14,26 @@ export default () =>
     .add(
       'Default',
       () => ({
-        components: { 'dd-uploader': Uploader },
-        template: '<dd-uploader>upload content</dd-uploader>',
+        components: { 'dd-uploader': Uploader, 'dd-userpic': Userpic },
+        props: {
+          text: {
+            default: text('Default slot', options.text),
+          },
+        },
+        data() {
+          return {
+            url: `https://gravatar.com/avatar/
+              e40f37c3d4d4cff5a87dd7d476af3fb4?s=200&d=retro&r=x`,
+            alt: 'Alt text',
+            size: 117,
+          };
+        },
+        template: `<dd-uploader>
+        <template #image>
+          <dd-userpic :url="url" :size="size"></dd-userpic>
+        </template>
+        {{text}}
+        </dd-uploader>`,
       }),
       {
         info: {
