@@ -22,7 +22,7 @@
         :class="[$style.original]"
         type="file"
         accept="image/*"
-        @change="onChange"
+        @input="onInput"
       />
     </label>
   </div>
