@@ -1,5 +1,7 @@
 <template>
-  <div :class="[$style.uploader]"></div>
+  <div :class="[$style.uploader]">
+    <slot></slot>
+  </div>
 </template>
 
 <script src="./uploader.js"></script>

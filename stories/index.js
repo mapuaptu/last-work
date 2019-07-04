@@ -13,6 +13,7 @@ import UserpicStory from './userpic';
 import BlockStory from './block';
 import CardStory from './card';
 import NotificationStory from './notification';
+import Uploader from './uploader';
 
 const stories = {
   ButtonStory,
@@ -29,6 +30,7 @@ const stories = {
   BlockStory,
   CardStory,
   NotificationStory,
+  Uploader,
   ...TypographyStory,
 };
 
