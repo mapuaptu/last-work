@@ -15,10 +15,7 @@
         position && $style[`menu--${position}`],
       ]"
       >
-        <div
-          v-if="$slots.default"
-          @click="$emit('input', false)"
-        >
+        <div v-if="$slots.default">
           <slot></slot>
         </div>
 

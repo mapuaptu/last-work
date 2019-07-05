@@ -1,5 +1,8 @@
 <template>
-  <div :class="[$style['dropdown-item']]">
+  <div :class="[
+      $style['dropdown-item'],
+      disabled && $style[`dropdown-item--disabled`],
+    ]">
     <i
       v-if="icon"
       :class="[$style.icon, `fa fa-${icon}`]"

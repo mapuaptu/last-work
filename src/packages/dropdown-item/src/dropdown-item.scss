@@ -11,12 +11,17 @@
 
   &:hover {
     color: $color-default;
-    background-color: $color-light;
+    background-color: $color-background;
   }
 
   &:active {
     color: $color-white;
     background-color: $color-primary;
+  }
+
+  &--disabled {
+    color: $color-light;
+    pointer-events: none;
   }
 }
 

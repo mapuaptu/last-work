@@ -41,6 +41,7 @@ export default () =>
               },
               {
                 title: 'Delete',
+                disabled: true,
               },
             ],
           };
@@ -59,7 +60,8 @@ export default () =>
         },
         template: `<dd-dropdown v-model="open" :icon="icon" :position="position"
         @input="onInput">
-          <dd-dropdown-item v-for="(item, index) in menu" :key="index">
+          <dd-dropdown-item v-for="(item, index) in menu" :key="index"
+          :disabled="item.disabled">
             {{item.title}}
           </dd-dropdown-item>
       </dd-dropdown>`,
