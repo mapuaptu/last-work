@@ -22,6 +22,7 @@ import Card from './packages/card';
 import CardItem from './packages/card-item';
 import Notification from './packages/notification';
 import Uploader from './packages/uploader';
+import Progressbar from './packages/progressbar';
 
 import { version } from '../package.json';
 
@@ -51,6 +52,7 @@ const components = [
   CardItem,
   Notification,
   Uploader,
+  Progressbar,
 ];
 
 const install = (Vue) => {
@@ -85,4 +87,5 @@ export {
   CardItem,
   Notification,
   Uploader,
+  Progressbar,
 };
