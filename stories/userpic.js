@@ -1,13 +1,15 @@
 import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
-import { withKnobs, text, number } from '@storybook/addon-knobs';
+import { withKnobs, text, number, select } from '@storybook/addon-knobs';
 import { Userpic } from '../src/index';
 
 const options = {
-  url: `https://gravatar.com/avatar/
-              e40f37c3d4d4cff5a87dd7d476af3fb4?s=200&d=retro&r=x`,
+  url: {
+    default: '',
+    current: 'https://i.pravatar.cc/140',
+  },
   alt: 'Alt text',
-  size: 33,
+  size: 140,
 };
 
 export default () =>
@@ -19,7 +21,7 @@ export default () =>
       () => ({
         props: {
           url: {
-            default: text('Url', options.url),
+            default: select('Url', options.url, options.default),
           },
           alt: {
             default: text('Alt', options.alt),
