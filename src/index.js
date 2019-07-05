@@ -23,6 +23,7 @@ import CardItem from './packages/card-item';
 import Notification from './packages/notification';
 import Uploader from './packages/uploader';
 import Progressbar from './packages/progressbar';
+import Spinner from './packages/spinner';
 
 import { version } from '../package.json';
 
@@ -53,6 +54,7 @@ const components = [
   Notification,
   Uploader,
   Progressbar,
+  Spinner,
 ];
 
 const install = (Vue) => {
@@ -88,4 +90,5 @@ export {
   Notification,
   Uploader,
   Progressbar,
+  Spinner,
 };
