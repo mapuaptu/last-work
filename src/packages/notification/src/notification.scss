@@ -14,19 +14,19 @@
   transition: $transition background-color;
 
   &--success {
-    background-color: $color-message-success;
+    background-color: $color-status-complete;
   }
 
   &--error {
-    background-color: $color-message-error;
+    background-color: $color-status-waiting;
   }
 
   &--info {
-    background-color: $color-message-info;
+    background-color: $color-status-testing;
   }
 
   &--warning {
-    background-color: $color-message-warning;
+    background-color: $color-status-progress;
   }
 }
 
