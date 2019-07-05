@@ -5,11 +5,11 @@
       :class="[$style.image]"
     >
       <slot name="image"></slot>
-      <div
-        :class="[$style.delete]"
-        @click="onDelete"
-      >
-        <i :class="['fa', 'fa-trash', $style.icon]"></i>
+      <div :class="[$style.delete]">
+        <i
+          :class="['fa', 'fa-trash', $style.icon]"
+          @click="onDelete"
+        ></i>
       </div>
     </div>
     <label>

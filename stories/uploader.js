@@ -27,8 +27,7 @@ export default () =>
         },
         data() {
           return {
-            url: `https://gravatar.com/avatar/
-              e40f37c3d4d4cff5a87dd7d476af3fb4?s=200&d=retro&r=x`,
+            url: '',
             alt: 'Alt text',
             size: 140,
           };
