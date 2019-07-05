@@ -13,15 +13,17 @@
       </div>
     </div>
     <label>
-      <div :class="[$style.button]">
-        <small>
-          <slot></slot>
-        </small>
+      <div
+        :class="[$style.button]"
+        @click="$refs.input.click()"
+      >
+        <slot></slot>
       </div>
       <input
         :class="[$style.original]"
         type="file"
         accept="image/*"
+        ref="input"
         @input="onInput"
       />
     </label>

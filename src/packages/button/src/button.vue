@@ -1,6 +1,9 @@
 <template>
-  <button :class="classList" @click="$emit('click', $event)">
-    <i v-if="icon" class="fa" :class="`fa-${icon}`"></i>
+  <button :class="classList">
+    <i
+      v-if="icon"
+      :class="['fa', `fa-${icon}`]"
+    ></i>
     <span v-if="$slots.default">
       <slot></slot>
     </span>

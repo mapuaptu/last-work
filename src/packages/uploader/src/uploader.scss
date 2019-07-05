@@ -34,12 +34,12 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
+  top: 0;
   bottom: 0;
   z-index: 10;
   display: flex;
   justify-content: center;
-  background-color: rgba($color-black, 0.75);
+  background-color: rgba($color-link, 0.6);
   opacity: 0;
   transition: $transition;
   transition-property: background-color, opacity;
@@ -49,16 +49,13 @@
 
 .icon {
   position: absolute;
-  top: 40%;
+  bottom: 15%;
   font-size: 20px;
-  color: $color-secondary;
+  color: $color-white;
 }
 
 .button {
-  margin-top: 20px;
-  text-decoration: underline;
-  color: $color-link;
-  cursor: pointer;
+  margin-top: 28px;
 
   &:hover {
     text-decoration: none;
