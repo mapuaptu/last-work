@@ -15,6 +15,7 @@ import CardStory from './card';
 import NotificationStory from './notification';
 import Uploader from './uploader';
 import Progressbar from './progressbar';
+import Spinner from './spinner';
 
 const stories = {
   ButtonStory,
@@ -33,6 +34,7 @@ const stories = {
   NotificationStory,
   Uploader,
   Progressbar,
+  Spinner,
   ...TypographyStory,
 };
 
