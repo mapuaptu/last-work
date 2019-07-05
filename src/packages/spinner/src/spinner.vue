@@ -1,5 +1,8 @@
 <template>
-  <div :class="[$style.spinner]"></div>
+  <div
+    :class="[$style.spinner]"
+    :style="{'--size': size}"
+  ></div>
 </template>
 
 <script src="./spinner.js"></script>

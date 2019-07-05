@@ -1,5 +1,26 @@
 @import '../../../styles/variables';
 
 .spinner {
+  --size: 150;
+
   position: relative;
+  border-top: calc(var(--size) / 10 * 1px) solid $color-background;
+  border-right: calc(var(--size) / 10 * 1px) solid $color-background;
+  border-bottom: calc(var(--size) / 10 * 1px) solid $color-background;
+  border-left: calc(var(--size) / 10 * 1px) solid $color-light;
+  border-radius: 50%;
+  width: calc(var(--size) * 1px);
+  height: calc(var(--size) * 1px);
+  transform: translateZ(0);
+  animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
