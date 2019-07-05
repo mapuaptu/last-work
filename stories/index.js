@@ -14,6 +14,7 @@ import BlockStory from './block';
 import CardStory from './card';
 import NotificationStory from './notification';
 import Uploader from './uploader';
+import Progressbar from './progressbar';
 
 const stories = {
   ButtonStory,
@@ -31,6 +32,7 @@ const stories = {
   CardStory,
   NotificationStory,
   Uploader,
+  Progressbar,
   ...TypographyStory,
 };
 
