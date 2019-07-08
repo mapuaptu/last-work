@@ -43,6 +43,13 @@ export default () =>
                 title: 'Delete',
                 disabled: true,
               },
+              {
+                title: 'I am a delimeter',
+                delimiter: true,
+              },
+              {
+                title: 'Change',
+              },
             ],
           };
         },
@@ -61,7 +68,7 @@ export default () =>
         template: `<dd-dropdown v-model="open" :icon="icon" :position="position"
         @input="onInput">
           <dd-dropdown-item v-for="(item, index) in menu" :key="index"
-          :disabled="item.disabled">
+          :disabled="item.disabled" :delimiter="item.delimiter">
             {{item.title}}
           </dd-dropdown-item>
       </dd-dropdown>`,

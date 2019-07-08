@@ -2,6 +2,7 @@
   <div :class="[
       $style['dropdown-item'],
       disabled && $style[`dropdown-item--disabled`],
+      delimiter && $style[`dropdown-item--delimiter`],
     ]">
     <i
       v-if="icon"

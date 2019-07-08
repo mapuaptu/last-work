@@ -9,5 +9,9 @@ export default {
       type: Boolean,
       default: false,
     },
+    delimiter: {
+      type: Boolean,
+      default: false,
+    },
   },
 };

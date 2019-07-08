@@ -23,6 +23,15 @@
     color: $color-light;
     pointer-events: none;
   }
+
+  &--delimiter {
+    border-bottom: 1px solid $color-light;
+
+    .text {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
 }
 
 .icon {
