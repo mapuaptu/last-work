@@ -26,10 +26,16 @@
 
   &--delimiter {
     border-bottom: 1px solid $color-light;
+    cursor: initial;
 
     .text {
       font-size: 12px;
       line-height: 14px;
+      color: $color-secondary;
+    }
+
+    &:hover {
+      background-color: $color-white;
     }
   }
 }
