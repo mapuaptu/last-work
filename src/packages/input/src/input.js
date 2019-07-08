@@ -13,6 +13,10 @@ export default {
       type: String,
       default: '',
     },
+    type: {
+      type: String,
+      default: 'text',
+    },
   },
   methods: {
     onInput(event) {

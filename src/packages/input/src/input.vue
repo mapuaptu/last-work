@@ -13,7 +13,7 @@
       :value="value"
       v-bind="$attrs"
       @input="onInput"
-      type="text"
+      :type="type"
     />
     <i :class="[
       $style.icon,
