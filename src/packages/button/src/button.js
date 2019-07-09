@@ -17,6 +17,10 @@ export default {
       type: String,
       default: null,
     },
+    rounded: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     classList() {
@@ -27,6 +31,7 @@ export default {
         this.fluid && this.$style['button--fluid'],
         this.icon && this.$style['button--icon'],
         !this.$slots.default && this.$style['button--notext'],
+        this.rounded && this.$style['button--rounded'],
       ];
     },
   },

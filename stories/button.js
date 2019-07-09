@@ -4,7 +4,7 @@ import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import { Button } from '../src/index';
 
 const options = {
-  text: 'Hello Dashdojo',
+  text: 'Button text',
   type: {
     primary: 'primary',
     secondary: 'secondary',
@@ -20,6 +20,7 @@ const options = {
     archive: 'archive',
   },
   fluid: false,
+  rounded: false,
 };
 
 export default () =>
@@ -43,12 +44,15 @@ export default () =>
           fluid: {
             default: boolean('Fluid', options.fluid),
           },
+          rounded: {
+            default: boolean('Rounded', options.rounded),
+          },
           text: {
             default: text('Slot default', options.text),
           },
         },
         template: `<dd-button :icon="icon" :type="type" :size="size"
-        :fluid="fluid"
+        :fluid="fluid" :rounded="rounded"
         >{{text}}</dd-button>`,
       }),
       {
