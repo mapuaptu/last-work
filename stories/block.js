@@ -8,6 +8,7 @@ const options = {
   status: 'progress',
   text: 'Block content here',
   size: true,
+  link: false,
 };
 
 export default () =>
@@ -25,8 +26,11 @@ export default () =>
           size: {
             default: boolean('Size', options.size),
           },
+          link: {
+            default: boolean('Link', options.link),
+          },
         },
-        template: '<dd-block :size="size">{{text}}</dd-block>',
+        template: '<dd-block :size="size" :link="link">{{text}}</dd-block>',
       }),
       {
         info: {

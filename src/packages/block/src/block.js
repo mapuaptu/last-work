@@ -9,5 +9,9 @@ export default {
       type: Boolean,
       default: true,
     },
+    link: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
