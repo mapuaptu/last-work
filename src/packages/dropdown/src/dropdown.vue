@@ -12,11 +12,14 @@
       <slot name="control"></slot>
     </div>
 
-    <i
+    <dd-icon
       v-else
-      :class="[$style.icon, `fa fa-${icon}`]"
-      @click="onClick"
-    ></i>
+      :class="[$style.icon]"
+      :name="icon"
+      color="#617c92"
+      :size="18"
+      @click.native="onClick"
+    ></dd-icon>
 
     <transition name="fade">
       <div
