@@ -99,6 +99,18 @@
       background-color: transparent;
     }
   }
+
+  &--disabled {
+    :global(.multiselect__tags) {
+      color: $color-secondary;
+      background-color: $color-background;
+    }
+
+    :global(.multiselect__single) {
+      color: $color-secondary;
+      background-color: $color-background;
+    }
+  }
 }
 
 .caret {

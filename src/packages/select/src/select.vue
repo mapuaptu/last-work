@@ -1,7 +1,8 @@
 <template>
   <div :class="[
     $style.select,
-    status && $style['select--status']
+    status && $style['select--status'],
+    disabled && $style['select--disabled']
   ]">
     <multiselect
       :value="value"
