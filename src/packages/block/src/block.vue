@@ -4,6 +4,7 @@
     status && $style[`block--${status}`],
     !size && $style['block--purge'],
     link && $style['block--link'],
+    disabled && $style['block--disabled'],
   ]">
     <slot></slot>
   </div>
