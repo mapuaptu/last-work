@@ -66,11 +66,26 @@
     }
   }
 
-  &--large {
+  &--medium {
     --font-size: 16;
     --line-height: 21;
 
     min-height: 56px;
+    font-size: calc(var(--font-size) * 1px);
+    line-height: calc(var(--line-height) * 1px);
+
+    i {
+      margin-right: 15px;
+      font-size: calc(var(--font-size) * 1.7px);
+      line-height: calc(var(--line-height) * 1.7px);
+    }
+  }
+
+  &--large {
+    --font-size: 22;
+    --line-height: 26;
+
+    min-height: 64px;
     font-size: calc(var(--font-size) * 1px);
     line-height: calc(var(--line-height) * 1px);
 
@@ -100,6 +115,19 @@
 
   &--rounded {
     border-radius: 50%;
+    padding: 0;
     width: 48px;
+  }
+
+  &--rounded#{&}--small {
+    width: 32px;
+  }
+
+  &--rounded#{&}--medium {
+    width: 56px;
+  }
+
+  &--rounded#{&}--large {
+    width: 64px;
   }
 }

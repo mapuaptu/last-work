@@ -12,6 +12,7 @@ const options = {
   size: {
     default: '',
     small: 'small',
+    medium: 'medium',
     large: 'large',
   },
   icon: {
