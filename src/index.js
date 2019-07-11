@@ -1,5 +1,4 @@
 import Button from './packages/button';
-import { Grid, Column } from './packages/grid';
 import Container from './packages/container';
 import Row from './packages/row';
 import Col from './packages/col';
@@ -12,7 +11,6 @@ import DropdownItem from './packages/dropdown-item';
 import Form from './packages/form';
 import FormField from './packages/form-field';
 import Radio from './packages/radio';
-import Panel from './packages/panel';
 import Select from './packages/select';
 import Switch from './packages/switch';
 import Modal from './packages/modal';
@@ -29,8 +27,6 @@ import { version } from '../package.json';
 
 const components = [
   Button,
-  Grid,
-  Column,
   Container,
   Row,
   Col,
@@ -43,7 +39,6 @@ const components = [
   Form,
   FormField,
   Radio,
-  Panel,
   Select,
   Switch,
   Modal,
@@ -65,8 +60,6 @@ export default install;
 export {
   version,
   Button,
-  Grid,
-  Column,
   Container,
   Row,
   Col,
@@ -79,7 +72,6 @@ export {
   Form,
   FormField,
   Radio,
-  Panel,
   Select,
   Switch,
   Modal,
