@@ -1,16 +1,13 @@
 <template>
-  <div :class="[$style.item]">
+  <div :class="classList">
     <div
-      :class="[$style.name]"
+      :class="$style.name"
       v-if="$slots.name"
     >
       <slot name="name"></slot>
     </div>
     <div
-      :class="[
-        $style.value,
-        color && $style[`value--${color}`],
-      ]"
+      :class="$style.value"
       v-if="$slots.value"
     >
       <slot name="value"></slot>

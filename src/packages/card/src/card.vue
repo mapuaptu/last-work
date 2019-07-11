@@ -2,7 +2,7 @@
   <div :class="classList">
     <div
       v-if="$slots.title"
-      :class="[$style.title]"
+      :class="$style.title"
     >
       <h2>
         <slot name="title"></slot>
@@ -10,7 +10,7 @@
     </div>
     <div
       v-if="$slots.default"
-      :class="[$style.content]"
+      :class="$style.content"
     >
       <slot></slot>
     </div>

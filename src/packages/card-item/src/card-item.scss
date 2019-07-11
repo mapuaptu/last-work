@@ -11,20 +11,16 @@
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-.name {
-  position: relative;
-}
-
-.value {
-  position: relative;
 
   &--success {
-    color: $color-message-success;
+    .value {
+      color: $color-message-success;
+    }
   }
 
   &--error {
-    color: $color-message-error;
+    .value {
+      color: $color-message-error;
+    }
   }
 }
