@@ -1,5 +1,5 @@
 <template>
-  <div :class="[$style.card]">
+  <div :class="classList">
     <div
       v-if="$slots.title"
       :class="[$style.title]"

@@ -1,5 +1,6 @@
 import ButtonStory from './button';
 import BlockStory from './block';
+import CardStory from './card';
 import CheckboxStory from './checkbox';
 import GridStory from './grid';
 import InputStory from './input';
@@ -11,7 +12,6 @@ import RadioStory from './radio';
 import SelectStory from './select';
 import SwitchStory from './switch';
 import UserpicStory from './userpic';
-import CardStory from './card';
 import NotificationStory from './notification';
 import Uploader from './uploader';
 import Spinner from './spinner';
@@ -19,6 +19,7 @@ import Spinner from './spinner';
 const stories = {
   ButtonStory,
   BlockStory,
+  CardStory,
   CheckboxStory,
   GridStory,
   InputStory,
@@ -29,7 +30,6 @@ const stories = {
   SelectStory,
   SwitchStory,
   UserpicStory,
-  CardStory,
   NotificationStory,
   Uploader,
   Spinner,

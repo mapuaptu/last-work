@@ -1,3 +1,8 @@
 export default {
-  name: 'dd-card',
+  name: 'DdCard',
+  computed: {
+    classList() {
+      return [this.$style.card];
+    },
+  },
 };
