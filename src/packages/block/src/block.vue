@@ -1,11 +1,5 @@
 <template>
-  <div :class="[
-    $style.block,
-    status && $style[`block--${status}`],
-    !size && $style['block--purge'],
-    link && $style['block--link'],
-    disabled && $style['block--disabled'],
-  ]">
+  <div :class="classList">
     <slot></slot>
   </div>
 </template>

@@ -1,5 +1,5 @@
 export default {
-  name: 'dd-block',
+  name: 'DdBlock',
   props: {
     status: {
       type: String,
@@ -16,6 +16,17 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
+    },
+  },
+  computed: {
+    classList() {
+      return [
+        this.$style.block,
+        this.status && this.$style[`block--${this.status}`],
+        !this.size && this.$style['block--purge'],
+        this.link && this.$style['block--link'],
+        this.disabled && this.$style['block--disabled'],
+      ];
     },
   },
 };
