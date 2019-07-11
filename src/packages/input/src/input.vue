@@ -15,14 +15,17 @@
       @input="onInput"
       :type="type"
     />
-    <i :class="[
+    <i
+      v-if="root.status"
+      :class="[
       $style.icon,
       'fa',
       root.status === 'success' ? [$style['icon--success'],'fa-check-circle'] :
       root.status === 'error' ?
       [$style['icon--error'], 'fa-exclamation-circle']: '',
       size && $style[`icon--${size}`],
-    ]">
+    ]"
+    >
     </i>
   </div>
 </template>
