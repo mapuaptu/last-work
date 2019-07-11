@@ -21,7 +21,7 @@
           $style.caret,
           status && $style['caret--status']
         ]">
-          <i class="fa fa-angle-up"></i>
+          <i class="fa fa-angle-down"></i>
         </div>
       </template>
     </multiselect>
