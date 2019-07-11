@@ -1,5 +1,5 @@
 export default {
-  name: 'dd-button',
+  name: 'DdButton',
   props: {
     type: {
       type: String,
@@ -30,8 +30,8 @@ export default {
         this.type && this.$style[`button--${this.type}`],
         this.fluid && this.$style['button--fluid'],
         this.icon && this.$style['button--icon'],
-        !this.$slots.default && this.$style['button--notext'],
         this.rounded && this.$style['button--rounded'],
+        !this.$slots.default && this.$style['button--notext'],
       ];
     },
   },
