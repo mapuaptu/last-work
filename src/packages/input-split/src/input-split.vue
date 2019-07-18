@@ -5,8 +5,10 @@
       disabled && $style['input-split--disabled'],
       root.status && $style[`input-split--${root.status}`],
       size && $style[`input-split--${size}`],
+      focus && $style['input-split--focus'],
     ]"
-    tabindex="-1"
+    @click="onClick"
+    v-click-outside="onClickOutside"
   >
     <input
       v-autowidth="{maxWidth: '350px', minWidth: '20px', comfortZone: 0}"
@@ -16,6 +18,7 @@
       v-bind="$attrs"
       @input="onInput"
       :type="type"
+      ref="input"
     />
     <i
       v-if="root.status"
