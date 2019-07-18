@@ -4,6 +4,7 @@ import CardStory from './card';
 import CheckboxStory from './checkbox';
 import GridStory from './grid';
 import InputStory from './input';
+import InputSplitStory from './input-split';
 import IconStory from './icon';
 import LogoStory from './logo';
 import DropdownStory from './dropdown';
@@ -23,6 +24,7 @@ const stories = {
   CheckboxStory,
   GridStory,
   InputStory,
+  InputSplitStory,
   IconStory,
   LogoStory,
   DropdownStory,
