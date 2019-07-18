@@ -11,8 +11,6 @@
       :show-labels="false"
       :searchable="false"
       :disabled="disabled"
-      :track-by="status ? 'id' : ''"
-      :label="status ? 'label' : ''"
       v-bind="$attrs"
       @input="onInput"
     >
