@@ -22,6 +22,18 @@
           <i class="fa fa-angle-down"></i>
         </div>
       </template>
+      <template #option="props">
+        <slot
+          name="option"
+          :option="props.option"
+        ></slot>
+      </template>
+      <template #singleLabel="props">
+        <slot
+          name="singleLabel"
+          :option="props.option"
+        ></slot>
+      </template>
     </multiselect>
   </div>
 </template>

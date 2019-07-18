@@ -16,14 +16,19 @@
   }
 
   :global(.multiselect__tags) {
+    display: flex;
     border: 1px solid $color-light;
     border-radius: 6px !important;
     padding: 10px 40px 0 14px;
+    padding-top: 0;
     min-height: 48px;
   }
 
   :global(.multiselect__placeholder) {
-    padding-top: 3px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    padding-top: 0;
     font-size: 16px;
     line-height: 19px;
     color: $color-secondary;
@@ -34,7 +39,10 @@
   }
 
   :global(.multiselect__single) {
-    padding-top: 4px;
+    display: flex;
+    align-items: center;
+    //padding-top: 4px;
+    margin-bottom: 0;
     font-size: 16px;
     line-height: 19px;
     color: $color-default;
