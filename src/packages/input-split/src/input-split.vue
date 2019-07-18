@@ -9,6 +9,7 @@
     tabindex="-1"
   >
     <input
+      v-autowidth="{maxWidth: '350px', minWidth: '20px', comfortZone: 0}"
       :class="$style.inner"
       :disabled="disabled"
       :value="value"
@@ -29,7 +30,12 @@
     >
     </i>
 
-    <div>.dashdojo.com</div>
+    <div
+      v-if="$slots.default"
+      :class="$style.domen"
+    >
+      <slot></slot>
+    </div>
   </div>
 </template>
 

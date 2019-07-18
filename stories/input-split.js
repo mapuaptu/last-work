@@ -9,6 +9,7 @@ const options = {
   statuses: ['default', 'success', 'error'],
   label: 'label',
   message: 'message',
+  domen: 'dashdojo.com',
 };
 
 export default () =>
@@ -38,6 +39,9 @@ export default () =>
           message: {
             default: text('Message', options.message),
           },
+          domen: {
+            default: text('Domen', options.domen),
+          },
         },
         data() {
           return {
@@ -47,6 +51,7 @@ export default () =>
         template: `<dd-form-field status="default" :status="status">
           <dd-input-split v-model="model" :placeholder="placeholder"
             :disabled="disabled">
+            .{{domen}}
           </dd-input-split>
           <template #label>{{label}}</template>
           <template #message>{{message}}</template>

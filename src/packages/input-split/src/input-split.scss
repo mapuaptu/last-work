@@ -12,6 +12,7 @@
   padding-right: 45px;
   width: 100%;
   min-height: 48px;
+  max-width: 100%;
   font-size: 16px;
   line-height: 21px;
   color: $color-default;
@@ -77,6 +78,10 @@
       border: 1px solid $color-message-error;
     }
   }
+}
+
+.domen {
+  color: $color-secondary;
 }
 
 .icon {
