@@ -1,5 +1,10 @@
+import Userpic from '../../userpic/index';
+
 export default {
   name: 'dd-input',
+  components: {
+    'dd-userpic': Userpic,
+  },
   props: {
     value: {
       type: [String, Number],
@@ -16,6 +21,10 @@ export default {
     type: {
       type: String,
       default: 'text',
+    },
+    image: {
+      type: String,
+      default: '',
     },
   },
   methods: {

@@ -8,6 +8,7 @@
         disabled && $style['inner--disabled'],
         root.status && $style[`inner--${root.status}`],
         size && $style[`inner--${size}`],
+        image && $style['inner--image'],
       ]"
       :disabled="disabled"
       :value="value"
@@ -15,6 +16,15 @@
       @input="onInput"
       :type="type"
     />
+    <div
+      v-if="image"
+      :class="$style.image"
+    >
+      <dd-userpic
+        :url="image"
+        :size="24"
+      ></dd-userpic>
+    </div>
     <i
       v-if="root.status"
       :class="[

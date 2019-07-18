@@ -10,6 +10,7 @@ const options = {
   statuses: ['default', 'success', 'error'],
   label: 'label',
   message: 'message',
+  image: 'https://i.pravatar.cc/24',
 };
 
 export default () =>
@@ -33,6 +34,9 @@ export default () =>
           status: {
             default: select('Status', options.statuses, options.status),
           },
+          image: {
+            default: text('Image', options.image),
+          },
           label: {
             default: text('Label', options.label),
           },
@@ -47,7 +51,7 @@ export default () =>
         },
         template: `<dd-form-field :status="status">
         <dd-input v-model="model" :placeholder="placeholder"
-        :disabled="disabled" @input="onInput">
+        :disabled="disabled" :image="image" @input="onInput">
         </dd-input>
         <template #label>{{label}}</template>
         <template #message>{{message}}</template>

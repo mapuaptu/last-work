@@ -7,6 +7,11 @@
   align-items: center;
 }
 
+.image {
+  position: absolute;
+  left: 10px;
+}
+
 .icon {
   position: absolute;
   right: 15px;
@@ -115,5 +120,9 @@
     &:focus {
       border: 1px solid $color-message-error;
     }
+  }
+
+  &--image {
+    padding: 12px 14px 12px 40px;
   }
 }
