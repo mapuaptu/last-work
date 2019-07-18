@@ -1,12 +1,15 @@
 <template>
-  <div :class="$style['input-split']">
+  <div
+    :class="[
+      $style['input-split'],
+      disabled && $style['input-split--disabled'],
+      root.status && $style[`input-split--${root.status}`],
+      size && $style[`input-split--${size}`],
+    ]"
+    tabindex="-1"
+  >
     <input
-      :class="[
-        $style.inner,
-        disabled && $style['inner--disabled'],
-        root.status && $style[`inner--${root.status}`],
-        size && $style[`inner--${size}`],
-      ]"
+      :class="$style.inner"
       :disabled="disabled"
       :value="value"
       v-bind="$attrs"
