@@ -1,7 +1,0 @@
-/src/stories
-/stories
-
-src/**/*.test.js
-src/**/*.spec.js
-**/*.test.js
-**/*.spec.js
