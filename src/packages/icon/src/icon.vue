@@ -2,7 +2,7 @@
   <div :class="[$style.icon]">
     <i
       :class="`fa fa-${name}`"
-      :style="{fontSize: `${size}px`, lineHeight: `${size}px`, color,}"
+      :style="styleList"
     ></i>
   </div>
 </template>

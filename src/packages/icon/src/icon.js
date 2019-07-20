@@ -1,5 +1,5 @@
 export default {
-  name: 'dd-icon',
+  name: 'DdIcon',
   props: {
     name: {
       type: String,
@@ -7,11 +7,20 @@ export default {
     },
     size: {
       type: Number,
-      default: 20,
+      default: null,
     },
     color: {
       type: String,
-      default: '#1b1919',
+      default: '',
+    },
+  },
+  computed: {
+    styleList() {
+      return {
+        fontSize: this.size && `${this.size}px`,
+        lineHeight: this.size && `${this.size}px`,
+        color: this.color,
+      };
     },
   },
 };

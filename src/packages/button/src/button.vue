@@ -1,9 +1,10 @@
 <template>
   <button :class="classList">
-    <i
+    <dd-icon
       v-if="icon"
-      :class="['fa', `fa-${icon}`]"
-    ></i>
+      :class="[$style.icon]"
+      :name="icon"
+    ></dd-icon>
     <span v-if="$slots.default">
       <slot></slot>
     </span>

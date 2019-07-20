@@ -27,7 +27,7 @@
   transition-property: background-color;
   cursor: pointer;
 
-  i {
+  .icon {
     position: relative;
     top: -1px;
     margin-right: 6px;
@@ -48,7 +48,7 @@
   }
 
   &--notext {
-    i {
+    .icon {
       margin-right: 0;
     }
   }
@@ -63,7 +63,7 @@
     font-size: calc(var(--font-size) * 1px);
     line-height: calc(var(--line-height) * 1px);
 
-    i {
+    .icon {
       margin-right: 5px;
       font-size: calc(var(--font-size) * 1.4px);
       line-height: calc(var(--line-height) * 1.4px);
@@ -78,7 +78,7 @@
     font-size: calc(var(--font-size) * 1px);
     line-height: calc(var(--line-height) * 1px);
 
-    i {
+    .icon {
       margin-right: 15px;
       font-size: calc(var(--font-size) * 1.7px);
       line-height: calc(var(--line-height) * 1.7px);
@@ -93,7 +93,7 @@
     font-size: calc(var(--font-size) * 1px);
     line-height: calc(var(--line-height) * 1px);
 
-    i {
+    .icon {
       margin-right: 15px;
       font-size: calc(var(--font-size) * 1.7px);
       line-height: calc(var(--line-height) * 1.7px);

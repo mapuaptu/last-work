@@ -11,6 +11,7 @@
     "storybook": "start-storybook -p 9000 -s ./.storybook/assets",
     "build-storybook": "build-storybook -c .storybook -o build/storybook",
     "test": "jest",
+    "test:clear": "jest --clearCache",
     "release": "np --any-branch --no-yarn --verbose",
     "lint": "vue-cli-service lint",
     "reinstall": "rm -rf node_modules && npm i"

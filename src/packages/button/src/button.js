@@ -1,5 +1,8 @@
+import Icon from '../../icon/index';
+
 export default {
   name: 'DdButton',
+  components: { [Icon.name]: Icon },
   props: {
     type: {
       type: String,
