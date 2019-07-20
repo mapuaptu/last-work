@@ -1,3 +1,3 @@
-./stories
+/src/stories
 **/*.test.js
 **/*.spec.js
