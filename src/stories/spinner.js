@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
 import { withKnobs, number } from '@storybook/addon-knobs';
-import { Spinner } from '../src/index';
+import { Spinner } from '../index';
 
 const options = {
   size: 100,

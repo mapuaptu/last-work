@@ -59,6 +59,7 @@ const install = (Vue) => {
 };
 
 export default install;
+
 export {
   version,
   Button,

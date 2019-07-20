@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
 import { withKnobs, number, text, color } from '@storybook/addon-knobs';
-import { Icon } from '../src/index';
+import { Icon } from '../index';
 
 const options = {
   name: 'air-freshener',

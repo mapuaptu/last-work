@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
 import { withKnobs, text, number, select } from '@storybook/addon-knobs';
-import { Userpic } from '../src/index';
+import { Userpic } from '../index';
 
 const options = {
   url: {

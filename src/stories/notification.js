@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
 import { withKnobs, select } from '@storybook/addon-knobs';
-import { Notification } from '../src/index';
+import { Notification } from '../index';
 
 const options = {
   statuses: ['default', 'error', 'warning', 'success', 'info'],

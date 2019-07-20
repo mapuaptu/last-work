@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
-import { Card, CardItem } from '../src/index';
+import { Card, CardItem } from '../index';
 
 export default () =>
   storiesOf('Card', module)

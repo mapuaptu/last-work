@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from 'storybook-addon-vue-info';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
-import { Switch } from '../src/index';
+import { Switch } from '../index';
 
 const options = {
   disabled: false,

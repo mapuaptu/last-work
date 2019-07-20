@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { Container, Row, Col } from '../src/index';
+import { Container, Row, Col } from '../index';
 
 export default () =>
   storiesOf('Grid', module).add('default', () => ({

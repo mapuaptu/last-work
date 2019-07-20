@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
-import { Uploader, Userpic, Button } from '../src/index';
+import { Uploader, Userpic, Button } from '../index';
 
 const options = {
   text: 'Upload new',

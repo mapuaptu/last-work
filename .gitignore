@@ -22,3 +22,4 @@ yarn-error.log*
 # Other
 *.npmrc
 /build
+/coverage

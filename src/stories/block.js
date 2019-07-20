@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
-import { Block, Select } from '../src/index';
+import { Block, Select } from '../index';
 
 const options = {
   statuses: ['progress', 'waiting', 'testing', 'complete', 'default'],

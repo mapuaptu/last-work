@@ -1,7 +1,8 @@
 import { storiesOf } from '@storybook/vue';
+import { action } from '@storybook/addon-actions';
 import { withInfo } from 'storybook-addon-vue-info';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
-import { InputSplit, FormField } from '../src/index';
+import { Input, FormField } from '../index';
 
 const options = {
   placeholder: 'Example placeholder',
@@ -9,18 +10,18 @@ const options = {
   statuses: ['default', 'success', 'error'],
   label: 'label',
   message: 'message',
-  domen: 'dashdojo.com',
+  image: 'https://i.pravatar.cc/24',
 };
 
 export default () =>
-  storiesOf('InputSplit', module)
+  storiesOf('Input', module)
     .addDecorator(withInfo)
     .addDecorator(withKnobs)
     .add(
       'default',
       () => ({
         components: {
-          'dd-input-split': InputSplit,
+          'dd-input': Input,
           'dd-form-field': FormField,
         },
         props: {
@@ -33,34 +34,35 @@ export default () =>
           status: {
             default: select('Status', options.statuses, options.status),
           },
+          image: {
+            default: text('Image', options.image),
+          },
           label: {
             default: text('Label', options.label),
           },
           message: {
             default: text('Message', options.message),
           },
-          domen: {
-            default: text('Domen', options.domen),
-          },
         },
         data() {
           return {
-            model: 'buchkodex',
+            model: 'Example text field',
           };
         },
-        template: `<dd-form-field status="default" :status="status">
-          <dd-input-split v-model="model" :placeholder="placeholder"
-            :disabled="disabled">
-            .{{domen}}
-          </dd-input-split>
-          <template #label>{{label}}</template>
-          <template #message>{{message}}</template>
-        </dd-form-field>
-        `,
+        template: `<dd-form-field :status="status">
+        <dd-input v-model="model" :placeholder="placeholder"
+        :disabled="disabled" :image="image" @input="onInput">
+        </dd-input>
+        <template #label>{{label}}</template>
+        <template #message>{{message}}</template>
+      </dd-form-field>`,
+        methods: {
+          onInput: action('input'),
+        },
       }),
       {
         info: {
-          summary: 'Default input-split',
+          summary: 'Default button',
         },
       },
     );

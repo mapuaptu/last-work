@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
-import { Button } from '../src/index';
+import { Button } from '../index';
 
 const options = {
   text: 'Button text',

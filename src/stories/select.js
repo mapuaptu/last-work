@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-import { Select, Userpic } from '../src/index';
+import { Select, Userpic } from '../index';
 
 const options = {
   placeholder: 'Please select country',
