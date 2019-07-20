@@ -10,7 +10,6 @@
   "scripts": {
     "storybook": "start-storybook -p 9000 -s ./.storybook/assets",
     "build-storybook": "build-storybook -c .storybook -o build/storybook",
-    "test": "cross-env NODE_ENV=testing jest --no-cache",
     "release": "np --any-branch --no-yarn --verbose",
     "lint": "vue-cli-service lint",
     "reinstall": "rm -rf node_modules && npm i"
@@ -38,14 +37,11 @@
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.2",
-    "babel-jest": "24.8.0",
     "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
     "cross-env": "5.2.0",
     "css-loader": "3.1.0",
     "eslint": "^6.0.1",
-    "eslint-plugin-jest": "22.11.1",
     "eslint-plugin-vue": "^5.2.3",
-    "jest": "24.8.0",
     "node-sass": "4.12.0",
     "sass-loader": "7.1.0",
     "storybook-addon-vue-info": "^1.2.1",
@@ -55,7 +51,6 @@
     "stylelint-config-standard": "18.3.0",
     "stylelint-declaration-block-no-ignored-properties": "2.1.0",
     "stylelint-order": "3.0.1",
-    "vue-jest": "3.0.4",
     "vue-loader": "15.7.1",
     "vue-template-compiler": "^2.6.10"
   }
