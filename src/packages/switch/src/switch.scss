@@ -6,63 +6,65 @@
   align-items: center;
   justify-content: center;
 
-  &--disabled {
-    opacity: 0.6;
-  }
-}
-
-.core {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  outline: none;
-  border: 1px solid $color-light;
-  border-radius: 30px;
-  width: 50px;
-  height: 24px;
-  background-color: $color-white;
-  transition: $transition;
-  transition-property: background-color, border;
-  cursor: pointer;
-  user-select: none;
-
-  &::after {
-    content: '';
+  .input {
     position: absolute;
-    left: 3px;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    background-color: $color-light;
-    transition: $transition;
-    transition-property: left, background-color;
+    margin: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
   }
 
-  &--checked {
-    border: 1px solid $color-primary-dark;
-    background-color: $color-primary;
+  .label {
+    margin-left: 12px;
+  }
+
+  .core {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    outline: none;
+    border: 1px solid $color-light;
+    border-radius: 30px;
+    width: 50px;
+    height: 24px;
+    background-color: $color-white;
+    transition: $transition;
+    transition-property: background-color, border;
+    cursor: pointer;
+    user-select: none;
 
     &::after {
-      left: 27px;
-      background-color: $color-white;
+      content: '';
+      position: absolute;
+      left: 3px;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      background-color: $color-light;
+      transition: $transition;
+      transition-property: left, background-color;
     }
   }
 
   &--disabled {
-    background-color: $color-background;
+    opacity: 0.6;
+
+    .core {
+      background-color: $color-background;
+    }
   }
-}
 
-.input {
-  position: absolute;
-  margin: 0;
-  width: 0;
-  height: 0;
-  opacity: 0;
-}
+  &--checked {
+    .core {
+      border: 1px solid $color-primary-dark;
+      background-color: $color-primary;
 
-.label {
-  margin-left: 12px;
+      &::after {
+        left: 27px;
+        background-color: $color-white;
+      }
+    }
+  }
 }

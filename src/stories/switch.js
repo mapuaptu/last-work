@@ -16,7 +16,7 @@ export default () =>
     .add(
       'Default',
       () => ({
-        components: { 'dd-switch': Switch },
+        components: { [Switch.name]: Switch },
         data() {
           return {
             checked: false,

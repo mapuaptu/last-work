@@ -1,19 +1,15 @@
 <template>
-  <label :class="[$style.switch, disabled && $style['switch--disabled']]">
+  <label :class="classList">
     <input
       type="checkbox"
-      :class="[$style.input]"
+      :class="$style.input"
       :checked="value"
       :disabled="disabled"
       @change="onChange"
     >
-    <span :class="[
-      $style.core,
-      value && $style['core--checked'],
-      disabled && $style['core--disabled'],
-    ]"></span>
+    <span :class="$style.core"></span>
     <span
-      :class="[$style.label]"
+      :class="$style.label"
       v-if="$slots.default"
     >
       <slot></slot>

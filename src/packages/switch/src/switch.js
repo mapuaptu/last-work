@@ -1,5 +1,5 @@
 export default {
-  name: 'dd-switch',
+  name: 'DdSwitch',
   props: {
     value: {
       type: Boolean,
@@ -8,6 +8,15 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
+    },
+  },
+  computed: {
+    classList() {
+      return [
+        this.$style.switch,
+        this.disabled && this.$style['switch--disabled'],
+        this.value && this.$style['switch--checked'],
+      ];
     },
   },
   methods: {
