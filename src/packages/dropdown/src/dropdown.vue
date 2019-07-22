@@ -2,6 +2,7 @@
   <div
     :class="$style.dropdown"
     v-click-outside="onClickOutside"
+    data-test-dropdown="data-test-dropdown"
   >
 
     <div
