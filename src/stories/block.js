@@ -18,7 +18,7 @@ export default () =>
     .add(
       'Default',
       () => ({
-        components: { 'dd-block': Block },
+        components: { [Block.name]: Block },
         props: {
           text: {
             default: text('Default slot', options.text),
