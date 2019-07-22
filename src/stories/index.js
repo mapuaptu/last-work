@@ -2,6 +2,7 @@ import ButtonStory from './button';
 import BlockStory from './block';
 import CardStory from './card';
 import CheckboxStory from './checkbox';
+import Datepicker from './datepicker';
 import DropdownStory from './dropdown';
 import GridStory from './grid';
 import InputStory from './input';
@@ -22,6 +23,7 @@ const stories = {
   BlockStory,
   CardStory,
   CheckboxStory,
+  Datepicker,
   DropdownStory,
   GridStory,
   InputStory,

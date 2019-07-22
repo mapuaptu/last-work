@@ -1,5 +1,7 @@
 <template>
-  <div :class="$style.datepicker"></div>
+  <div :class="$style.datepicker">
+    <slot></slot>
+  </div>
 </template>
 
 <script src="./datepicker.js"></script>
