@@ -1,5 +1,8 @@
 <template>
-  <div :class="$style.field">
+  <div
+    :class="$style.field"
+    data-test-form-field="data-test-form-field"
+  >
     <div
       v-if="$slots.label"
       :class="$style.label"
