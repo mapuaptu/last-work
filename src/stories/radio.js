@@ -18,7 +18,7 @@ export default () =>
       'default ',
       () => ({
         components: {
-          'dd-radio': Radio,
+          [Radio.name]: Radio,
         },
         props: {
           disabled: {

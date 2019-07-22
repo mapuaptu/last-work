@@ -1,13 +1,9 @@
 <template>
-  <div :class="[$style.radio]">
-    <div :class="[$style.input]">
-      <div :class="[
-        $style.inner,
-        isChecked && $style['inner--checked'],
-        disabled && $style['inner--disabled'],
-      ]"></div>
+  <div :class="classList">
+    <div :class="$style.input">
+      <div :class="$style.inner"></div>
       <input
-        :class="[$style.original]"
+        :class="$style.original"
         type="radio"
         :disabled="disabled"
         :value="label"
@@ -18,7 +14,7 @@
     </div>
     <div
       v-if="label"
-      :class="[$style.label]"
+      :class="$style.label"
     >{{label}}</div>
   </div>
 </template>

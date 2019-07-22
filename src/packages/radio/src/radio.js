@@ -1,5 +1,5 @@
 export default {
-  name: 'dd-radio',
+  name: 'DdRadio',
   props: {
     value: {
       type: String,
@@ -15,6 +15,13 @@ export default {
     },
   },
   computed: {
+    classList() {
+      return [
+        this.$style.radio,
+        this.isChecked && this.$style['radio--checked'],
+        this.disabled && this.$style['radio--disabled'],
+      ];
+    },
     isChecked() {
       return this.label === this.value;
     },
