@@ -1,5 +1,8 @@
 <template>
-  <div :class="classList">
+  <div
+    :class="classList"
+    data-test-block="data-test-block"
+  >
     <slot></slot>
   </div>
 </template>
