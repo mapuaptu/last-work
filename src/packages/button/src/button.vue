@@ -1,5 +1,8 @@
 <template>
-  <button :class="classList">
+  <button
+    :class="classList"
+    data-test-button="data-test-button"
+  >
     <dd-icon
       v-if="icon"
       :class="[$style.icon]"

@@ -11,8 +11,9 @@ describe('Block', () => {
 
   it('2. Block - can render data attribute', () => {
     const wrapper = mount(Block);
+    const attribute = 'data-test-block';
 
-    expect(wrapper.attributes('data-test-block')).to.equal('data-test-block');
+    expect(wrapper.attributes(attribute)).to.equal(attribute);
   });
 
   it('3. Block - can render text in default slot', () => {
