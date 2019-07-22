@@ -1,3 +1,3 @@
 export default {
-  name: 'dd-panel',
+  name: 'DdPanel',
 };

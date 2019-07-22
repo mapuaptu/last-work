@@ -1,5 +1,5 @@
 <template>
-  <div :class="[$style.panel]">
+  <div :class="$style.panel">
     <slot></slot>
   </div>
 </template>
