@@ -1,5 +1,5 @@
 <template>
-  <div :class="[$style.progressbar]"></div>
+  <div :class="$style.progressbar"></div>
 </template>
 
 <script src="./progressbar.js"></script>
