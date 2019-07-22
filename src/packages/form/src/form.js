@@ -1,5 +1,5 @@
 export default {
-  name: 'dd-form',
+  name: 'DdForm',
   methods: {
     onSubmit(event) {
       this.$emit('submit', event);

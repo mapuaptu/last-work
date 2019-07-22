@@ -1,7 +1,7 @@
 <template>
   <form
     action=""
-    :class="[$style.form]"
+    :class="$style.form"
     @submit="onSubmit"
   >
     <slot></slot>
