@@ -1,9 +1,13 @@
 <template>
-  <div :class="$style.icon">
+  <div
+    :class="$style.icon"
+    data-test-icon="data-test-icon"
+  >
     <i
       :class="`fa fa-${name}`"
       :style="styleList"
     ></i>
+    <slot></slot>
   </div>
 </template>
 
