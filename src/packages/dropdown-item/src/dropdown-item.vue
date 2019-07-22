@@ -1,5 +1,8 @@
 <template>
-  <div :class="classList">
+  <div
+    :class="classList"
+    data-test-dropdown-item="data-test-dropdown-item"
+  >
     <i
       v-if="icon"
       :class="[$style.icon, `fa fa-${icon}`]"
