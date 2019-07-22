@@ -7,6 +7,7 @@ import InputSplit from './packages/input-split';
 import Icon from './packages/icon';
 import Checkbox from './packages/checkbox';
 import Logo from './packages/logo';
+import Datepicker from './packages/datepicker';
 import Dropdown from './packages/dropdown';
 import DropdownItem from './packages/dropdown-item';
 import Form from './packages/form';
@@ -36,6 +37,7 @@ const components = [
   Icon,
   Checkbox,
   Logo,
+  Datepicker,
   Dropdown,
   DropdownItem,
   Form,
@@ -71,6 +73,7 @@ export {
   Icon,
   Checkbox,
   Logo,
+  Datepicker,
   Dropdown,
   DropdownItem,
   Form,
