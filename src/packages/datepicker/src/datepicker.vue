@@ -1,6 +1,10 @@
 <template>
   <div :class="$style.datepicker">
-    <slot></slot>
+    <v-date-picker
+      mode="single"
+      :value="value"
+      @input="onInput"
+    ></v-date-picker>
   </div>
 </template>
 
