@@ -1,7 +1,7 @@
 import Multiselect from 'vue-multiselect';
 
 export default {
-  name: 'dd-select',
+  name: 'DdSelect',
   components: { Multiselect },
   props: {
     value: {
@@ -23,6 +23,15 @@ export default {
     status: {
       type: Boolean,
       default: false,
+    },
+  },
+  computed: {
+    classList() {
+      return [
+        this.$style.select,
+        this.status && this.$style['select--status'],
+        this.disabled && this.$style['select--disabled'],
+      ];
     },
   },
   methods: {

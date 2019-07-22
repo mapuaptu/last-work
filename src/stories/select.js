@@ -16,7 +16,7 @@ export default () =>
     .add(
       'Default',
       () => ({
-        components: { 'dd-select': Select },
+        components: { [Select.name]: Select },
         data() {
           return {
             value: '',

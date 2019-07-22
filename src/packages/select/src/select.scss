@@ -4,6 +4,22 @@
   position: relative;
   flex: 1 0 auto;
 
+  .caret {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 100%;
+    font-size: 19px;
+    line-height: 25px;
+    color: $color-secondary;
+    transition: $transition;
+    transition-property: transform;
+    cursor: pointer;
+  }
+
   :global(.multiselect--active) {
     .caret {
       transform: rotate(180deg);
@@ -41,7 +57,6 @@
   :global(.multiselect__single) {
     display: flex;
     align-items: center;
-    //padding-top: 4px;
     margin-bottom: 0;
     font-size: 16px;
     line-height: 19px;
@@ -106,6 +121,10 @@
     :global(.multiselect__single) {
       background-color: transparent;
     }
+
+    .caret {
+      right: 20px;
+    }
   }
 
   &--disabled {
@@ -118,25 +137,5 @@
       color: $color-secondary;
       background-color: $color-background;
     }
-  }
-}
-
-.caret {
-  position: absolute;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 100%;
-  font-size: 19px;
-  line-height: 25px;
-  color: $color-secondary;
-  transition: $transition;
-  transition-property: transform;
-  cursor: pointer;
-
-  &--status {
-    right: 20px;
   }
 }

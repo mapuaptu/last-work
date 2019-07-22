@@ -1,9 +1,5 @@
 <template>
-  <div :class="[
-    $style.select,
-    status && $style['select--status'],
-    disabled && $style['select--disabled']
-  ]">
+  <div :class="classList">
     <multiselect
       :value="value"
       :options="options"
@@ -15,10 +11,7 @@
       @input="onInput"
     >
       <template #caret>
-        <div :class="[
-          $style.caret,
-          status && $style['caret--status']
-        ]">
+        <div :class="$style.caret">
           <i class="fa fa-angle-down"></i>
         </div>
       </template>
