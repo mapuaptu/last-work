@@ -1,8 +1,11 @@
 <template>
-  <div :class="[
+  <div
+    :class="[
     $style.notification,
     status !== 'default' && $style[`notification--${status}`]
-  ]">
+  ]"
+    data-test-notification="data-test-notification"
+  >
     <div
       v-if="status !== 'default'"
       :class="$style.icon"
