@@ -1,5 +1,10 @@
 <template>
-  <div :class="$style.progressbar"></div>
+  <div
+    :class="$style.progressbar"
+    data-test-progressbar="data-test-progressbar"
+  >
+    <slot></slot>
+  </div>
 </template>
 
 <script src="./progressbar.js"></script>
