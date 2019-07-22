@@ -1,5 +1,5 @@
 export default {
-  name: 'DdCntainer',
+  name: 'DdContainer',
   props: {
     fluid: {
       type: Boolean,
