@@ -1,5 +1,5 @@
 export default {
-  name: 'dd-spinner',
+  name: 'DdSpinner',
   props: {
     size: {
       type: Number,

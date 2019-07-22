@@ -14,7 +14,7 @@ export default () =>
     .add(
       'Default',
       () => ({
-        components: { 'dd-spinner': Spinner },
+        components: { [Spinner.name]: Spinner },
         props: {
           size: {
             default: number('Size', options.size),

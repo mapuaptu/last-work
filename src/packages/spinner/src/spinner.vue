@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="[$style.spinner]"
+    :class="$style.spinner"
     :style="{'--size': size}"
   ></div>
 </template>
