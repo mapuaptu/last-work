@@ -19,6 +19,7 @@ export default () =>
     .add(
       'Default',
       () => ({
+        components: { [Userpic.name]: Userpic },
         props: {
           url: {
             default: select('Url', options.url, options.default),
@@ -30,7 +31,6 @@ export default () =>
             default: number('Size', options.size),
           },
         },
-        components: { 'dd-userpic': Userpic },
         template: `<dd-userpic :url="url" :alt="alt" :size="size">
         </dd-userpic>`,
       }),

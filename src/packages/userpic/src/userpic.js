@@ -1,5 +1,5 @@
 export default {
-  name: 'dd-userpic',
+  name: 'DdUserpic',
   props: {
     url: {
       type: String,

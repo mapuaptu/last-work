@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="[$style.userpic]"
+    :class="$style.userpic"
     :style="{'--size': size}"
   >
     <img
@@ -9,8 +9,8 @@
       :alt="alt"
     >
     <i
-      :class="['fa', 'fa-user', $style.icon]"
       v-else
+      :class="['fa', 'fa-user', $style.icon]"
     ></i>
   </div>
 </template>
