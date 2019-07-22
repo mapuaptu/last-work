@@ -2,13 +2,11 @@
   "name": "@dashdojodev/ui-components",
   "version": "1.3.22",
   "scripts": {
-    "test": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "build-storybook": "build-storybook -c .storybook -o build/storybook",
     "reinstall": "rm -rf node_modules && npm i",
     "release": "np --any-branch --no-yarn --verbose",
-    "storybook": "start-storybook -p 9000 -s ./.storybook/assets",
-    "test:unit": "vue-cli-service test:unit"
+    "storybook": "start-storybook -p 9000 -s ./.storybook/assets"
   },
   "main": "src/index.js",
   "files": [
