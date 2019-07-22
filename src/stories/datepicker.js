@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from 'storybook-addon-vue-info';
-import { Datepicker } from '../index';
+import { Datepicker, Input } from '../index';
 
 export default () =>
   storiesOf('Datepicker', module)
@@ -9,7 +9,7 @@ export default () =>
     .add(
       'Default',
       () => ({
-        components: { [Datepicker.name]: Datepicker },
+        components: { [Datepicker.name]: Datepicker, [Input.name]: Input },
         props: {},
         data() {
           return {
@@ -22,7 +22,6 @@ export default () =>
           onInput(value) {
             this.date = value;
             action('input')(value);
-            console.log(value);
           },
         },
       }),

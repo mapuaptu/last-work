@@ -1,11 +1,15 @@
 <template>
-  <div :class="$style.datepicker">
+  <div :class="classList">
     <v-date-picker
       mode="single"
       popoverVisibility="focus"
       :value="value"
       @input="onInput"
-    ></v-date-picker>
+      @click.native="onClick"
+      v-click-outside="onClickOutside"
+    >
+      <slot></slot>
+    </v-date-picker>
   </div>
 </template>
 

@@ -2,4 +2,31 @@
 
 .datepicker {
   position: relative;
+
+  input {
+    position: relative;
+    display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+    outline: none;
+    border: 1px solid $color-light;
+    border-radius: 6px;
+    padding: 12px 14px;
+    padding-right: 45px;
+    width: 100%;
+    min-height: 48px;
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 21px;
+    color: $color-default;
+    background-color: $color-white;
+    transition: $transition;
+    transition-property: border, color, background-color;
+  }
+
+  &--focus {
+    input {
+      border: 1px solid $color-secondary;
+    }
+  }
 }
