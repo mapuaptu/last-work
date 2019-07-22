@@ -1,5 +1,8 @@
 <template>
-  <div :class="classList">
+  <div
+    :class="classList"
+    data-test-card-item="data-test-card-item"
+  >
     <div
       :class="$style.name"
       v-if="$slots.name"
@@ -12,6 +15,7 @@
     >
       <slot name="value"></slot>
     </div>
+    <slot></slot>
   </div>
 </template>
 
