@@ -1,5 +1,5 @@
 export default {
-  name: 'dd-col',
+  name: 'DdCol',
   props: {
     size: {
       type: [String, Number],
@@ -43,6 +43,21 @@ export default {
     },
   },
   computed: {
+    classList() {
+      return [
+        this.size ? this.$style[`col-${this.size}`] : this.$style['col-12'],
+        this.sm && this.$style[`col-sm-${this.sm}`],
+        this.md && this.$style[`col-md-${this.md}`],
+        this.lg && this.$style[`col-lg-${this.lg}`],
+        this.xl && this.$style[`col-xl-${this.xl}`],
+        this.offset && this.$style[`offset-${this.offset}`],
+        this.order && this.$style[`order-${this.order}`],
+        this.justify && this.$style[`justify-content-${this.justify}`],
+        this.align && this.$style[`align-items-${this.align}`],
+        this.self && this.$style[`align-self-${this.self}`],
+        this.$style.flex,
+      ];
+    },
     styleGutter() {
       const result = {};
 
