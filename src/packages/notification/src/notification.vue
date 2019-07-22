@@ -5,19 +5,13 @@
   ]">
     <div
       v-if="status !== 'default'"
-      :class="[
-        $style.icon,
-        status !== 'default' && $style[`icon--${status}`],
-      ]"
+      :class="$style.icon"
     >
-      <i :class="['fa', `fa-${icon}`]"></i>
+      <dd-icon :name="icon"></dd-icon>
     </div>
     <div
       v-if="$slots.default"
-      :class="[
-        $style.text,
-        status !== 'default' && $style[`text--${status}`]
-      ]"
+      :class="$style.text"
     >
       <slot></slot>
     </div>

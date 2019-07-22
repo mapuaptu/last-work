@@ -16,7 +16,7 @@ export default () =>
       'default',
       () => ({
         components: {
-          'dd-notification': Notification,
+          [Notification.name]: Notification,
         },
         props: {
           status: {

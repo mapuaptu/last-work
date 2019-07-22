@@ -13,12 +13,29 @@
   background-color: $color-white;
   transition: $transition background-color;
 
+  .icon {
+    margin-right: 34px;
+    font-size: 70px;
+  }
+
+  .text {
+    transition: $transition color;
+  }
+
   &--success {
     background-color: $color-status-complete;
   }
 
   &--error {
     background-color: $color-status-waiting;
+
+    .icon {
+      color: $color-white;
+    }
+
+    .text {
+      color: $color-white;
+    }
   }
 
   &--info {
@@ -27,25 +44,5 @@
 
   &--warning {
     background-color: $color-status-progress;
-  }
-}
-
-.icon {
-  margin-right: 34px;
-
-  i {
-    font-size: 70px;
-  }
-
-  &--error {
-    color: $color-white;
-  }
-}
-
-.text {
-  transition: $transition color;
-
-  &--error {
-    color: $color-white;
   }
 }

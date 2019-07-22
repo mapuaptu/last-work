@@ -1,5 +1,10 @@
+import Icon from '../../icon/index';
+
 export default {
-  name: 'dd-notification',
+  name: 'DdNotification',
+  components: {
+    [Icon.name]: Icon,
+  },
   props: {
     status: {
       type: String,
