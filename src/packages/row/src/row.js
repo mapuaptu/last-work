@@ -1,5 +1,5 @@
 export default {
-  name: 'dd-row',
+  name: 'DdRow',
   props: {
     gutter: {
       type: [Number, String],
@@ -15,6 +15,13 @@ export default {
     },
   },
   computed: {
+    classList() {
+      return [
+        this.$style.row,
+        this.$style[`justify-content-${this.justify}`],
+        this.$style[`align-items-${this.align}`],
+      ];
+    },
     styleGutter() {
       const result = {};
 

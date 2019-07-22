@@ -1,11 +1,7 @@
 <template>
   <div
-    :class="[
-      $style.row,
-      $style[`justify-content-${justify}`],
-      $style[`align-items-${this.align}`],
-    ]"
-    :style="[styleGutter]"
+    :class="classList"
+    :style="styleGutter"
   >
     <slot></slot>
   </div>
