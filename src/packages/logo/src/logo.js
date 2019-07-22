@@ -1,5 +1,5 @@
 export default {
-  name: 'dd-logo',
+  name: 'DdLogo',
   props: {
     size: {
       type: Number,

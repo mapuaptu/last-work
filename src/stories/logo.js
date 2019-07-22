@@ -15,7 +15,7 @@ export default () =>
       'default',
       () => ({
         components: {
-          'dd-logo': Logo,
+          [Logo.name]: Logo,
         },
         props: {
           size: {

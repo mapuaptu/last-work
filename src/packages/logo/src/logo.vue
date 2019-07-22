@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="[$style.logo]"
+    :class="$style.logo"
     :style="{width: `${size}px`}"
   >
     <svg
