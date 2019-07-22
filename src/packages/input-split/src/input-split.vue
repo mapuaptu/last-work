@@ -1,12 +1,6 @@
 <template>
   <div
-    :class="[
-      $style['input-split'],
-      disabled && $style['input-split--disabled'],
-      root.status && $style[`input-split--${root.status}`],
-      size && $style[`input-split--${size}`],
-      focus && $style['input-split--focus'],
-    ]"
+    :class="classList"
     @click="onClick"
     v-click-outside="onClickOutside"
   >
@@ -20,18 +14,12 @@
       :type="type"
       ref="input"
     />
-    <i
+    <dd-icon
       v-if="root.status"
-      :class="[
-      $style.icon,
-      'fa',
-      root.status === 'success' ? [$style['icon--success'],'fa-check-circle'] :
-      root.status === 'error' ?
-      [$style['icon--error'], 'fa-exclamation-circle']: '',
-      size && $style[`icon--${size}`],
-    ]"
+      :class="$style.icon"
+      :name="iconName"
     >
-    </i>
+    </dd-icon>
 
     <div
       v-if="$slots.default"

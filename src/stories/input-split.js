@@ -10,6 +10,8 @@ const options = {
   label: 'label',
   message: 'message',
   domen: 'dashdojo.com',
+  size: 'default',
+  sizes: ['default', 'small', 'medium', 'large'],
 };
 
 export default () =>
@@ -20,8 +22,8 @@ export default () =>
       'default',
       () => ({
         components: {
-          'dd-input-split': InputSplit,
-          'dd-form-field': FormField,
+          [InputSplit.name]: InputSplit,
+          [FormField.name]: FormField,
         },
         props: {
           placeholder: {
@@ -29,6 +31,9 @@ export default () =>
           },
           disabled: {
             default: boolean('Disabled', options.disabled),
+          },
+          size: {
+            default: select('Size', options.sizes, options.size),
           },
           status: {
             default: select('Status', options.statuses, options.status),
@@ -50,7 +55,7 @@ export default () =>
         },
         template: `<dd-form-field status="default" :status="status">
           <dd-input-split v-model="model" :placeholder="placeholder"
-            :disabled="disabled">
+            :disabled="disabled" :size="size">
             .{{domen}}
           </dd-input-split>
           <template #label>{{label}}</template>

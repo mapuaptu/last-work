@@ -20,6 +20,32 @@
   transition: $transition;
   transition-property: border, color, background-color;
 
+  .domen {
+    color: $color-secondary;
+  }
+
+  .icon {
+    position: absolute;
+    right: 15px;
+    font-size: 20px;
+    transition: $transition color;
+  }
+
+  .inner {
+    margin: 0;
+    outline: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    background-color: transparent;
+
+    &::placeholder {
+      color: $color-secondary;
+    }
+  }
+
   &--focus {
     border: 1px solid $color-secondary;
   }
@@ -35,6 +61,11 @@
     min-height: 32px;
     font-size: 12px;
     line-height: 19px;
+
+    .icon {
+      right: 10px;
+      font-size: 15px;
+    }
   }
 
   &--medium {
@@ -43,6 +74,11 @@
     min-height: 56px;
     font-size: 18px;
     line-height: 24px;
+
+    .icon {
+      right: 15px;
+      font-size: 25px;
+    }
   }
 
   &--large {
@@ -51,11 +87,20 @@
     min-height: 64px;
     font-size: 20px;
     line-height: 27px;
+
+    .icon {
+      right: 15px;
+      font-size: 30px;
+    }
   }
 
   &--success {
     border: 1px solid $color-message-success;
     color: $color-message-success;
+
+    .icon {
+      color: $color-message-success;
+    }
 
     &::placeholder {
       color: lighten($color-message-success, 20);
@@ -70,6 +115,10 @@
     border: 1px solid $color-message-error;
     color: $color-message-error;
 
+    .icon {
+      color: $color-message-error;
+    }
+
     &::placeholder {
       color: lighten($color-message-error, 20);
     }
@@ -77,54 +126,5 @@
     &:focus {
       border: 1px solid $color-message-error;
     }
-  }
-}
-
-.domen {
-  color: $color-secondary;
-}
-
-.icon {
-  position: absolute;
-  right: 15px;
-  font-size: 20px;
-  transition: $transition color;
-
-  &--small {
-    right: 10px;
-    font-size: 15px;
-  }
-
-  &--medium {
-    right: 20px;
-    font-size: 25px;
-  }
-
-  &--large {
-    right: 25px;
-    font-size: 30px;
-  }
-
-  &--success {
-    color: $color-message-success;
-  }
-
-  &--error {
-    color: $color-message-error;
-  }
-}
-
-.inner {
-  margin: 0;
-  outline: none;
-  border: none;
-  padding: 0;
-  font-size: inherit;
-  line-height: inherit;
-  color: inherit;
-  background-color: transparent;
-
-  &::placeholder {
-    color: $color-secondary;
   }
 }
