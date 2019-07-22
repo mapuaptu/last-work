@@ -3,6 +3,7 @@
     action=""
     :class="$style.form"
     @submit="onSubmit"
+    data-test-form="data-test-form"
   >
     <slot></slot>
   </form>
