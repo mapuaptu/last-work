@@ -2,6 +2,7 @@
   <div
     :class="classList"
     :style="styleGutter"
+    data-test-col="data-test-col"
   >
     <slot></slot>
   </div>
