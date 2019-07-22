@@ -3,6 +3,7 @@
     :class="classList"
     @click="onClick"
     v-click-outside="onClickOutside"
+    data-test-input-split="data-test-input-split"
   >
     <input
       v-autowidth="{maxWidth: '350px', minWidth: '20px', comfortZone: 0}"
