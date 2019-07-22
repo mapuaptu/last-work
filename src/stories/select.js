@@ -53,7 +53,7 @@ export default () =>
     .add(
       'Default with object',
       () => ({
-        components: { 'dd-select': Select, 'dd-userpic': Userpic },
+        components: { [Select.name]: Select, [Userpic.name]: Userpic },
         data() {
           return {
             value: {

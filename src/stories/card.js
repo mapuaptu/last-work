@@ -8,7 +8,7 @@ export default () =>
     .add(
       'Default',
       () => ({
-        components: { 'dd-card': Card, 'dd-card-item': CardItem },
+        components: { [Card.name]: Card, [CardItem.name]: CardItem },
         props: {},
         data() {
           return {

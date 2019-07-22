@@ -26,8 +26,8 @@ export default () =>
       'default',
       () => ({
         components: {
-          'dd-dropdown': Dropdown,
-          'dd-dropdown-item': DropdownItem,
+          [Dropdown.name]: Dropdown,
+          [DropdownItem.name]: DropdownItem,
         },
         data() {
           return {

@@ -17,7 +17,7 @@ export default () =>
       'default',
       () => ({
         components: {
-          'dd-icon': Icon,
+          [Icon.name]: Icon,
         },
         props: {
           name: {

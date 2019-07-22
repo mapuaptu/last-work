@@ -41,7 +41,7 @@ export default () =>
     .add(
       'With status',
       () => ({
-        components: { 'dd-block': Block, 'dd-select': Select },
+        components: { [Block.name]: Block, [Select.name]: Select },
         data() {
           return {
             options: [

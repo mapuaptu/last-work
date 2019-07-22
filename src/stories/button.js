@@ -31,7 +31,7 @@ export default () =>
     .add(
       'Default',
       () => ({
-        components: { 'dd-button': Button },
+        components: { [Button.name]: Button },
         props: {
           type: {
             default: select('Type', options.type, options.type.primary),

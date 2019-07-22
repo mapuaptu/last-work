@@ -3,7 +3,11 @@ import { Container, Row, Col } from '../index';
 
 export default () =>
   storiesOf('Grid', module).add('default', () => ({
-    components: { 'dd-container': Container, 'dd-row': Row, 'dd-col': Col },
+    components: {
+      [Container.name]: Container,
+      [Row.name]: Row,
+      [Col.name]: Col,
+    },
     template: `<dd-container>
         <dd-row gutter="60" style="background-color: #ff9184;">
           <dd-col size="2" offset="1" order="2" justify="center" align="center"

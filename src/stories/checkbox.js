@@ -16,7 +16,7 @@ export default () =>
     .add(
       'Default',
       () => ({
-        components: { 'dd-checkbox': Checkbox },
+        components: { [Checkbox.name]: Checkbox },
         props: {
           disabled: {
             default: boolean('Disabled', options.disabled),
