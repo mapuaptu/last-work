@@ -1,9 +1,9 @@
 import { directive as clickOutside } from 'v-click-outside';
-import { Icon } from '../../../index';
+import Icon from '../../icon/index';
 
 export default {
-  name: 'dd-dropdown',
-  components: { 'dd-icon': Icon },
+  name: 'DdDropdown',
+  components: { [Icon.name]: Icon },
   directives: {
     clickOutside,
   },

@@ -6,7 +6,7 @@
 
     <div
       v-if="$slots.control"
-      :class="[$style.control]"
+      :class="$style.control"
       @click="onClick"
     >
       <slot name="control"></slot>
@@ -14,7 +14,7 @@
 
     <dd-icon
       v-else
-      :class="[$style.icon]"
+      :class="$style.icon"
       :name="icon"
       color="#617c92"
       :size="18"

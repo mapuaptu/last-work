@@ -9,98 +9,98 @@
   color: $color-link;
   cursor: pointer;
 
+  .control {
+    display: flex;
+    align-items: center;
+    color: $color-default;
+
+    span {
+      position: relative;
+      top: 1px;
+      margin-right: 15px;
+    }
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    transition: $transition;
+    transition-property: background-color;
+
+    &:hover {
+      background-color: $color-background;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 4px);
+    z-index: 10;
+    overflow: hidden;
+    border-radius: 6px;
+    min-width: 212px;
+    box-shadow: 0 8px 32px rgba(27, 25, 25, 0.1);
+    background-color: $color-white;
+
+    &--bottom-left {
+      left: initial;
+      right: 0;
+      top: calc(100% + 4px);
+      bottom: initial;
+    }
+
+    &--right-bottom {
+      left: calc(100% + 4px);
+      right: initial;
+      top: 0;
+      bottom: initial;
+    }
+
+    &--right-top {
+      left: calc(100% + 4px);
+      right: initial;
+      top: initial;
+      bottom: 0;
+    }
+
+    &--top-right {
+      left: 0;
+      right: initial;
+      top: initial;
+      bottom: calc(100% + 4px);
+    }
+
+    &--top-left {
+      left: initial;
+      right: 0;
+      top: initial;
+      bottom: calc(100% + 4px);
+    }
+
+    &--left-top {
+      left: initial;
+      right: calc(100% + 4px);
+      top: initial;
+      bottom: 0;
+    }
+
+    &--left-bottom {
+      left: initial;
+      right: calc(100% + 4px);
+      top: 0;
+      bottom: initial;
+    }
+  }
+
   &:hover {
     .control {
       text-decoration: underline;
     }
-  }
-}
-
-.control {
-  display: flex;
-  align-items: center;
-  color: $color-default;
-
-  span {
-    position: relative;
-    top: 1px;
-    margin-right: 15px;
-  }
-}
-
-.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  width: 32px;
-  height: 32px;
-  font-size: 18px;
-  transition: $transition;
-  transition-property: background-color;
-
-  &:hover {
-    background-color: $color-background;
-  }
-}
-
-.menu {
-  position: absolute;
-  left: 0;
-  top: calc(100% + 4px);
-  z-index: 10;
-  overflow: hidden;
-  border-radius: 6px;
-  min-width: 212px;
-  box-shadow: 0 8px 32px rgba(27, 25, 25, 0.1);
-  background-color: $color-white;
-
-  &--bottom-left {
-    left: initial;
-    right: 0;
-    top: calc(100% + 4px);
-    bottom: initial;
-  }
-
-  &--right-bottom {
-    left: calc(100% + 4px);
-    right: initial;
-    top: 0;
-    bottom: initial;
-  }
-
-  &--right-top {
-    left: calc(100% + 4px);
-    right: initial;
-    top: initial;
-    bottom: 0;
-  }
-
-  &--top-right {
-    left: 0;
-    right: initial;
-    top: initial;
-    bottom: calc(100% + 4px);
-  }
-
-  &--top-left {
-    left: initial;
-    right: 0;
-    top: initial;
-    bottom: calc(100% + 4px);
-  }
-
-  &--left-top {
-    left: initial;
-    right: calc(100% + 4px);
-    top: initial;
-    bottom: 0;
-  }
-
-  &--left-bottom {
-    left: initial;
-    right: calc(100% + 4px);
-    top: 0;
-    bottom: initial;
   }
 }
