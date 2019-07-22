@@ -1,10 +1,8 @@
 <template>
-  <div :class="[
-    $style.field,
-  ]">
+  <div :class="$style.field">
     <div
       v-if="$slots.label"
-      :class="[$style.label]"
+      :class="$style.label"
     >
       <slot name="label"></slot>
     </div>

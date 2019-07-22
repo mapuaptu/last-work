@@ -4,25 +4,25 @@
   display: flex;
   flex: 1 0 auto;
   flex-flow: column;
-}
 
-.label {
-  margin-bottom: 10px;
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.message {
-  margin-top: 8px;
-  font-size: 12px;
-  line-height: 14px;
-  color: $color-link;
-
-  &--success {
-    color: $color-message-success;
+  .label {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 16px;
   }
 
-  &--error {
-    color: $color-message-error;
+  .message {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 14px;
+    color: $color-link;
+
+    &--success {
+      color: $color-message-success;
+    }
+
+    &--error {
+      color: $color-message-error;
+    }
   }
 }

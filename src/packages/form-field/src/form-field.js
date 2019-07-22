@@ -1,5 +1,5 @@
 export default {
-  name: 'dd-form-field',
+  name: 'DdFormField',
   props: {
     status: {
       type: String,
