@@ -16,9 +16,9 @@ export default () =>
       'Default',
       () => ({
         components: {
-          'dd-uploader': Uploader,
-          'dd-userpic': Userpic,
-          'dd-button': Button,
+          [Uploader.name]: Uploader,
+          [Userpic.name]: Userpic,
+          [Button.name]: Button,
         },
         props: {
           text: {

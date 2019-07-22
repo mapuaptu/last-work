@@ -1,11 +1,11 @@
 <template>
-  <div :class="[$style.uploader]">
+  <div :class="$style.uploader">
     <div
       v-if="$slots.image"
-      :class="[$style.image]"
+      :class="$style.image"
     >
       <slot name="image"></slot>
-      <div :class="[$style.delete]">
+      <div :class="$style.delete">
         <i
           :class="['fa', 'fa-trash', $style.icon]"
           @click="onDelete"
@@ -14,13 +14,13 @@
     </div>
     <label>
       <div
-        :class="[$style.button]"
+        :class="$style.button"
         @click="$refs.input.click()"
       >
         <slot></slot>
       </div>
       <input
-        :class="[$style.original]"
+        :class="$style.original"
         type="file"
         accept="image/*"
         ref="input"

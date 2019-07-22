@@ -1,5 +1,5 @@
 export default {
-  name: 'dd-uploader',
+  name: 'DdUploader',
   methods: {
     onInput(event) {
       const { target } = event;
