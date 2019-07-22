@@ -1,5 +1,8 @@
 <template>
-  <div :class="$style.modal">
+  <div
+    :class="$style.modal"
+    data-test-modal="data-test-modal"
+  >
     <slot></slot>
   </div>
 </template>
