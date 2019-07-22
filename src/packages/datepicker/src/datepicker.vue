@@ -1,5 +1,8 @@
 <template>
-  <div :class="classList">
+  <div
+    :class="classList"
+    data-test-datepicker="data-test-datepicker"
+  >
     <v-date-picker
       mode="single"
       popoverVisibility="focus"
