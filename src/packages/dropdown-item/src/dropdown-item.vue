@@ -1,16 +1,12 @@
 <template>
-  <div :class="[
-      $style['dropdown-item'],
-      disabled && $style[`dropdown-item--disabled`],
-      delimiter && $style[`dropdown-item--delimiter`],
-    ]">
+  <div :class="classList">
     <i
       v-if="icon"
       :class="[$style.icon, `fa fa-${icon}`]"
     ></i>
     <div
       v-if="$slots.default"
-      :class="[$style.text]"
+      :class="$style.text"
     >
       <slot></slot>
     </div>

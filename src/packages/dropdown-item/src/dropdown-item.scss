@@ -9,6 +9,15 @@
   transition-property: background-color;
   user-select: none;
 
+  .icon {
+    margin-right: 10px;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
   &:hover {
     color: $color-default;
     background-color: $color-background;
@@ -38,13 +47,4 @@
       background-color: $color-white;
     }
   }
-}
-
-.icon {
-  margin-right: 10px;
-}
-
-.text {
-  font-size: 16px;
-  line-height: 21px;
 }
