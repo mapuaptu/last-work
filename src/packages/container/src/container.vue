@@ -1,8 +1,5 @@
 <template>
-  <div :class="[
-    $style.container,
-    fluid && $style['container-fluid'],
-  ]">
+  <div :class="classList">
     <slot></slot>
   </div>
 </template>
