@@ -1,5 +1,8 @@
 <template>
-  <div :class="classList">
+  <div
+    :class="classList"
+    data-test-radio="data-test-radio"
+  >
     <div :class="$style.input">
       <div :class="$style.inner"></div>
       <input
@@ -15,7 +18,10 @@
     <div
       v-if="label"
       :class="$style.label"
-    >{{label}}</div>
+    >
+      {{label}}
+    </div>
+    <slot></slot>
   </div>
 </template>
 
