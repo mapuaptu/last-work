@@ -1,5 +1,8 @@
 <template>
-  <div :class="classList">
+  <div
+    :class="classList"
+    data-test-select="data-test-select"
+  >
     <multiselect
       :value="value"
       :options="options"
@@ -28,6 +31,7 @@
         ></slot>
       </template>
     </multiselect>
+    <slot></slot>
   </div>
 </template>
 
