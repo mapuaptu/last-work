@@ -19,9 +19,6 @@ describe('DropdownItem', () => {
   it('3. DropdownItem - can render text in default slot', () => {
     const message = 'DropdownItem message';
     const wrapper = mount(DropdownItem, {
-      propsData: {
-        value: true,
-      },
       slots: {
         default: message,
       },

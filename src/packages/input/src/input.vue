@@ -1,5 +1,8 @@
 <template>
-  <div :class="classList">
+  <div
+    :class="classList"
+    data-test-input="data-test-input"
+  >
     <input
       :class="$style.inner"
       :disabled="disabled"
@@ -24,6 +27,7 @@
       :name="iconName"
     >
     </dd-icon>
+    <slot></slot>
   </div>
 </template>
 

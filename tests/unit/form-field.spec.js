@@ -19,9 +19,6 @@ describe('FormField', () => {
   it('3. FormField - can render text in default slot', () => {
     const message = 'FormField message';
     const wrapper = mount(FormField, {
-      propsData: {
-        value: true,
-      },
       slots: {
         default: message,
       },

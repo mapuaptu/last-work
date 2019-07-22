@@ -67,7 +67,7 @@ export default {
       return size;
     },
     iconName() {
-      let name = '';
+      let name;
 
       if (this.root.status) {
         switch (this.root.status) {
@@ -80,6 +80,7 @@ export default {
             break;
 
           default:
+            name = '';
             break;
         }
       }
@@ -94,7 +95,7 @@ export default {
   },
   inject: {
     root: {
-      default: null,
+      default: 'default',
     },
   },
 };

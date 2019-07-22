@@ -19,9 +19,6 @@ describe('Form', () => {
   it('3. Form - can render text in default slot', () => {
     const message = 'Form message';
     const wrapper = mount(Form, {
-      propsData: {
-        value: true,
-      },
       slots: {
         default: message,
       },

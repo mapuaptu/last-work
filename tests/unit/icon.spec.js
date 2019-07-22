@@ -19,9 +19,6 @@ describe('Icon', () => {
   it('3. Icon - can render text in default slot', () => {
     const message = 'Icon message';
     const wrapper = mount(Icon, {
-      propsData: {
-        value: true,
-      },
       slots: {
         default: message,
       },
