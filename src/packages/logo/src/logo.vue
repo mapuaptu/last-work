@@ -2,6 +2,7 @@
   <div
     :class="$style.logo"
     :style="{width: `${size}px`}"
+    data-test-logo="data-test-logo"
   >
     <svg
       enable-background="new 0 0 381 49"
@@ -57,6 +58,7 @@
         fill="#FF0101"
       />
     </svg>
+    <slot></slot>
   </div>
 </template>
 
