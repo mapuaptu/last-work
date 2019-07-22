@@ -1,14 +1,9 @@
 <template>
-  <label :class="[$style.checkbox]">
-    <div :class="[$style.input]">
-      <span :class="[
-        $style.inner,
-        value && $style['inner--checked'],
-        disabled && $style['inner--disabled'],
-        $slots.default && value && $style['inner--text']
-      ]"></span>
+  <label :class="classList">
+    <div :class="$style.input">
+      <span :class="$style.inner"></span>
       <input
-        :class="[$style.original]"
+        :class="$style.original"
         type="checkbox"
         :checked="value"
         :disabled="disabled"
@@ -17,8 +12,8 @@
       >
     </div>
     <div
-      :class="[$style.label, disabled && $style['label--disabled']]"
       v-if="$slots.default"
+      :class="$style.label"
     >
       <slot></slot>
     </div>

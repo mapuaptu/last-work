@@ -1,5 +1,5 @@
 export default {
-  name: 'dd-checkbox',
+  name: 'DdCheckbox',
   props: {
     value: {
       type: [Array, Boolean],
@@ -8,6 +8,15 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
+    },
+  },
+  computed: {
+    classList() {
+      return [
+        this.$style.checkbox,
+        this.value && this.$style['checkbox--checked'],
+        this.disabled && this.$style['checkbox--disabled'],
+      ];
     },
   },
   methods: {
