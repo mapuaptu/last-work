@@ -1,5 +1,8 @@
 <template>
-  <div :class="$style.uploader">
+  <div
+    :class="$style.uploader"
+    data-test-uploader="data-test-uploader"
+  >
     <div
       v-if="$slots.image"
       :class="$style.image"
@@ -27,6 +30,7 @@
         @input="onInput"
       />
     </label>
+    <slot></slot>
   </div>
 </template>
 
