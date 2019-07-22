@@ -1,5 +1,8 @@
 <template>
-  <label :class="classList">
+  <label
+    :class="classList"
+    data-test-switch="data-test-switch"
+  >
     <input
       type="checkbox"
       :class="$style.input"
