@@ -2,7 +2,10 @@
   <div
     :class="$style.spinner"
     :style="{'--size': size}"
-  ></div>
+    data-test-spinner="data-test-spinner"
+  >
+    <slot></slot>
+  </div>
 </template>
 
 <script src="./spinner.js"></script>
