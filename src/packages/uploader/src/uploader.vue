@@ -30,7 +30,6 @@
         @input="onInput"
       />
     </label>
-    <slot></slot>
   </div>
 </template>
 

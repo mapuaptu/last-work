@@ -2,6 +2,7 @@
   <div
     :class="$style.userpic"
     :style="{'--size': size}"
+    data-test-userpic="data-test-userpic"
   >
     <img
       v-if="url"
@@ -12,6 +13,7 @@
       v-else
       :class="['fa', 'fa-user', $style.icon]"
     ></i>
+    <slot></slot>
   </div>
 </template>
 
