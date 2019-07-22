@@ -1,15 +1,7 @@
 <template>
-  <div :class="[
-    $style.input,
-  ]">
+  <div :class="classList">
     <input
-      :class="[
-        $style.inner,
-        disabled && $style['inner--disabled'],
-        root.status && $style[`inner--${root.status}`],
-        size && $style[`inner--${size}`],
-        image && $style['inner--image'],
-      ]"
+      :class="$style.inner"
       :disabled="disabled"
       :value="value"
       v-bind="$attrs"
@@ -22,21 +14,16 @@
     >
       <dd-userpic
         :url="image"
-        :size="24"
+        :size="imageSize"
       ></dd-userpic>
     </div>
-    <i
+
+    <dd-icon
       v-if="root.status"
-      :class="[
-      $style.icon,
-      'fa',
-      root.status === 'success' ? [$style['icon--success'],'fa-check-circle'] :
-      root.status === 'error' ?
-      [$style['icon--error'], 'fa-exclamation-circle']: '',
-      size && $style[`icon--${size}`],
-    ]"
+      :class="$style.icon"
+      :name="iconName"
     >
-    </i>
+    </dd-icon>
   </div>
 </template>
 

@@ -11,6 +11,8 @@ const options = {
   label: 'label',
   message: 'message',
   image: 'https://i.pravatar.cc/24',
+  size: 'default',
+  sizes: ['default', 'small', 'medium', 'large'],
 };
 
 export default () =>
@@ -21,12 +23,15 @@ export default () =>
       'default',
       () => ({
         components: {
-          'dd-input': Input,
-          'dd-form-field': FormField,
+          [Input.name]: Input,
+          [FormField.name]: FormField,
         },
         props: {
           placeholder: {
             default: text('Placeholder', options.placeholder),
+          },
+          size: {
+            default: select('Size', options.sizes, options.size),
           },
           disabled: {
             default: boolean('Disabled', options.disabled),
@@ -50,12 +55,12 @@ export default () =>
           };
         },
         template: `<dd-form-field :status="status">
-        <dd-input v-model="model" :placeholder="placeholder"
-        :disabled="disabled" :image="image" @input="onInput">
-        </dd-input>
-        <template #label>{{label}}</template>
-        <template #message>{{message}}</template>
-      </dd-form-field>`,
+          <dd-input v-model="model" :placeholder="placeholder"
+          :disabled="disabled" :image="image" :size="size" @input="onInput">
+          </dd-input>
+          <template #label>{{label}}</template>
+          <template #message>{{message}}</template>
+        </dd-form-field>`,
         methods: {
           onInput: action('input'),
         },

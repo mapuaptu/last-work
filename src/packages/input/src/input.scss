@@ -5,124 +5,156 @@
   display: flex;
   flex: 1 0 auto;
   align-items: center;
-}
 
-.image {
-  position: absolute;
-  left: 10px;
-}
-
-.icon {
-  position: absolute;
-  right: 15px;
-  font-size: 20px;
-  transition: $transition color;
-
-  &--small {
-    right: 10px;
-    font-size: 15px;
+  .image {
+    position: absolute;
+    left: 10px;
   }
 
-  &--medium {
-    right: 20px;
-    font-size: 25px;
-  }
-
-  &--large {
-    right: 25px;
-    font-size: 30px;
-  }
-
-  &--success {
-    color: $color-message-success;
-  }
-
-  &--error {
-    color: $color-message-error;
-  }
-}
-
-.inner {
-  display: flex;
-  align-items: center;
-  outline: none;
-  border: 1px solid $color-light;
-  border-radius: 6px;
-  padding: 12px 14px;
-  padding-right: 45px;
-  width: 100%;
-  min-height: 48px;
-  font-size: 16px;
-  line-height: 21px;
-  color: $color-default;
-  background-color: $color-white;
-  transition: $transition;
-  transition-property: border, color, background-color;
-
-  &::placeholder {
-    color: $color-secondary;
-  }
-
-  &:focus {
-    border: 1px solid $color-secondary;
-  }
-
-  &--disabled {
-    color: $color-secondary;
-    background-color: $color-background;
-  }
-
-  &--small {
-    padding: 5px 14px;
-    padding-right: 35px;
-    min-height: 32px;
-    font-size: 12px;
-    line-height: 19px;
-  }
-
-  &--medium {
-    padding: 15px 14px;
-    padding-right: 65px;
-    min-height: 56px;
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  &--large {
-    padding: 18px 14px;
-    padding-right: 80px;
-    min-height: 64px;
+  .icon {
+    position: absolute;
+    right: 15px;
     font-size: 20px;
-    line-height: 27px;
+    transition: $transition color;
   }
 
-  &--success {
-    border: 1px solid $color-message-success;
-    color: $color-message-success;
+  .inner {
+    display: flex;
+    align-items: center;
+    outline: none;
+    border: 1px solid $color-light;
+    border-radius: 6px;
+    padding: 12px 14px;
+    padding-right: 45px;
+    width: 100%;
+    min-height: 48px;
+    font-size: 16px;
+    line-height: 21px;
+    color: $color-default;
+    background-color: $color-white;
+    transition: $transition;
+    transition-property: border, color, background-color;
 
     &::placeholder {
-      color: lighten($color-message-success, 20);
+      color: $color-secondary;
     }
 
     &:focus {
+      border: 1px solid $color-secondary;
+    }
+  }
+
+  &--small {
+    .icon {
+      right: 10px;
+      font-size: 15px;
+    }
+
+    .inner {
+      padding: 5px 14px;
+      padding-right: 35px;
+      min-height: 32px;
+      font-size: 12px;
+      line-height: 19px;
+    }
+  }
+
+  &--medium {
+    .icon {
+      right: 20px;
+      font-size: 25px;
+    }
+
+    .inner {
+      padding: 15px 14px;
+      padding-right: 65px;
+      min-height: 56px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &--large {
+    .icon {
+      right: 25px;
+      font-size: 30px;
+    }
+
+    .inner {
+      padding: 18px 14px;
+      padding-right: 80px;
+      min-height: 64px;
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+
+  &--success {
+    .icon {
+      color: $color-message-success;
+    }
+
+    .inner {
       border: 1px solid $color-message-success;
+      color: $color-message-success;
+
+      &::placeholder {
+        color: lighten($color-message-success, 20);
+      }
+
+      &:focus {
+        border: 1px solid $color-message-success;
+      }
     }
   }
 
   &--error {
-    border: 1px solid $color-message-error;
-    color: $color-message-error;
-
-    &::placeholder {
-      color: lighten($color-message-error, 20);
+    .icon {
+      color: $color-message-error;
     }
 
-    &:focus {
+    .inner {
       border: 1px solid $color-message-error;
+      color: $color-message-error;
+
+      &::placeholder {
+        color: lighten($color-message-error, 20);
+      }
+
+      &:focus {
+        border: 1px solid $color-message-error;
+      }
     }
   }
 
   &--image {
-    padding: 12px 14px 12px 40px;
+    .inner {
+      padding: 12px 14px 12px 40px;
+    }
+  }
+
+  &--image#{&}--small {
+    .inner {
+      padding: 12px 14px 12px 35px;
+    }
+  }
+
+  &--image#{&}--medium {
+    .inner {
+      padding: 12px 14px 12px 45px;
+    }
+  }
+
+  &--image#{&}--large {
+    .inner {
+      padding: 12px 14px 12px 50px;
+    }
+  }
+
+  &--disabled {
+    .inner {
+      color: $color-secondary;
+      background-color: $color-background;
+    }
   }
 }
