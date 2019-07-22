@@ -2,6 +2,7 @@
   <div :class="$style.datepicker">
     <v-date-picker
       mode="single"
+      popoverVisibility="focus"
       :value="value"
       @input="onInput"
     ></v-date-picker>
