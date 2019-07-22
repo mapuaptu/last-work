@@ -1,9 +1,9 @@
 import Userpic from '../../userpic/index';
 
 export default {
-  name: 'dd-input',
+  name: 'DdInput',
   components: {
-    'dd-userpic': Userpic,
+    [Userpic.name]: Userpic,
   },
   props: {
     value: {

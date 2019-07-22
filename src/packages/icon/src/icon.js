@@ -19,7 +19,7 @@ export default {
       return {
         fontSize: this.size && `${this.size}px`,
         lineHeight: this.size && `${this.size}px`,
-        color: this.color,
+        color: this.color && this.color,
       };
     },
   },

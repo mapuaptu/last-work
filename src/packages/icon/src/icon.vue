@@ -1,5 +1,5 @@
 <template>
-  <div :class="[$style.icon]">
+  <div :class="$style.icon">
     <i
       :class="`fa fa-${name}`"
       :style="styleList"
