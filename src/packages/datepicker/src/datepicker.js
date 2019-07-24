@@ -1,13 +1,16 @@
-import Vue from 'vue';
-import VCalendar from 'v-calendar';
+import { Calendar, DatePicker, setupCalendar } from 'v-calendar';
 import { directive as clickOutside } from 'v-click-outside';
 
-Vue.use(VCalendar, {});
+setupCalendar({});
 
 export default {
   name: 'DdDatepicker',
   directives: {
     clickOutside,
+  },
+  components: {
+    'v-calendar': Calendar,
+    'v-date-picker': DatePicker,
   },
   props: {
     value: {
