@@ -14,6 +14,7 @@ import Icon from './packages/icon';
 import Input from './packages/input';
 import InputSplit from './packages/input-split';
 import Logo from './packages/logo';
+import Menu from './packages/menu';
 import Modal from './packages/modal';
 import Notification from './packages/notification';
 import Progressbar from './packages/progressbar';
@@ -44,6 +45,7 @@ const components = [
   Input,
   InputSplit,
   Logo,
+  Menu,
   Modal,
   Notification,
   Progressbar,
@@ -80,6 +82,7 @@ export {
   Input,
   InputSplit,
   Logo,
+  Menu,
   Modal,
   Notification,
   Progressbar,
