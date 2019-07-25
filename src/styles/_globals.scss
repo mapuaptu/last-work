@@ -10,6 +10,7 @@ body {
   font-size: 14px;
   line-height: 22px;
   color: $color-default;
+  background-color: $color-background;
 
   h1 {
     font-size: 32px;
@@ -56,13 +57,31 @@ body {
   }
 }
 
-.block-link {
+// Global classes
+
+.dd-layout {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.dd-header {
+  position: relative;
+  background-color: $color-white;
+}
+
+.dd-content {
+  flex: 1 0 auto;
+}
+
+.dd-block-link {
   display: flex;
   flex: 1 0 auto;
   text-decoration: none;
 }
 
-.line {
+.dd-line {
   position: relative;
 
   &::before {
@@ -75,6 +94,15 @@ body {
     background-color: $color-secondary;
   }
 }
+
+// Global states
+
+.dd-is-disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+// Global animations
 
 .fade-enter-active,
 .fade-leave-active {
