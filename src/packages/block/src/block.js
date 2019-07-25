@@ -5,13 +5,13 @@ export default {
       type: String,
       default: '',
     },
-    size: {
+    empty: {
       type: Boolean,
-      default: true,
+      default: false,
     },
-    type: {
+    size: {
       type: String,
-      default: 'default',
+      default: '',
     },
     link: {
       type: Boolean,
@@ -27,10 +27,10 @@ export default {
       return [
         this.$style.block,
         this.status && this.$style[`block--${this.status}`],
-        !this.size && this.$style['block--purge'],
+        this.empty && this.$style['block--empty'],
         this.link && this.$style['block--link'],
         this.disabled && this.$style['block--disabled'],
-        this.type && this.$style[`block--${this.type}`],
+        this.size && this.$style[`block--${this.size}`],
       ];
     },
   },

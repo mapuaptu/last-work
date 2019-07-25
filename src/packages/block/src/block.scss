@@ -35,7 +35,7 @@
     padding: 8px 0;
   }
 
-  &--purge {
+  &--empty {
     justify-content: center;
     padding: 5px 0;
   }
@@ -49,7 +49,15 @@
     pointer-events: none;
   }
 
+  &--small {
+    min-height: 32px;
+  }
+
   &--medium {
     min-height: 56px;
+  }
+
+  &--large {
+    min-height: 64px;
   }
 }
