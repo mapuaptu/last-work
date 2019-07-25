@@ -9,6 +9,7 @@ import IconStory from './icon';
 import InputSplitStory from './input-split';
 import InputStory from './input';
 import LogoStory from './logo';
+import MenuStory from './menu';
 import NotificationStory from './notification';
 import RadioStory from './radio';
 import SelectStory from './select';
@@ -30,6 +31,7 @@ const stories = {
   InputSplitStory,
   InputStory,
   LogoStory,
+  MenuStory,
   NotificationStory,
   RadioStory,
   SelectStory,
