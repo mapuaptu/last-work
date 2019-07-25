@@ -29,6 +29,26 @@ export default {
       type: String,
       default: null,
     },
+    offsetXs: {
+      type: [String, Number],
+      default: null,
+    },
+    offsetVs: {
+      type: [String, Number],
+      default: null,
+    },
+    offsetSm: {
+      type: [String, Number],
+      default: null,
+    },
+    offsetMd: {
+      type: [String, Number],
+      default: null,
+    },
+    offsetLg: {
+      type: [String, Number],
+      default: null,
+    },
     offset: {
       type: [String, Number],
       default: null,
@@ -61,6 +81,12 @@ export default {
         this.lg && this.$style[`col-lg-${this.lg}`],
         this.xl && this.$style[`col-xl-${this.xl}`],
         this.offset && this.$style[`offset-${this.offset}`],
+        this.offsetXs && this.$style[`offset-xs-${this.offsetXs}`],
+        this.offsetVs && this.$style[`offset-vs-${this.offsetVs}`],
+        this.offsetSm && this.$style[`offset-sm-${this.offsetSm}`],
+        this.offsetSm && this.$style[`offset-sm-${this.offsetSm}`],
+        this.offsetMd && this.$style[`offset-md-${this.offsetMd}`],
+        this.offsetLg && this.$style[`offset-lg-${this.offsetLg}`],
         this.order && this.$style[`order-${this.order}`],
         this.justify && this.$style[`justify-content-${this.justify}`],
         this.align && this.$style[`align-items-${this.align}`],
