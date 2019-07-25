@@ -2,6 +2,12 @@
 
 .modal {
   position: relative;
+
+  .control {
+    position: absolute;
+    left: 30px;
+    top: -15px;
+  }
 }
 
 :global(.v--modal-overlay) {

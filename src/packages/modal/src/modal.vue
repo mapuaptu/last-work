@@ -4,6 +4,12 @@
     data-test-modal="data-test-modal"
   >
     <slot></slot>
+    <div
+      v-if="$slots.control"
+      :class="$style.control"
+    >
+      <slot name="control"></slot>
+    </div>
   </div>
 </template>
 
