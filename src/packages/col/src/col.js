@@ -5,6 +5,14 @@ export default {
       type: [String, Number],
       default: null,
     },
+    xs: {
+      type: String,
+      default: null,
+    },
+    vs: {
+      type: String,
+      default: null,
+    },
     sm: {
       type: String,
       default: null,
@@ -46,6 +54,8 @@ export default {
     classList() {
       return [
         this.size ? this.$style[`col-${this.size}`] : this.$style['col-12'],
+        this.xs && this.$style[`col-xs-${this.xs}`],
+        this.vs && this.$style[`col-vs-${this.vs}`],
         this.sm && this.$style[`col-sm-${this.sm}`],
         this.md && this.$style[`col-md-${this.md}`],
         this.lg && this.$style[`col-lg-${this.lg}`],
