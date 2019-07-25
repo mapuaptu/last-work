@@ -1,5 +1,8 @@
 <template>
-  <nav :class="$style.menu">
+  <nav
+    :class="$style.menu"
+    data-test-menu="data-test-menu"
+  >
     <slot></slot>
   </nav>
 </template>
