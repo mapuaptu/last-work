@@ -35,6 +35,43 @@
     }
   }
 
+  .mobile {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 90px;
+    z-index: 10;
+    display: flex;
+    flex-flow: column wrap;
+    border-top: 1px solid $color-light;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: $color-white;
+
+    a {
+      justify-content: flex-start;
+      padding: 20px;
+      color: $color-secondary;
+      background-color: $color-white;
+
+      &:hover,
+      &:active {
+        background-color: $color-status-testing;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+
+    @include media-breakpoint-down(vs) {
+      top: 63px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      top: 54px;
+    }
+  }
+
   .icon {
     display: none;
     align-self: flex-start;

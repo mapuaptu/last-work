@@ -7,7 +7,18 @@
       <slot></slot>
     </div>
 
-    <div :class="$style.icon">
+    <div
+      v-if="mobileOpen"
+      :class="$style.mobile"
+    >
+      <slot></slot>
+    </div>
+
+    <div
+      :class="$style.icon"
+      @click="onClick"
+      v-click-outside="onClickOutside"
+    >
       <i class="fa fa-bars"></i>
     </div>
   </nav>
