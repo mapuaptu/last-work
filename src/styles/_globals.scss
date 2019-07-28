@@ -49,6 +49,11 @@ body {
   small {
     font-size: 12px;
     line-height: 16px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 9px;
+      line-height: 12px;
+    }
   }
 
   b {
