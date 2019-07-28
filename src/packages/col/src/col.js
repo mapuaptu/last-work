@@ -57,6 +57,30 @@ export default {
       type: [String, Number],
       default: null,
     },
+    orderXl: {
+      type: [String, Number],
+      default: null,
+    },
+    orderLg: {
+      type: [String, Number],
+      default: null,
+    },
+    orderMd: {
+      type: [String, Number],
+      default: null,
+    },
+    orderSm: {
+      type: [String, Number],
+      default: null,
+    },
+    orderVs: {
+      type: [String, Number],
+      default: null,
+    },
+    orderXs: {
+      type: [String, Number],
+      default: null,
+    },
     justify: {
       type: String,
       default: null,
@@ -88,6 +112,12 @@ export default {
         this.offsetMd && this.$style[`offset-md-${this.offsetMd}`],
         this.offsetLg && this.$style[`offset-lg-${this.offsetLg}`],
         this.order && this.$style[`order-${this.order}`],
+        this.orderXl && this.$style[`order-xl-${this.orderXl}`],
+        this.orderLg && this.$style[`order-lg-${this.orderLg}`],
+        this.orderMd && this.$style[`order-md-${this.orderMd}`],
+        this.orderSm && this.$style[`order-sm-${this.orderSm}`],
+        this.orderVs && this.$style[`order-vs-${this.orderVs}`],
+        this.orderXs && this.$style[`order-xs-${this.orderXs}`],
         this.justify && this.$style[`justify-content-${this.justify}`],
         this.align && this.$style[`align-items-${this.align}`],
         this.self && this.$style[`align-self-${this.self}`],

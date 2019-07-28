@@ -3,7 +3,13 @@
     :class="$style.menu"
     data-test-menu="data-test-menu"
   >
-    <slot></slot>
+    <div :class="$style.inner">
+      <slot></slot>
+    </div>
+
+    <div :class="$style.icon">
+      <i class="fa fa-bars"></i>
+    </div>
   </nav>
 </template>
 
