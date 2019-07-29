@@ -8,6 +8,24 @@
     left: 30px;
     top: -15px;
   }
+
+  .close {
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-size: 20px;
+    color: $color-secondary;
+    transition: $transition opacity;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
 }
 
 :global(.v--modal-overlay) {

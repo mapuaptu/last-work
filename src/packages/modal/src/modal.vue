@@ -10,6 +10,12 @@
     >
       <slot name="control"></slot>
     </div>
+    <div
+      :class="$style.close"
+      @click="$emit('close')"
+    >
+      <i class="fa fa-times"></i>
+    </div>
   </div>
 </template>
 
