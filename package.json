@@ -1,6 +1,6 @@
 {
   "name": "@dashdojodev/ui-components",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "scripts": {
     "storybook": "start-storybook -p 9000 -s ./.storybook/assets",
     "build-storybook": "build-storybook -c .storybook -o build/storybook",
