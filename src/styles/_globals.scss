@@ -76,6 +76,12 @@ body {
   background-color: $color-white;
 }
 
+.dd-columns-header {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
 .dd-content {
   flex: 1 0 auto;
 }
