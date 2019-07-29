@@ -2,6 +2,7 @@
   <nav
     :class="$style.menu"
     data-test-menu="data-test-menu"
+    v-click-outside="onClickOutside"
   >
     <div :class="$style.inner">
       <slot></slot>
@@ -10,6 +11,7 @@
     <div
       v-if="mobileOpen"
       :class="$style.mobile"
+      @click="onClickOutside"
     >
       <slot></slot>
     </div>
@@ -17,7 +19,6 @@
     <div
       :class="$style.icon"
       @click="onClick"
-      v-click-outside="onClickOutside"
     >
       <i class="fa fa-bars"></i>
     </div>
