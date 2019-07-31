@@ -2,13 +2,12 @@
 
 .block {
   display: flex;
-  flex: 1 0 auto;
   align-items: center;
   justify-content: space-between;
   border-radius: 6px;
   padding: 5px 20px;
   width: 100%;
-  min-height: 48px;
+  height: 48px;
   background-color: $color-white;
 
   &--progress {
@@ -50,14 +49,14 @@
   }
 
   &--small {
-    min-height: 32px;
+    height: 32px;
   }
 
   &--medium {
-    min-height: 56px;
+    height: 56px;
   }
 
   &--large {
-    min-height: 64px;
+    height: 64px;
   }
 }

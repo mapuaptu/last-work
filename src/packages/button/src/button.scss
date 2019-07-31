@@ -16,7 +16,7 @@
   border-radius: 6px;
   padding-right: 24px;
   padding-left: 24px;
-  min-height: calc(var(--size) * 1px);
+  height: calc(var(--size) * 1px);
   font-weight: 700;
   font-size: calc(var(--font-size) * 1px);
   line-height: calc(var(--line-height) * 1px);
@@ -58,7 +58,7 @@
     --line-height: 15;
 
     border-radius: 4px;
-    min-height: calc(var(--size-small) * 1px);
+    height: calc(var(--size-small) * 1px);
     font-weight: 600;
     font-size: calc(var(--font-size) * 1px);
     line-height: calc(var(--line-height) * 1px);
@@ -74,7 +74,7 @@
     --font-size: 16;
     --line-height: 21;
 
-    min-height: calc(var(--size-medium) * 1px);
+    height: calc(var(--size-medium) * 1px);
     font-size: calc(var(--font-size) * 1px);
     line-height: calc(var(--line-height) * 1px);
 
@@ -89,7 +89,7 @@
     --font-size: 22;
     --line-height: 26;
 
-    min-height: calc(var(--size-large) * 1px);
+    height: calc(var(--size-large) * 1px);
     font-size: calc(var(--font-size) * 1px);
     line-height: calc(var(--line-height) * 1px);
 

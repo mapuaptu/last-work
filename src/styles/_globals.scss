@@ -49,11 +49,6 @@ body {
   small {
     font-size: 12px;
     line-height: 16px;
-
-    @include media-breakpoint-down(lg) {
-      font-size: 9px;
-      line-height: 12px;
-    }
   }
 
   b {
@@ -93,12 +88,6 @@ body {
 
   @include media-breakpoint-down(md) {
     align-self: stretch;
-  }
-}
-
-.dd-columns-header {
-  @include media-breakpoint-down(md) {
-    display: none;
   }
 }
 
