@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import Notification from '../../src/packages/notification';
+import Notification from './index';
 
 describe('Notification', () => {
   it('1. Notification - is vue instance', () => {

@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import Dropdown from '../../src/packages/dropdown';
+import Dropdown from './index';
 
 describe('Dropdown', () => {
   it('1. Dropdown - is vue instance', () => {

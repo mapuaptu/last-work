@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import Checkbox from '../../src/packages/checkbox';
+import Checkbox from './index';
 
 describe('Checkbox', () => {
   it('1. Checkbox - is vue instance', () => {

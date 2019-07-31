@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import Progressbar from '../../src/packages/progressbar';
+import Progressbar from './index';
 
 describe('Progressbar', () => {
   it('1. Progressbar - is vue instance', () => {

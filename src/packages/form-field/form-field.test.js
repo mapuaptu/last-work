@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import FormField from '../../src/packages/form-field';
+import FormField from './index';
 
 describe('FormField', () => {
   it('1. FormField - is vue instance', () => {

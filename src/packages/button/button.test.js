@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import Button from '../../src/packages/button';
+import Button from './index';
 
 describe('Button', () => {
   it('1. Button - is vue instance', () => {

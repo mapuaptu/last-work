@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import Spinner from '../../src/packages/spinner';
+import Spinner from './index';
 
 describe('Spinner', () => {
   it('1. Spinner - is vue instance', () => {

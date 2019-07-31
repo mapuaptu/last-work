@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import Row from '../../src/packages/row';
+import Row from './index';
 
 describe('Row', () => {
   it('1. Row - is vue instance', () => {

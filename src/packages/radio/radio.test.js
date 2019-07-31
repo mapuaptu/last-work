@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import Radio from '../../src/packages/radio';
+import Radio from './index';
 
 describe('Radio', () => {
   it('1. Radio - is vue instance', () => {

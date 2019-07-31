@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import Switch from '../../src/packages/switch';
+import Switch from './index';
 
 describe('Switch', () => {
   it('1. Switch - is vue instance', () => {

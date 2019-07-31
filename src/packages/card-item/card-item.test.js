@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import CardItem from '../../src/packages/card-item';
+import CardItem from './index';
 
 describe('CardItem', () => {
   it('1. CardItem - is vue instance', () => {

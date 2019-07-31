@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import Modal from '../../src/packages/modal';
+import Modal from './index';
 
 describe('Modal', () => {
   it('1. Modal - is vue instance', () => {

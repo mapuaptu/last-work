@@ -5,14 +5,15 @@
     "storybook": "start-storybook -p 9000 -s ./.storybook/assets",
     "build-storybook": "build-storybook -c .storybook -o build/storybook",
     "lint": "vue-cli-service lint",
-    "test": "vue-cli-service test:unit",
+    "test": "vue-cli-service test:unit src/**/*.test.js",
     "release": "np --any-branch --no-yarn --verbose",
     "reinstall": "rm -rf node_modules && npm i"
   },
   "main": "src/index.js",
   "files": [
     "src/**",
-    "!src/stories"
+    "!src/stories",
+    "!src/**/*.test.js"
   ],
   "dependencies": {
     "core-js": "^2.6.5",

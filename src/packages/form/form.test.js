@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import Form from '../../src/packages/form';
+import Form from './index';
 
 describe('Form', () => {
   it('1. Form - is vue instance', () => {

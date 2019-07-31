@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import Menu from '../../src/packages/menu';
+import Menu from './index';
 
 describe('Menu', () => {
   it('1. Menu - is vue instance', () => {

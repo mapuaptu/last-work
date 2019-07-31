@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import Select from '../../src/packages/select';
+import Select from './index';
 
 describe('Select', () => {
   it('1. Select - is vue instance', () => {

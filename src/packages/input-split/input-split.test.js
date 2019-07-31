@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import InputSplit from '../../src/packages/input-split';
+import InputSplit from './index';
 
 describe('InputSplit', () => {
   it('1. InputSplit - is vue instance', () => {

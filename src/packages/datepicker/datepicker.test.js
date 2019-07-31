@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import Datepicker from '../../src/packages/datepicker';
+import Datepicker from './index';
 
 describe('Datepicker', () => {
   it('1. Datepicker - is vue instance', () => {

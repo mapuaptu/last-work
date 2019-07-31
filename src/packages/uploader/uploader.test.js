@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import Uploader from '../../src/packages/uploader';
+import Uploader from './index';
 
 describe('Uploader', () => {
   it('1. Uploader - is vue instance', () => {
