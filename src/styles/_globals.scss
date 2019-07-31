@@ -84,6 +84,18 @@ body {
   }
 }
 
+.dd-profile {
+  .dd-profile-text {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    align-self: stretch;
+  }
+}
+
 .dd-columns-header {
   @include media-breakpoint-down(md) {
     display: none;
