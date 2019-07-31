@@ -8,13 +8,15 @@
       <slot></slot>
     </div>
 
-    <div
-      v-if="mobileOpen"
-      :class="$style.mobile"
-      @click="onClickOutside"
-    >
-      <slot></slot>
-    </div>
+    <transition name="fade">
+      <div
+        v-if="mobileOpen"
+        :class="$style.mobile"
+        @click="onClickOutside"
+      >
+        <slot></slot>
+      </div>
+    </transition>
 
     <div
       :class="$style.icon"
