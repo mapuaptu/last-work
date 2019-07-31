@@ -1,4 +1,5 @@
 @import '../../../styles/variables';
+@import '../../../styles/vendor/grid-bootstrap/mixins/breakpoints';
 
 .modal {
   position: relative;
@@ -7,6 +8,11 @@
     position: absolute;
     left: 30px;
     top: -15px;
+
+    @include media-breakpoint-down(vs) {
+      left: 15px;
+      top: -25px;
+    }
   }
 
   .close {
