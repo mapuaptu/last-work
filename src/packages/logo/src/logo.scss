@@ -1,3 +1,10 @@
+@import '../../../styles/variables';
+
 .logo {
   position: relative;
+  transition: $transition opacity;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }

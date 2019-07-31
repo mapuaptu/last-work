@@ -71,19 +71,23 @@ body {
   min-height: 100vh;
 }
 
+.dd-content {
+  flex: 1 0 auto;
+}
+
 .dd-header {
   position: relative;
   background-color: $color-white;
+
+  a {
+    align-self: flex-start;
+  }
 }
 
 .dd-columns-header {
   @include media-breakpoint-down(md) {
     display: none;
   }
-}
-
-.dd-content {
-  flex: 1 0 auto;
 }
 
 .dd-block-link {
