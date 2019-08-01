@@ -5,7 +5,7 @@
   >
     <dd-icon
       v-if="icon"
-      :class="[$style.icon]"
+      :class="$style.icon"
       :name="icon"
     ></dd-icon>
     <span v-if="$slots.default">

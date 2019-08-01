@@ -28,9 +28,9 @@ export default {
         this.$style.block,
         this.status && this.$style[`block--${this.status}`],
         this.empty && this.$style['block--empty'],
+        this.size && this.$style[`block--${this.size}`],
         this.link && this.$style['block--link'],
         this.disabled && this.$style['block--disabled'],
-        this.size && this.$style[`block--${this.size}`],
       ];
     },
   },

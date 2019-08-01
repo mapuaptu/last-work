@@ -6,11 +6,11 @@ export default {
   props: {
     type: {
       type: String,
-      default: null,
+      default: '',
     },
     size: {
       type: String,
-      default: null,
+      default: '',
     },
     fluid: {
       type: Boolean,
@@ -18,19 +18,19 @@ export default {
     },
     icon: {
       type: String,
-      default: null,
+      default: '',
     },
     rounded: {
       type: Boolean,
-      default: false,
+      default: '',
     },
   },
   computed: {
     classList() {
       return [
         this.$style.button,
-        this.size && this.$style[`button--${this.size}`],
         this.type && this.$style[`button--${this.type}`],
+        this.size && this.$style[`button--${this.size}`],
         this.fluid && this.$style['button--fluid'],
         this.icon && this.$style['button--icon'],
         this.rounded && this.$style['button--rounded'],
