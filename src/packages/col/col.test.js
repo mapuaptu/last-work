@@ -27,5 +27,21 @@ describe('Col', () => {
     expect(wrapper.text()).to.include(message);
   });
 
-  it('4. Col - has paddings when parent(row) have gutter prop.', () => {});
+  it('4. Col - has paddings when parent(row) have gutter prop.', () => {
+    const gutter = 10;
+    const Parent = {
+      created() {
+        this.gutter = gutter;
+      },
+    };
+
+    const wrapper = mount(Col, {
+      parentComponent: Parent,
+    });
+
+    expect(wrapper.vm.styleGutter).to.eql({
+      paddingLeft: `${gutter / 2}px`,
+      paddingRight: `${gutter / 2}px`,
+    });
+  });
 });
