@@ -26,4 +26,26 @@ describe('CardItem', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('4. CardItem - can render text in name slot', () => {
+    const message = 'CardItem message';
+    const wrapper = mount(CardItem, {
+      slots: {
+        name: message,
+      },
+    });
+
+    expect(wrapper.text()).to.include(message);
+  });
+
+  it('5. CardItem - can render text in value slot', () => {
+    const message = 'CardItem message';
+    const wrapper = mount(CardItem, {
+      slots: {
+        value: message,
+      },
+    });
+
+    expect(wrapper.text()).to.include(message);
+  });
 });
