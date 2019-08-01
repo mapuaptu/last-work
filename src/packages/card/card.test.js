@@ -26,4 +26,15 @@ describe('Card', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('4. Card - can render text in title slot', () => {
+    const message = 'Card message';
+    const wrapper = mount(Card, {
+      slots: {
+        title: message,
+      },
+    });
+
+    expect(wrapper.text()).to.include(message);
+  });
 });
