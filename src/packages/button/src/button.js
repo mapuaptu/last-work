@@ -22,7 +22,7 @@ export default {
     },
     rounded: {
       type: Boolean,
-      default: '',
+      default: false,
     },
   },
   computed: {
