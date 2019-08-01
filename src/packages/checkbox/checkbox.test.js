@@ -32,4 +32,21 @@ describe('Checkbox', () => {
 
     expect(wrapper.contains('input')).to.equal(true);
   });
+
+  it('5. Checkbox - click trigger checked state on inner input', () => {
+    const wrapper = mount(Checkbox);
+    const input = wrapper.find('input');
+
+    wrapper.trigger('click');
+
+    expect(input.element.checked).to.equal(true);
+  });
+
+  it('6. Checkbox - click trigger emit("input")', () => {
+    const wrapper = mount(Checkbox);
+
+    wrapper.trigger('click');
+
+    expect(!!wrapper.emitted().input).to.equal(true);
+  });
 });
