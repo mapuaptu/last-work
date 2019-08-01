@@ -26,4 +26,10 @@ describe('Checkbox', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('4. Checkbox - can render input', () => {
+    const wrapper = mount(Checkbox);
+
+    expect(wrapper.contains('input')).to.equal(true);
+  });
 });

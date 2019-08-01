@@ -3,7 +3,7 @@ export default {
   props: {
     value: {
       type: [Array, Boolean],
-      default: null,
+      default: false,
     },
     disabled: {
       type: Boolean,
