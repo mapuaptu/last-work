@@ -47,6 +47,6 @@ describe('Checkbox', () => {
 
     wrapper.trigger('click');
 
-    expect(!!wrapper.emitted().input).to.equal(true);
+    expect(!!wrapper.emitted('input')).to.equal(true);
   });
 });
