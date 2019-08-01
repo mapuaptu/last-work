@@ -26,4 +26,6 @@ describe('Col', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('4. Col - has paddings when parent have gutter prop.', () => {});
 });
