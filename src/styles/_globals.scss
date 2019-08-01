@@ -112,6 +112,19 @@ body {
   pointer-events: none;
 }
 
+// Global overwrites
+
+:global(.v--modal-overlay) {
+  background-color: rgba($color-black, 0.6);
+}
+
+:global(.v--modal-box) {
+  border-radius: 5px;
+  padding-top: 40px;
+  padding-bottom: 45px;
+  background-color: $color-white;
+}
+
 // Global animations
 
 .fade-enter-active,
