@@ -1,6 +1,7 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
 import Button from './index';
+import Icon from '../icon/index';
 
 describe('Button', () => {
   it('1. Button - is vue instance', () => {
@@ -25,5 +26,16 @@ describe('Button', () => {
     });
 
     expect(wrapper.text()).to.include(message);
+  });
+
+  it('4. Button - can render icon', () => {
+    const icon = 'circle';
+    const wrapper = mount(Button, {
+      propsData: {
+        icon,
+      },
+    });
+
+    expect(wrapper.contains(Icon)).to.equal(true);
   });
 });

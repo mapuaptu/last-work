@@ -6,6 +6,7 @@
     "build-storybook": "build-storybook -c .storybook -o build/storybook",
     "lint": "vue-cli-service lint",
     "test": "vue-cli-service test:unit src/**/*.test.js",
+    "test:single": "vue-cli-service test:unit",
     "release": "np --any-branch --no-yarn --verbose",
     "reinstall": "rm -rf node_modules && npm i"
   },
