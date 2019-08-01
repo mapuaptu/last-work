@@ -3,7 +3,7 @@
     :class="classList"
     data-test-datepicker="data-test-datepicker"
   >
-    <v-date-picker
+    <date-picker
       mode="single"
       popoverVisibility="focus"
       :value="value"
@@ -12,7 +12,7 @@
       v-click-outside="onClickOutside"
     >
       <slot></slot>
-    </v-date-picker>
+    </date-picker>
   </div>
 </template>
 

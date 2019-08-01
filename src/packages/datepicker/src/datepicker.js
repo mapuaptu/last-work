@@ -1,4 +1,4 @@
-import { Calendar, DatePicker, setupCalendar } from 'v-calendar';
+import { DatePicker, setupCalendar } from 'v-calendar';
 import { directive as clickOutside } from 'v-click-outside';
 
 setupCalendar({});
@@ -9,8 +9,7 @@ export default {
     clickOutside,
   },
   components: {
-    'v-calendar': Calendar,
-    'v-date-picker': DatePicker,
+    DatePicker,
   },
   props: {
     value: {
