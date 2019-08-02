@@ -115,7 +115,7 @@ body {
 // Global overwrites
 
 .v--modal-overlay {
-  background-color: rgba($color-black, 0.6);
+  background-color: rgba($color-black, 0.6) !important;
 }
 
 .v--modal-box {
