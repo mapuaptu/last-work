@@ -26,4 +26,10 @@ describe('Icon', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('4. Icon - can render i tag', () => {
+    const wrapper = mount(Icon);
+
+    expect(wrapper.contains('i')).to.equal(true);
+  });
 });
