@@ -26,4 +26,20 @@ describe('Userpic', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('4. Userpic - can render icon', () => {
+    const wrapper = mount(Userpic);
+
+    expect(wrapper.contains('i')).to.equal(true);
+  });
+
+  it('5. Userpic - can render image', () => {
+    const wrapper = mount(Userpic, {
+      propsData: {
+        url: 'image',
+      },
+    });
+
+    expect(wrapper.contains('img')).to.equal(true);
+  });
 });
