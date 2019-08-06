@@ -26,4 +26,15 @@ describe('Modal', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('4. Modal - can render text in control slot', () => {
+    const message = 'Modal message';
+    const wrapper = mount(Modal, {
+      slots: {
+        control: message,
+      },
+    });
+
+    expect(wrapper.text()).to.include(message);
+  });
 });
