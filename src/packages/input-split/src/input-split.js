@@ -81,7 +81,7 @@ export default {
   },
   inject: {
     root: {
-      default: 'default',
+      default: { status: '' },
     },
   },
 };

@@ -26,4 +26,26 @@ describe('FormField', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('4. FormField - can render text in label slot', () => {
+    const message = 'FormField message';
+    const wrapper = mount(FormField, {
+      slots: {
+        label: message,
+      },
+    });
+
+    expect(wrapper.text()).to.include(message);
+  });
+
+  it('5. FormField - can render text in message slot', () => {
+    const message = 'FormField message';
+    const wrapper = mount(FormField, {
+      slots: {
+        message,
+      },
+    });
+
+    expect(wrapper.text()).to.include(message);
+  });
 });

@@ -53,7 +53,7 @@ export default () =>
             model: 'buchkodex',
           };
         },
-        template: `<dd-form-field status="default" :status="status">
+        template: `<dd-form-field :status="status">
           <dd-input-split v-model="model" :placeholder="placeholder"
             :disabled="disabled" :size="size">
             .{{domen}}
