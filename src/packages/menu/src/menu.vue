@@ -21,6 +21,7 @@
     <div
       :class="$style.icon"
       @click="onClick"
+      ref="toggle"
     >
       <i class="fa fa-bars"></i>
     </div>

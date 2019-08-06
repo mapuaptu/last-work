@@ -26,4 +26,19 @@ describe('Menu', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('4. Menu - can render icon', () => {
+    const wrapper = mount(Menu);
+
+    expect(wrapper.contains('i')).to.equal(true);
+  });
+
+  it('5. Menu - can open', () => {
+    const wrapper = mount(Menu);
+    const toggle = wrapper.find({ ref: 'toggle' });
+
+    toggle.trigger('click');
+
+    expect(wrapper.vm.mobileOpen).to.equal(true);
+  });
 });
