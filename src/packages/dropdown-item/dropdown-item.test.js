@@ -26,4 +26,14 @@ describe('DropdownItem', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('3. DropdownItem - can render icon', () => {
+    const wrapper = mount(DropdownItem, {
+      propsData: {
+        icon: 'circle',
+      },
+    });
+
+    expect(wrapper.contains('i')).to.equal(true);
+  });
 });
