@@ -26,4 +26,21 @@ describe('Uploader', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('4. Uploader - can render text in image slot', () => {
+    const message = 'Uploader message';
+    const wrapper = mount(Uploader, {
+      slots: {
+        image: message,
+      },
+    });
+
+    expect(wrapper.text()).to.include(message);
+  });
+
+  it('5. Uploader - can render input', () => {
+    const wrapper = mount(Uploader);
+
+    expect(wrapper.contains('input')).to.equal(true);
+  });
 });
