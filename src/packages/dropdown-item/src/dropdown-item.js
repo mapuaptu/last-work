@@ -3,7 +3,7 @@ export default {
   props: {
     icon: {
       type: String,
-      default: null,
+      default: '',
     },
     disabled: {
       type: Boolean,
