@@ -26,4 +26,10 @@ describe('Switch', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('4. Switch - can render input', () => {
+    const wrapper = mount(Switch);
+
+    expect(wrapper.contains('input')).to.equal(true);
+  });
 });
