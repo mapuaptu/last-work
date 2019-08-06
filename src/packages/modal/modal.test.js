@@ -37,4 +37,10 @@ describe('Modal', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('5. Modal - can render i tag for close icon', () => {
+    const wrapper = mount(Modal);
+
+    expect(wrapper.contains('i')).to.equal(true);
+  });
 });
