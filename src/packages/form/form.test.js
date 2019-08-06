@@ -26,4 +26,12 @@ describe('Form', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('4. Form - emit("submit")', () => {
+    const wrapper = mount(Form);
+
+    wrapper.trigger('submit');
+
+    expect(!!wrapper.emitted('submit')).to.equal(true);
+  });
 });
