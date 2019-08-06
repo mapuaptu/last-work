@@ -26,4 +26,10 @@ describe('Logo', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('4. Logo - can render svg', () => {
+    const wrapper = mount(Logo);
+
+    expect(wrapper.contains('svg')).to.equal(true);
+  });
 });
