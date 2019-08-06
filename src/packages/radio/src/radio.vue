@@ -2,6 +2,7 @@
   <div
     :class="classList"
     data-test-radio="data-test-radio"
+    @click="onChange"
   >
     <div :class="$style.input">
       <div :class="$style.inner"></div>
@@ -12,7 +13,7 @@
         :value="label"
         :checked="isChecked"
         v-bind="$attrs"
-        @change="onChange"
+        ref="input"
       />
     </div>
     <div

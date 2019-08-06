@@ -27,8 +27,8 @@ export default {
     },
   },
   methods: {
-    onChange(event) {
-      this.$emit('input', event.target.value);
+    onChange() {
+      this.$emit('input', this.$refs.input.value);
     },
   },
 };

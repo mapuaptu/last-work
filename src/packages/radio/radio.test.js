@@ -32,4 +32,17 @@ describe('Radio', () => {
 
     expect(wrapper.contains('input')).to.equal(true);
   });
+
+  it('5. Radio - click trigger emit("input")', () => {
+    const wrapper = mount(Radio, {
+      propsData: {
+        value: '123',
+        label: '321',
+      },
+    });
+
+    wrapper.trigger('click');
+
+    expect(!!wrapper.emitted('input')).to.equal(true);
+  });
 });
