@@ -26,4 +26,10 @@ describe('Radio', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('4. Radio - can render input', () => {
+    const wrapper = mount(Radio);
+
+    expect(wrapper.contains('input')).to.equal(true);
+  });
 });

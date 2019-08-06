@@ -3,7 +3,7 @@ export default {
   props: {
     value: {
       type: String,
-      default: null,
+      default: '',
     },
     disabled: {
       type: Boolean,
@@ -11,7 +11,7 @@ export default {
     },
     label: {
       type: String,
-      default: null,
+      default: '',
     },
   },
   computed: {
