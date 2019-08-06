@@ -32,4 +32,21 @@ describe('Switch', () => {
 
     expect(wrapper.contains('input')).to.equal(true);
   });
+
+  it('5. Switch - click trigger checked state on inner input', () => {
+    const wrapper = mount(Switch);
+    const input = wrapper.find('input');
+
+    wrapper.trigger('click');
+
+    expect(input.element.checked).to.equal(true);
+  });
+
+  it('6. Switch - click trigger emit("input")', () => {
+    const wrapper = mount(Switch);
+
+    wrapper.trigger('click');
+
+    expect(!!wrapper.emitted('input')).to.equal(true);
+  });
 });
