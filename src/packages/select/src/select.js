@@ -6,7 +6,7 @@ export default {
   props: {
     value: {
       type: [String, Number, Object],
-      default: '',
+      default: null,
     },
     options: {
       type: Array,
