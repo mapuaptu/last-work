@@ -7,19 +7,19 @@ export default {
     },
     justify: {
       type: String,
-      default: null,
+      default: '',
     },
     align: {
       type: String,
-      default: null,
+      default: '',
     },
   },
   computed: {
     classList() {
       return [
         this.$style.row,
-        this.$style[`justify-content-${this.justify}`],
-        this.$style[`align-items-${this.align}`],
+        this.justify && this.$style[`justify-content-${this.justify}`],
+        this.align && this.$style[`align-items-${this.align}`],
       ];
     },
     styleGutter() {
