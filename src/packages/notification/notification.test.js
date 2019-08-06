@@ -1,6 +1,7 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
 import Notification from './index';
+import Icon from '../icon/index';
 
 describe('Notification', () => {
   it('1. Notification - is vue instance', () => {
@@ -25,5 +26,15 @@ describe('Notification', () => {
     });
 
     expect(wrapper.text()).to.include(message);
+  });
+
+  it('4. Notification - can render dd-icon', () => {
+    const wrapper = mount(Notification, {
+      propsData: {
+        status: 'info',
+      },
+    });
+
+    expect(wrapper.contains(Icon)).to.equal(true);
   });
 });

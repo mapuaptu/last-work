@@ -12,6 +12,14 @@ export default {
     },
   },
   computed: {
+    classList() {
+      return [
+        this.$style.notification,
+        this.status !== 'default'
+          ? this.$style[`notification--${this.status}`]
+          : '',
+      ];
+    },
     icon() {
       let icon = '';
 

@@ -1,9 +1,6 @@
 <template>
   <div
-    :class="[
-    $style.notification,
-    status !== 'default' && $style[`notification--${status}`]
-  ]"
+    :class="classList"
     data-test-notification="data-test-notification"
   >
     <div
