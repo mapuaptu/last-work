@@ -21,30 +21,14 @@ export default {
       ];
     },
     icon() {
-      let icon = '';
+      const icons = {
+        error: 'hand-paper',
+        warning: 'exclamation-triangle',
+        success: 'check',
+        info: 'info',
+      };
 
-      switch (this.status) {
-        case 'error':
-          icon = 'hand-paper';
-          break;
-
-        case 'warning':
-          icon = 'exclamation-triangle';
-          break;
-
-        case 'success':
-          icon = 'check';
-          break;
-
-        case 'info':
-          icon = 'info';
-          break;
-
-        default:
-          break;
-      }
-
-      return icon;
+      return icons[this.status];
     },
   },
 };
