@@ -24,6 +24,10 @@
     transition-property: border, color, background-color;
   }
 
+  :global(.popover-content) {
+    background-color: $color-white !important;
+  }
+
   &--focus {
     input {
       border: 1px solid $color-secondary;
