@@ -12,24 +12,23 @@
         <i
           :class="['fa', 'fa-trash', $style.icon]"
           @click="onDelete"
+          data-test="icon"
         ></i>
       </div>
     </div>
-    <label>
-      <div
-        :class="$style.button"
-        @click="$refs.input.click()"
-      >
-        <slot></slot>
-      </div>
-      <input
-        :class="$style.original"
-        type="file"
-        accept="image/*"
-        ref="input"
-        @input="onInput"
-      />
-    </label>
+    <div
+      :class="$style.button"
+      @click="$refs.input.click()"
+    >
+      <slot></slot>
+    </div>
+    <input
+      :class="$style.original"
+      type="file"
+      accept="image/*"
+      ref="input"
+      @input="onInput"
+    />
   </div>
 </template>
 

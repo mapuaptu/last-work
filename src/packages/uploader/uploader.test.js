@@ -43,4 +43,16 @@ describe('Uploader', () => {
 
     expect(wrapper.contains('input')).to.equal(true);
   });
+
+  it('6. Uploader - can delete image', () => {
+    const wrapper = mount(Uploader, {
+      slots: {
+        image: '<img></img>',
+      },
+    });
+
+    wrapper.find('[data-test="icon"]').trigger('click');
+
+    expect(!!wrapper.emitted('delete')).to.equal(true);
+  });
 });
