@@ -29,4 +29,15 @@ describe('Dropdown', () => {
 
     expect(wrapper.text()).to.include(message);
   });
+
+  it('3. Dropdown - can render text in control slot', () => {
+    const message = 'Dropdown message';
+    const wrapper = mount(Dropdown, {
+      slots: {
+        control: message,
+      },
+    });
+
+    expect(wrapper.text()).to.include(message);
+  });
 });
