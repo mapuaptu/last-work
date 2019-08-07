@@ -16,9 +16,9 @@
       ref="input"
     />
     <dd-icon
-      v-if="root.status"
-      :class="$style.icon"
+      v-if="iconName"
       :name="iconName"
+      :class="$style.icon"
     >
     </dd-icon>
 
