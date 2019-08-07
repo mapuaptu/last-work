@@ -20,8 +20,9 @@ module.exports = async ({ config, mode }) => {
         {
           loader: 'css-loader',
           options: {
-            modules: true,
-            localIdentName: '[local]_[hash:base64:8]',
+            modules: {
+              localIdentName: '[local]_[hash:base64:8]',
+            },
           },
         },
         'sass-loader',
