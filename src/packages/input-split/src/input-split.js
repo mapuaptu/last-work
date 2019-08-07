@@ -47,12 +47,12 @@ export default {
       ];
     },
     iconName() {
-      const icon = {
+      const icons = {
         success: 'check-circle',
         error: 'exclamation-circle',
       };
 
-      return icon[this.root.status];
+      return icons[this.root.status];
     },
   },
   methods: {

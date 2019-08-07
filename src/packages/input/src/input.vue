@@ -22,7 +22,7 @@
     </div>
 
     <dd-icon
-      v-if="root.status"
+      v-if="iconName"
       :class="$style.icon"
       :name="iconName"
     >

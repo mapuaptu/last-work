@@ -40,52 +40,22 @@ export default {
       ];
     },
     imageSize() {
-      let size;
+      const sizes = {
+        small: 20,
+        medium: 28,
+        large: 32,
+        default: 24,
+      };
 
-      switch (this.size) {
-        case 'small':
-          size = 20;
-          break;
-
-        case 'default':
-          size = 24;
-          break;
-
-        case 'medium':
-          size = 28;
-          break;
-
-        case 'large':
-          size = 32;
-          break;
-
-        default:
-          size = 24;
-          break;
-      }
-
-      return size;
+      return sizes[this.size] || sizes.default;
     },
     iconName() {
-      let name;
+      const icons = {
+        success: 'check-circle',
+        error: 'exclamation-circle',
+      };
 
-      if (this.root.status) {
-        switch (this.root.status) {
-          case 'success':
-            name = 'check-circle';
-            break;
-
-          case 'error':
-            name = 'exclamation-circle';
-            break;
-
-          default:
-            name = '';
-            break;
-        }
-      }
-
-      return name;
+      return icons[this.root.status];
     },
   },
   methods: {
