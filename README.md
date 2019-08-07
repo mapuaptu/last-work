@@ -18,7 +18,7 @@ npm run storybook
 npm test
 ```
 
-### Test single conponent
+### Test single component
 
 ```bash
 npm run test:single src/packages/block/block.test.js
@@ -30,7 +30,7 @@ npm run test:single src/packages/block/block.test.js
 npm run release
 ```
 
-### Lints and fixes files
+### Lint and fix files
 
 ```bash
 npm run lint
