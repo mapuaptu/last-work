@@ -3,49 +3,43 @@ import { mount } from '@vue/test-utils';
 import CardItem from './index';
 
 describe('CardItem', () => {
-  it('1. CardItem - is vue instance', () => {
-    const wrapper = mount(CardItem);
-
-    expect(wrapper.isVueInstance()).to.equal(true);
-  });
-
-  it('2. CardItem - can render data attribute', () => {
+  it('1. CardItem - can render data-test attribute', () => {
     const wrapper = mount(CardItem);
     const attribute = 'data-test-card-item';
 
     expect(wrapper.attributes(attribute)).to.equal(attribute);
   });
 
-  it('3. CardItem - can render text in default slot', () => {
-    const message = 'CardItem message';
+  it('2. CardItem - can render content in default slot', () => {
+    const content = 'CardItem content';
     const wrapper = mount(CardItem, {
       slots: {
-        default: message,
+        default: content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
+    expect(wrapper.text()).to.include(content);
   });
 
-  it('4. CardItem - can render text in name slot', () => {
-    const message = 'CardItem message';
+  it('3. CardItem - can render content in name slot', () => {
+    const content = 'CardItem content';
     const wrapper = mount(CardItem, {
       slots: {
-        name: message,
+        name: content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
+    expect(wrapper.text()).to.include(content);
   });
 
-  it('5. CardItem - can render text in value slot', () => {
-    const message = 'CardItem message';
+  it('4. CardItem - can render content in value slot', () => {
+    const content = 'CardItem content';
     const wrapper = mount(CardItem, {
       slots: {
-        value: message,
+        value: content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
+    expect(wrapper.text()).to.include(content);
   });
 });
