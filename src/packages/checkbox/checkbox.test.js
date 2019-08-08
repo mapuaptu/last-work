@@ -3,37 +3,25 @@ import { mount } from '@vue/test-utils';
 import Checkbox from './index';
 
 describe('Checkbox', () => {
-  it('1. Checkbox - is vue instance', () => {
-    const wrapper = mount(Checkbox);
-
-    expect(wrapper.isVueInstance()).to.equal(true);
-  });
-
-  it('2. Checkbox - can render data attribute', () => {
+  it('1. Checkbox - can render data-test attribute', () => {
     const wrapper = mount(Checkbox);
     const attribute = 'data-test-checkbox';
 
     expect(wrapper.attributes(attribute)).to.equal(attribute);
   });
 
-  it('3. Checkbox - can render text in default slot', () => {
-    const message = 'Checkbox message';
+  it('2. Checkbox - can render content in default slot', () => {
+    const content = 'Checkbox content';
     const wrapper = mount(Checkbox, {
       slots: {
-        default: message,
+        default: content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
+    expect(wrapper.text()).to.include(content);
   });
 
-  it('4. Checkbox - can render input', () => {
-    const wrapper = mount(Checkbox);
-
-    expect(wrapper.contains('input')).to.equal(true);
-  });
-
-  it('5. Checkbox - click trigger checked state on inner input', () => {
+  it('3. Checkbox - click trigger checked state on inner input', () => {
     const wrapper = mount(Checkbox);
     const input = wrapper.find('input');
 
@@ -42,7 +30,7 @@ describe('Checkbox', () => {
     expect(input.element.checked).to.equal(true);
   });
 
-  it('6. Checkbox - click trigger emit("input")', () => {
+  it('4. Checkbox - click trigger emit("input")', () => {
     const wrapper = mount(Checkbox);
 
     wrapper.trigger('click');
