@@ -4,31 +4,25 @@ import Button from './index';
 import Icon from '../icon/index';
 
 describe('Button', () => {
-  it('1. Button - is vue instance', () => {
-    const wrapper = mount(Button);
-
-    expect(wrapper.isVueInstance()).to.equal(true);
-  });
-
-  it('2. Button - can render data attribute', () => {
+  it('1. Button - can render data-test attribute', () => {
     const wrapper = mount(Button);
     const attribute = 'data-test-button';
 
     expect(wrapper.attributes(attribute)).to.equal(attribute);
   });
 
-  it('3. Button - can render text in default slot', () => {
-    const message = 'Button message';
+  it('2. Button - can render content in default slot', () => {
+    const content = 'Button content';
     const wrapper = mount(Button, {
       slots: {
-        default: message,
+        default: content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
+    expect(wrapper.text()).to.include(content);
   });
 
-  it('4. Button - can render icon', () => {
+  it('3. Button - can render Icon', () => {
     const icon = 'circle';
     const wrapper = mount(Button, {
       propsData: {
