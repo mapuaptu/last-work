@@ -3,41 +3,35 @@ import { mount } from '@vue/test-utils';
 import Dropdown from './index';
 
 describe('Dropdown', () => {
-  it('1. Dropdown - is vue instance', () => {
-    const wrapper = mount(Dropdown);
-
-    expect(wrapper.isVueInstance()).to.equal(true);
-  });
-
-  it('2. Dropdown - can render data attribute', () => {
+  it('1. Dropdown - can render data-test attribute', () => {
     const wrapper = mount(Dropdown);
     const attribute = 'data-test-dropdown';
 
     expect(wrapper.attributes(attribute)).to.equal(attribute);
   });
 
-  it('3. Dropdown - can render text in default slot', () => {
-    const message = 'Dropdown message';
+  it('2. Dropdown - can render content in default slot', () => {
+    const content = 'Dropdown content';
     const wrapper = mount(Dropdown, {
       propsData: {
         value: true,
       },
       slots: {
-        default: message,
+        default: content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
+    expect(wrapper.text()).to.include(content);
   });
 
-  it('3. Dropdown - can render text in control slot', () => {
-    const message = 'Dropdown message';
+  it('3. Dropdown - can render content in control slot', () => {
+    const content = 'Dropdown content';
     const wrapper = mount(Dropdown, {
       slots: {
-        control: message,
+        control: content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
+    expect(wrapper.text()).to.include(content);
   });
 });
