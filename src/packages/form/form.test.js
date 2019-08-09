@@ -3,31 +3,25 @@ import { mount } from '@vue/test-utils';
 import Form from './index';
 
 describe('Form', () => {
-  it('1. Form - is vue instance', () => {
-    const wrapper = mount(Form);
-
-    expect(wrapper.isVueInstance()).to.equal(true);
-  });
-
-  it('2. Form - can render data attribute', () => {
+  it('1. Form - can render data-test attribute', () => {
     const wrapper = mount(Form);
     const attribute = 'data-test-form';
 
     expect(wrapper.attributes(attribute)).to.equal(attribute);
   });
 
-  it('3. Form - can render text in default slot', () => {
-    const message = 'Form message';
+  it('2. Form - can render content in default slot', () => {
+    const content = 'Form content';
     const wrapper = mount(Form, {
       slots: {
-        default: message,
+        default: content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
+    expect(wrapper.text()).to.include(content);
   });
 
-  it('4. Form - emit("submit")', () => {
+  it('3. Form - submit can trigger emit("submit")', () => {
     const wrapper = mount(Form);
 
     wrapper.trigger('submit');
