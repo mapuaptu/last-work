@@ -3,33 +3,21 @@ import { mount } from '@vue/test-utils';
 import Logo from './index';
 
 describe('Logo', () => {
-  it('1. Logo - is vue instance', () => {
-    const wrapper = mount(Logo);
-
-    expect(wrapper.isVueInstance()).to.equal(true);
-  });
-
-  it('2. Logo - can render data attribute', () => {
+  it('1. Logo - can render data-test attribute', () => {
     const wrapper = mount(Logo);
     const attribute = 'data-test-logo';
 
     expect(wrapper.attributes(attribute)).to.equal(attribute);
   });
 
-  it('3. Logo - can render text in default slot', () => {
-    const message = 'Logo message';
+  it('2. Logo - can render content in default slot', () => {
+    const content = 'Logo content';
     const wrapper = mount(Logo, {
       slots: {
-        default: message,
+        default: content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
-  });
-
-  it('4. Logo - can render svg', () => {
-    const wrapper = mount(Logo);
-
-    expect(wrapper.contains('svg')).to.equal(true);
+    expect(wrapper.text()).to.include(content);
   });
 });
