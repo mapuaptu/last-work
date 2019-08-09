@@ -3,37 +3,25 @@ import { mount } from '@vue/test-utils';
 import Userpic from './index';
 
 describe('Userpic', () => {
-  it('1. Userpic - is vue instance', () => {
-    const wrapper = mount(Userpic);
-
-    expect(wrapper.isVueInstance()).to.equal(true);
-  });
-
-  it('2. Userpic - can render data attribute', () => {
+  it('1. Userpic - can render data-test attribute', () => {
     const wrapper = mount(Userpic);
     const attribute = 'data-test-userpic';
 
     expect(wrapper.attributes(attribute)).to.equal(attribute);
   });
 
-  it('3. Userpic - can render text in default slot', () => {
-    const message = 'Userpic message';
+  it('2. Userpic - can render content in default slot', () => {
+    const content = 'Userpic content';
     const wrapper = mount(Userpic, {
       slots: {
-        default: message,
+        default: content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
+    expect(wrapper.text()).to.include(content);
   });
 
-  it('4. Userpic - can render icon', () => {
-    const wrapper = mount(Userpic);
-
-    expect(wrapper.contains('i')).to.equal(true);
-  });
-
-  it('5. Userpic - can render image', () => {
+  it('3. Userpic - can render image', () => {
     const wrapper = mount(Userpic, {
       propsData: {
         url: 'image',
