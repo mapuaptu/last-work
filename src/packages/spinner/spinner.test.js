@@ -3,27 +3,21 @@ import { mount } from '@vue/test-utils';
 import Spinner from './index';
 
 describe('Spinner', () => {
-  it('1. Spinner - is vue instance', () => {
-    const wrapper = mount(Spinner);
-
-    expect(wrapper.isVueInstance()).to.equal(true);
-  });
-
-  it('2. Spinner - can render data attribute', () => {
+  it('1. Spinner - can render data-test attribute', () => {
     const wrapper = mount(Spinner);
     const attribute = 'data-test-spinner';
 
     expect(wrapper.attributes(attribute)).to.equal(attribute);
   });
 
-  it('3. Spinner - can render text in default slot', () => {
-    const message = 'Spinner message';
+  it('2. Spinner - can render content in default slot', () => {
+    const content = 'Spinner content';
     const wrapper = mount(Spinner, {
       slots: {
-        default: message,
+        default: content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
+    expect(wrapper.text()).to.include(content);
   });
 });
