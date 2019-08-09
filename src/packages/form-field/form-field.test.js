@@ -3,49 +3,43 @@ import { mount } from '@vue/test-utils';
 import FormField from './index';
 
 describe('FormField', () => {
-  it('1. FormField - is vue instance', () => {
-    const wrapper = mount(FormField);
-
-    expect(wrapper.isVueInstance()).to.equal(true);
-  });
-
-  it('2. FormField - can render data attribute', () => {
+  it('1. FormField - can render data attribute', () => {
     const wrapper = mount(FormField);
     const attribute = 'data-test-form-field';
 
     expect(wrapper.attributes(attribute)).to.equal(attribute);
   });
 
-  it('3. FormField - can render text in default slot', () => {
-    const message = 'FormField message';
+  it('2. FormField - can render content in default slot', () => {
+    const content = 'FormField content';
     const wrapper = mount(FormField, {
       slots: {
-        default: message,
+        default: content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
+    expect(wrapper.text()).to.include(content);
   });
 
-  it('4. FormField - can render text in label slot', () => {
-    const message = 'FormField message';
+  it('3. FormField - can render content in label slot', () => {
+    const content = 'FormField content';
     const wrapper = mount(FormField, {
       slots: {
-        label: message,
+        label: content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
+    expect(wrapper.text()).to.include(content);
   });
 
-  it('5. FormField - can render text in message slot', () => {
-    const message = 'FormField message';
+  it('4. FormField - can render content in content slot', () => {
+    const content = 'FormField message';
     const wrapper = mount(FormField, {
       slots: {
-        message,
+        content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
+    expect(wrapper.text()).to.include(content);
   });
 });
