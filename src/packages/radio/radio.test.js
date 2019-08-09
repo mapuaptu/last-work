@@ -3,37 +3,25 @@ import { mount } from '@vue/test-utils';
 import Radio from './index';
 
 describe('Radio', () => {
-  it('1. Radio - is vue instance', () => {
-    const wrapper = mount(Radio);
-
-    expect(wrapper.isVueInstance()).to.equal(true);
-  });
-
-  it('2. Radio - can render data attribute', () => {
+  it('1. Radio - can render data-test attribute', () => {
     const wrapper = mount(Radio);
     const attribute = 'data-test-radio';
 
     expect(wrapper.attributes(attribute)).to.equal(attribute);
   });
 
-  it('3. Radio - can render text in default slot', () => {
-    const message = 'Radio message';
+  it('2. Radio - can render conten in default slot', () => {
+    const content = 'Radio content';
     const wrapper = mount(Radio, {
       slots: {
-        default: message,
+        default: content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
+    expect(wrapper.text()).to.include(content);
   });
 
-  it('4. Radio - can render input', () => {
-    const wrapper = mount(Radio);
-
-    expect(wrapper.contains('input')).to.equal(true);
-  });
-
-  it('5. Radio - click trigger emit("input")', () => {
+  it('3. Radio - click trigger emit("input")', () => {
     const wrapper = mount(Radio, {
       propsData: {
         value: '123',
