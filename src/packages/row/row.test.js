@@ -3,27 +3,21 @@ import { mount } from '@vue/test-utils';
 import Row from './index';
 
 describe('Row', () => {
-  it('1. Row - is vue instance', () => {
-    const wrapper = mount(Row);
-
-    expect(wrapper.isVueInstance()).to.equal(true);
-  });
-
-  it('2. Row - can render data attribute', () => {
+  it('1. Row - can render data-test attribute', () => {
     const wrapper = mount(Row);
     const attribute = 'data-test-row';
 
     expect(wrapper.attributes(attribute)).to.equal(attribute);
   });
 
-  it('3. Row - can render text in default slot', () => {
-    const message = 'Row message';
+  it('2. Row - can render content in default slot', () => {
+    const content = 'Row content';
     const wrapper = mount(Row, {
       slots: {
-        default: message,
+        default: content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
+    expect(wrapper.text()).to.include(content);
   });
 });
