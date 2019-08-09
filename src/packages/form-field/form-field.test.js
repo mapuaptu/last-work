@@ -32,11 +32,11 @@ describe('FormField', () => {
     expect(wrapper.text()).to.include(content);
   });
 
-  it('4. FormField - can render content in content slot', () => {
-    const content = 'FormField message';
+  it('4. FormField - can render content in message slot', () => {
+    const content = 'FormField content';
     const wrapper = mount(FormField, {
       slots: {
-        content,
+        message: content,
       },
     });
 
