@@ -3,37 +3,25 @@ import { mount } from '@vue/test-utils';
 import Menu from './index';
 
 describe('Menu', () => {
-  it('1. Menu - is vue instance', () => {
-    const wrapper = mount(Menu);
-
-    expect(wrapper.isVueInstance()).to.equal(true);
-  });
-
-  it('2. Menu - can render data attribute', () => {
+  it('1. Menu - can render data-test attribute', () => {
     const wrapper = mount(Menu);
     const attribute = 'data-test-menu';
 
     expect(wrapper.attributes(attribute)).to.equal(attribute);
   });
 
-  it('3. Menu - can render text in default slot', () => {
-    const message = 'Modal message';
+  it('2. Menu - can render content in default slot', () => {
+    const content = 'Modal content';
     const wrapper = mount(Menu, {
       slots: {
-        default: message,
+        default: content,
       },
     });
 
-    expect(wrapper.text()).to.include(message);
+    expect(wrapper.text()).to.include(content);
   });
 
-  it('4. Menu - can render icon', () => {
-    const wrapper = mount(Menu);
-
-    expect(wrapper.contains('i')).to.equal(true);
-  });
-
-  it('5. Menu - can open', () => {
+  it('3. Menu - click can trigger open menu', () => {
     const wrapper = mount(Menu);
     const toggle = wrapper.find({ ref: 'toggle' });
 
