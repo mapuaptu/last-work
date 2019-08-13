@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
+    width: 40px;
     height: 100%;
     font-size: 19px;
     line-height: 25px;
@@ -135,10 +135,6 @@
 
     :global(.multiselect__single) {
       background-color: transparent;
-    }
-
-    .caret {
-      right: 8px;
     }
   }
 
