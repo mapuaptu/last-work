@@ -13,12 +13,6 @@
     display: flex;
     align-items: center;
     color: $color-default;
-
-    span {
-      position: relative;
-      top: 1px;
-      margin-right: 15px;
-    }
   }
 
   .icon {
@@ -95,12 +89,6 @@
       right: calc(100% + 4px);
       top: 0;
       bottom: initial;
-    }
-  }
-
-  &:hover {
-    .control {
-      text-decoration: underline;
     }
   }
 }

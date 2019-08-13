@@ -81,6 +81,15 @@ body {
 
 .dd-profile {
   .dd-profile-text {
+    position: relative;
+    top: 1px;
+    padding: 13px 16px;
+    transition: $transition color;
+
+    &:hover {
+      color: $color-primary;
+    }
+
     @include media-breakpoint-down(md) {
       display: none;
     }
