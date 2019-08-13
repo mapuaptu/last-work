@@ -35,7 +35,7 @@
     display: flex;
     border: 1px solid $color-light;
     border-radius: 6px !important;
-    padding: 10px 40px 0 14px;
+    padding: 10px 40px 0 8px;
     padding-top: 0;
     min-height: 48px;
   }
@@ -58,6 +58,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 0;
+    padding-left: 0;
     font-size: 16px;
     line-height: 19px;
     color: $color-default;
@@ -89,7 +90,7 @@
   }
 
   :global(.multiselect__option) {
-    padding: 10px 20px;
+    padding: 10px 20px 10px 8px;
     transition: $transition;
     transition-property: color, background-color;
   }
