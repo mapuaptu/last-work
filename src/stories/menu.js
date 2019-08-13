@@ -16,7 +16,7 @@ export default () =>
         template: `<dd-menu>
           <a href="/" @click.prevent>Menu item 1</a>
           <a href="/" @click.prevent>Menu item 2</a>
-          <a href="/" @click.prevent>Menu item 3</a>
+          <a class="router-link-active" href="/" @click.prevent>Menu item 3</a>
         </dd-menu>`,
       }),
       {
