@@ -86,7 +86,7 @@ export default () =>
             default: boolean('Disabled', options.disabled),
           },
         },
-        template: `<dd-select v-model="value" :options="options"
+        template: `<dd-select v-model="value" :options="options" image
           :disabled="disabled" :placeholder="placeholder" track-by="id"
           @input="onInput">
             <template #option="{option}">

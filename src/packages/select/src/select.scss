@@ -35,7 +35,7 @@
     display: flex;
     border: 1px solid $color-light;
     border-radius: 6px !important;
-    padding: 10px 40px 0 8px;
+    padding: 10px 40px 0 14px;
     padding-top: 0;
     min-height: 48px;
   }
@@ -90,7 +90,7 @@
   }
 
   :global(.multiselect__option) {
-    padding: 10px 20px 10px 8px;
+    padding: 10px 20px 10px 14px;
     transition: $transition;
     transition-property: color, background-color;
   }
@@ -111,6 +111,20 @@
   :global(.multiselect--above .multiselect__content) {
     margin-top: initial;
     margin-bottom: 10px;
+  }
+
+  &--image {
+    :global(.multiselect__tags) {
+      padding-left: 8px;
+    }
+
+    :global(.multiselect__placeholder) {
+      padding-left: 6px;
+    }
+
+    :global(.multiselect__option) {
+      padding-left: 8px;
+    }
   }
 
   &--status {

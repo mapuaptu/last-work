@@ -24,6 +24,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    image: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     classList() {
@@ -31,6 +35,7 @@ export default {
         this.$style.select,
         this.status && this.$style['select--status'],
         this.disabled && this.$style['select--disabled'],
+        this.image && this.$style['select--image'],
       ];
     },
   },
