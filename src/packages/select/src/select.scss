@@ -57,15 +57,34 @@
   :global(.multiselect__single) {
     display: flex;
     align-items: center;
+    overflow: hidden;
     margin-bottom: 0;
     padding-left: 0;
     font-size: 16px;
     line-height: 19px;
+    white-space: nowrap;
     color: $color-default;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 10;
+      width: 40px;
+      // stylelint-disable-next-line
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
   }
 
   :global(.multiselect__content-wrapper) {
-    overflow: visible;
+    overflow: hidden;
+    overflow-y: scroll;
     border: none !important;
     background-color: transparent;
   }

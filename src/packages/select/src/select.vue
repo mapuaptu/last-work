@@ -10,6 +10,7 @@
       :show-labels="false"
       :searchable="false"
       :disabled="disabled"
+      :max-height="175"
       v-bind="$attrs"
       @input="onInput"
     >
