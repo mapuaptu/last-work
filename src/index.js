@@ -17,7 +17,6 @@ import Logo from './packages/logo';
 import Menu from './packages/menu';
 import Modal from './packages/modal';
 import Notification from './packages/notification';
-import Progressbar from './packages/progressbar';
 import Radio from './packages/radio';
 import Row from './packages/row';
 import Select from './packages/select';
@@ -48,7 +47,6 @@ const components = [
   Menu,
   Modal,
   Notification,
-  Progressbar,
   Radio,
   Row,
   Select,
@@ -85,7 +83,6 @@ export {
   Menu,
   Modal,
   Notification,
-  Progressbar,
   Radio,
   Row,
   Select,
