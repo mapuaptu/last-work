@@ -9,6 +9,7 @@
   width: 100%;
   height: $size;
   background-color: $color-white;
+  transition: $transition background-color;
 
   &--progress {
     background-color: $color-status-progress;
