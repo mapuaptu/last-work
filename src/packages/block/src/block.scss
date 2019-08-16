@@ -1,18 +1,13 @@
 @import '../../../styles/variables';
 
 .block {
-  --size: 48;
-  --size-small: 32;
-  --size-medium: 56;
-  --size-large: 64;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 6px;
   padding: 5px 20px;
   width: 100%;
-  height: calc(var(--size) * 1px);
+  height: $size;
   background-color: $color-white;
 
   &--progress {
@@ -54,14 +49,14 @@
   }
 
   &--small {
-    height: calc(var(--size-small) * 1px);
+    height: $size-small;
   }
 
   &--medium {
-    height: calc(var(--size-medium) * 1px);
+    height: $size-medium;
   }
 
   &--large {
-    height: calc(var(--size-large) * 1px);
+    height: $size-large;
   }
 }
