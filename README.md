@@ -1,6 +1,12 @@
-# Dashdojo ui-components
+# @dashdojodev/ui-components
 
-## Project setup
+### Package install
+
+```bash
+npm install @dashdojodev/ui-components -S
+```
+
+### Project setup
 
 ```bash
 npm install
