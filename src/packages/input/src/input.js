@@ -1,5 +1,5 @@
-import Userpic from '../../userpic/index';
-import Icon from '../../icon/index';
+import Userpic from '../../userpic';
+import Icon from '../../icon';
 
 export default {
   name: 'DdInput',

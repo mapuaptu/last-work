@@ -1,6 +1,6 @@
 import { VueInputAutoWidth } from 'vue-input-autowidth';
 import { directive as clickOutside } from 'v-click-outside';
-import Icon from '../../icon/index';
+import Icon from '../../icon';
 
 export default {
   name: 'DdInputSplit',

@@ -1,4 +1,4 @@
-import Icon from '../../icon/index';
+import Icon from '../../icon';
 
 export default {
   name: 'DdButton',
