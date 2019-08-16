@@ -20,6 +20,10 @@
     cursor: pointer;
   }
 
+  :global(.multiselect) {
+    height: $size;
+  }
+
   :global(.multiselect--active) {
     .caret {
       transform: rotate(180deg);
@@ -37,7 +41,7 @@
     border-radius: 6px !important;
     padding: 10px 40px 0 14px;
     padding-top: 0;
-    min-height: 48px;
+    height: 100%;
   }
 
   :global(.multiselect__placeholder) {
@@ -51,7 +55,7 @@
   }
 
   :global(.multiselect__select) {
-    height: 48px;
+    height: 100%;
   }
 
   :global(.multiselect__single) {
