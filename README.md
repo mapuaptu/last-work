@@ -15,6 +15,12 @@ npm install
 ### Run StoryBook
 
 ```bash
+npm start
+```
+
+or
+
+```
 npm run storybook
 ```
 
