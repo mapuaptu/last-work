@@ -34,6 +34,7 @@ export default {
       return [
         this.$style.input,
         this.disabled && this.$style['input--disabled'],
+        this.root.status && this.$style['input--status'],
         this.root.status && this.$style[`input--${this.root.status}`],
         this.size && this.$style[`input--${this.size}`],
         this.image && this.$style['input--image'],
