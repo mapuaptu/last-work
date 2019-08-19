@@ -58,7 +58,7 @@
 
   &--medium {
     .icon {
-      right: 20px;
+      right: 15px;
       font-size: 25px;
     }
 
@@ -72,7 +72,7 @@
 
   &--large {
     .icon {
-      right: 25px;
+      right: 20px;
       font-size: 30px;
     }
 
@@ -143,13 +143,13 @@
 
   &--status#{&}--medium {
     .inner {
-      padding-right: 65px;
+      padding-right: 50px;
     }
   }
 
   &--status#{&}--large {
     .inner {
-      padding-right: 80px;
+      padding-right: 65px;
     }
   }
 

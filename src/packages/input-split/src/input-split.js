@@ -39,6 +39,7 @@ export default {
       return [
         this.$style['input-split'],
         this.disabled && this.$style['input-split--disabled'],
+        this.root.status && this.$style['input-split--status'],
         this.root.status && this.$style[`input-split--${this.root.status}`],
         this.size && this.$style[`input-split--${this.size}`],
         this.focus && this.$style['input-split--focus'],
