@@ -25,7 +25,7 @@ export default {
     onClick() {
       this.$emit('input', !this.value);
     },
-    onClickOutside() {
+    onClose() {
       this.$emit('input', false);
     },
   },

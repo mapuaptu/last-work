@@ -2,6 +2,7 @@
   <div
     :class="classList"
     data-test-dropdown-item="data-test-dropdown-item"
+    @click="onClick"
   >
     <i
       v-if="icon"

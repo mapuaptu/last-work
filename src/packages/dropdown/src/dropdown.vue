@@ -1,7 +1,7 @@
 <template>
   <div
     :class="$style.dropdown"
-    v-click-outside="onClickOutside"
+    v-click-outside="onClose"
     data-test-dropdown="data-test-dropdown"
   >
 
@@ -30,7 +30,10 @@
         position && $style[`menu--${position}`],
       ]"
       >
-        <div v-if="$slots.default">
+        <div
+          v-if="$slots.default"
+          @click="onClose"
+        >
           <slot></slot>
         </div>
 

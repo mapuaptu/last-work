@@ -5,6 +5,7 @@
   align-items: center;
   padding: 10px 20px;
   color: $color-link;
+  background-color: $color-white;
   transition: $transition;
   transition-property: background-color;
   user-select: none;
@@ -30,7 +31,13 @@
 
   &--disabled {
     color: $color-light;
-    pointer-events: none;
+    cursor: initial;
+
+    &:hover,
+    &:active {
+      color: $color-light;
+      background-color: $color-white;
+    }
   }
 
   &--delimiter {
@@ -43,7 +50,8 @@
       color: $color-secondary;
     }
 
-    &:hover {
+    &:hover,
+    &:active {
       background-color: $color-white;
     }
   }

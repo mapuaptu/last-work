@@ -23,4 +23,11 @@ export default {
       ];
     },
   },
+  methods: {
+    onClick(event) {
+      if (this.disabled || this.delimiter) {
+        event.stopPropagation();
+      }
+    },
+  },
 };
