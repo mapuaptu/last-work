@@ -90,14 +90,15 @@
     overflow: hidden;
     overflow-y: scroll;
     border: none !important;
+    border-radius: 6px;
+    padding-top: 0;
+    box-shadow: 0 4px 8px rgba($color-default, 0.2);
     background-color: transparent;
   }
 
   :global(.multiselect__content) {
     overflow: hidden;
-    margin-top: 10px;
     border-radius: 6px;
-    box-shadow: 0 8px 32px rgba($color-default, 0.1);
     background-color: $color-white;
   }
 
@@ -151,6 +152,11 @@
   }
 
   &--status {
+    :global(.multiselect__content-wrapper) {
+      position: relative;
+      top: 8px;
+    }
+
     :global(.multiselect__tags) {
       border: 1px solid transparent;
       background-color: transparent;
