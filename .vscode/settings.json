@@ -1,4 +1,7 @@
 {
+  "editor": {
+    "rules": [80, 120]
+  },
   "files": {
     "eol": "\n",
     "insertFinalNewline": true,
